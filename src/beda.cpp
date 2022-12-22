@@ -1,9 +1,15 @@
-using namespace std;
 
+#include "antlr4-runtime.h"
+#include "database/bl_design.h"
 #include "database/bl_library.h"
+#include "parsers/verilog/VerilogVisitor.h"
+#include "parsers/verilog/generated/VerilogLexer.h"
 #include <argparse/argparse.hpp>
 #include <iostream>
 #include <memory>
+
+using namespace std;
+using namespace antlr4;
 
 int main(int argc, char *argv[])
 {
@@ -34,7 +40,20 @@ int main(int argc, char *argv[])
             cout << "Parsing: " << file << endl;
             std::ifstream stream;
             stream.open(file);
-            stream.close();
+
+            ANTLRInputStream input(stream);
+            VerilogLexer lexer(&input);
+            CommonTokenStream tokens(&lexer);
+            VerilogParser parser(&tokens);
+            VerilogParser::Source_textContext *tree = parser.source_text();
+            VerilogVisitor visitor;
+            visitor.visitSource_text(tree);
+            shared_ptr<BLLibrary> library = visitor.get_library();
+
+            for (shared_ptr<BLDesign> design : library->get_designs())
+            {
+                cout << design->get_name() << endl;
+            }
         }
     }
 }
