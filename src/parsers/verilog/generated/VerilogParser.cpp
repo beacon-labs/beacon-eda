@@ -2,7 +2,7 @@
 // Generated from VerilogParser.g4 by ANTLR 4.11.1
 
 
-#include "VerilogParserListener.h"
+#include "VerilogParserVisitor.h"
 
 #include "VerilogParser.h"
 
@@ -2058,16 +2058,12 @@ size_t VerilogParser::Library_textContext::getRuleIndex() const {
   return VerilogParser::RuleLibrary_text;
 }
 
-void VerilogParser::Library_textContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLibrary_text(this);
-}
 
-void VerilogParser::Library_textContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLibrary_text(this);
+std::any VerilogParser::Library_textContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLibrary_text(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Library_textContext* VerilogParser::library_text() {
@@ -2132,16 +2128,12 @@ size_t VerilogParser::Library_descriptionContext::getRuleIndex() const {
   return VerilogParser::RuleLibrary_description;
 }
 
-void VerilogParser::Library_descriptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLibrary_description(this);
-}
 
-void VerilogParser::Library_descriptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLibrary_description(this);
+std::any VerilogParser::Library_descriptionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLibrary_description(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Library_descriptionContext* VerilogParser::library_description() {
@@ -2237,16 +2229,12 @@ size_t VerilogParser::Library_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleLibrary_declaration;
 }
 
-void VerilogParser::Library_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLibrary_declaration(this);
-}
 
-void VerilogParser::Library_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLibrary_declaration(this);
+std::any VerilogParser::Library_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLibrary_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Library_declarationContext* VerilogParser::library_declaration() {
@@ -2333,16 +2321,12 @@ size_t VerilogParser::Library_incdirContext::getRuleIndex() const {
   return VerilogParser::RuleLibrary_incdir;
 }
 
-void VerilogParser::Library_incdirContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLibrary_incdir(this);
-}
 
-void VerilogParser::Library_incdirContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLibrary_incdir(this);
+std::any VerilogParser::Library_incdirContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLibrary_incdir(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Library_incdirContext* VerilogParser::library_incdir() {
@@ -2409,16 +2393,12 @@ size_t VerilogParser::Include_statementContext::getRuleIndex() const {
   return VerilogParser::RuleInclude_statement;
 }
 
-void VerilogParser::Include_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInclude_statement(this);
-}
 
-void VerilogParser::Include_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInclude_statement(this);
+std::any VerilogParser::Include_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInclude_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Include_statementContext* VerilogParser::include_statement() {
@@ -2466,16 +2446,12 @@ size_t VerilogParser::File_path_specContext::getRuleIndex() const {
   return VerilogParser::RuleFile_path_spec;
 }
 
-void VerilogParser::File_path_specContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFile_path_spec(this);
-}
 
-void VerilogParser::File_path_specContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFile_path_spec(this);
+std::any VerilogParser::File_path_specContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFile_path_spec(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::File_path_specContext* VerilogParser::file_path_spec() {
@@ -2527,16 +2503,12 @@ size_t VerilogParser::Source_textContext::getRuleIndex() const {
   return VerilogParser::RuleSource_text;
 }
 
-void VerilogParser::Source_textContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSource_text(this);
-}
 
-void VerilogParser::Source_textContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSource_text(this);
+std::any VerilogParser::Source_textContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSource_text(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Source_textContext* VerilogParser::source_text() {
@@ -2600,16 +2572,12 @@ size_t VerilogParser::DescriptionContext::getRuleIndex() const {
   return VerilogParser::RuleDescription;
 }
 
-void VerilogParser::DescriptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDescription(this);
-}
 
-void VerilogParser::DescriptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDescription(this);
+std::any VerilogParser::DescriptionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDescription(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::DescriptionContext* VerilogParser::description() {
@@ -2713,16 +2681,12 @@ size_t VerilogParser::Module_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleModule_declaration;
 }
 
-void VerilogParser::Module_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_declaration(this);
-}
 
-void VerilogParser::Module_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_declaration(this);
+std::any VerilogParser::Module_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_declarationContext* VerilogParser::module_declaration() {
@@ -2816,16 +2780,12 @@ size_t VerilogParser::Module_keywordContext::getRuleIndex() const {
   return VerilogParser::RuleModule_keyword;
 }
 
-void VerilogParser::Module_keywordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_keyword(this);
-}
 
-void VerilogParser::Module_keywordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_keyword(this);
+std::any VerilogParser::Module_keywordContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_keyword(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_keywordContext* VerilogParser::module_keyword() {
@@ -2903,16 +2863,12 @@ size_t VerilogParser::Module_parameter_port_listContext::getRuleIndex() const {
   return VerilogParser::RuleModule_parameter_port_list;
 }
 
-void VerilogParser::Module_parameter_port_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_parameter_port_list(this);
-}
 
-void VerilogParser::Module_parameter_port_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_parameter_port_list(this);
+std::any VerilogParser::Module_parameter_port_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_parameter_port_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_parameter_port_listContext* VerilogParser::module_parameter_port_list() {
@@ -3011,16 +2967,12 @@ size_t VerilogParser::List_of_port_declarationsContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_port_declarations;
 }
 
-void VerilogParser::List_of_port_declarationsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_port_declarations(this);
-}
 
-void VerilogParser::List_of_port_declarationsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_port_declarations(this);
+std::any VerilogParser::List_of_port_declarationsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_port_declarations(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_port_declarationsContext* VerilogParser::list_of_port_declarations() {
@@ -3149,16 +3101,12 @@ size_t VerilogParser::PortContext::getRuleIndex() const {
   return VerilogParser::RulePort;
 }
 
-void VerilogParser::PortContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPort(this);
-}
 
-void VerilogParser::PortContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPort(this);
+std::any VerilogParser::PortContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPort(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::PortContext* VerilogParser::port() {
@@ -3232,16 +3180,12 @@ size_t VerilogParser::Port_implicitContext::getRuleIndex() const {
   return VerilogParser::RulePort_implicit;
 }
 
-void VerilogParser::Port_implicitContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPort_implicit(this);
-}
 
-void VerilogParser::Port_implicitContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPort_implicit(this);
+std::any VerilogParser::Port_implicitContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPort_implicit(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Port_implicitContext* VerilogParser::port_implicit() {
@@ -3301,16 +3245,12 @@ size_t VerilogParser::Port_explicitContext::getRuleIndex() const {
   return VerilogParser::RulePort_explicit;
 }
 
-void VerilogParser::Port_explicitContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPort_explicit(this);
-}
 
-void VerilogParser::Port_explicitContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPort_explicit(this);
+std::any VerilogParser::Port_explicitContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPort_explicit(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Port_explicitContext* VerilogParser::port_explicit() {
@@ -3391,16 +3331,12 @@ size_t VerilogParser::Port_expressionContext::getRuleIndex() const {
   return VerilogParser::RulePort_expression;
 }
 
-void VerilogParser::Port_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPort_expression(this);
-}
 
-void VerilogParser::Port_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPort_expression(this);
+std::any VerilogParser::Port_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPort_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Port_expressionContext* VerilogParser::port_expression() {
@@ -3491,16 +3427,12 @@ size_t VerilogParser::Port_referenceContext::getRuleIndex() const {
   return VerilogParser::RulePort_reference;
 }
 
-void VerilogParser::Port_referenceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPort_reference(this);
-}
 
-void VerilogParser::Port_referenceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPort_reference(this);
+std::any VerilogParser::Port_referenceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPort_reference(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Port_referenceContext* VerilogParser::port_reference() {
@@ -3573,16 +3505,12 @@ size_t VerilogParser::Port_declarationContext::getRuleIndex() const {
   return VerilogParser::RulePort_declaration;
 }
 
-void VerilogParser::Port_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPort_declaration(this);
-}
 
-void VerilogParser::Port_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPort_declaration(this);
+std::any VerilogParser::Port_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPort_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Port_declarationContext* VerilogParser::port_declaration() {
@@ -3713,16 +3641,12 @@ size_t VerilogParser::Module_itemContext::getRuleIndex() const {
   return VerilogParser::RuleModule_item;
 }
 
-void VerilogParser::Module_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_item(this);
-}
 
-void VerilogParser::Module_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_item(this);
+std::any VerilogParser::Module_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_itemContext* VerilogParser::module_item() {
@@ -3888,16 +3812,12 @@ size_t VerilogParser::Module_or_generate_itemContext::getRuleIndex() const {
   return VerilogParser::RuleModule_or_generate_item;
 }
 
-void VerilogParser::Module_or_generate_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_or_generate_item(this);
-}
 
-void VerilogParser::Module_or_generate_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_or_generate_item(this);
+std::any VerilogParser::Module_or_generate_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_or_generate_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_or_generate_itemContext* VerilogParser::module_or_generate_item() {
@@ -4170,16 +4090,12 @@ size_t VerilogParser::Module_or_generate_item_declarationContext::getRuleIndex()
   return VerilogParser::RuleModule_or_generate_item_declaration;
 }
 
-void VerilogParser::Module_or_generate_item_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_or_generate_item_declaration(this);
-}
 
-void VerilogParser::Module_or_generate_item_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_or_generate_item_declaration(this);
+std::any VerilogParser::Module_or_generate_item_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_or_generate_item_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_or_generate_item_declarationContext* VerilogParser::module_or_generate_item_declaration() {
@@ -4315,16 +4231,12 @@ size_t VerilogParser::Parameter_overrideContext::getRuleIndex() const {
   return VerilogParser::RuleParameter_override;
 }
 
-void VerilogParser::Parameter_overrideContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParameter_override(this);
-}
 
-void VerilogParser::Parameter_overrideContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParameter_override(this);
+std::any VerilogParser::Parameter_overrideContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitParameter_override(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Parameter_overrideContext* VerilogParser::parameter_override() {
@@ -4396,16 +4308,12 @@ size_t VerilogParser::Config_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleConfig_declaration;
 }
 
-void VerilogParser::Config_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConfig_declaration(this);
-}
 
-void VerilogParser::Config_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConfig_declaration(this);
+std::any VerilogParser::Config_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConfig_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Config_declarationContext* VerilogParser::config_declaration() {
@@ -4482,16 +4390,12 @@ size_t VerilogParser::Design_statementContext::getRuleIndex() const {
   return VerilogParser::RuleDesign_statement;
 }
 
-void VerilogParser::Design_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDesign_statement(this);
-}
 
-void VerilogParser::Design_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDesign_statement(this);
+std::any VerilogParser::Design_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDesign_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Design_statementContext* VerilogParser::design_statement() {
@@ -4558,16 +4462,12 @@ size_t VerilogParser::Design_statement_itemContext::getRuleIndex() const {
   return VerilogParser::RuleDesign_statement_item;
 }
 
-void VerilogParser::Design_statement_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDesign_statement_item(this);
-}
 
-void VerilogParser::Design_statement_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDesign_statement_item(this);
+std::any VerilogParser::Design_statement_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDesign_statement_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Design_statement_itemContext* VerilogParser::design_statement_item() {
@@ -4646,16 +4546,12 @@ size_t VerilogParser::Config_rule_statementContext::getRuleIndex() const {
   return VerilogParser::RuleConfig_rule_statement;
 }
 
-void VerilogParser::Config_rule_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConfig_rule_statement(this);
-}
 
-void VerilogParser::Config_rule_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConfig_rule_statement(this);
+std::any VerilogParser::Config_rule_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConfig_rule_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Config_rule_statementContext* VerilogParser::config_rule_statement() {
@@ -4757,16 +4653,12 @@ size_t VerilogParser::Default_clauseContext::getRuleIndex() const {
   return VerilogParser::RuleDefault_clause;
 }
 
-void VerilogParser::Default_clauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefault_clause(this);
-}
 
-void VerilogParser::Default_clauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefault_clause(this);
+std::any VerilogParser::Default_clauseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDefault_clause(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Default_clauseContext* VerilogParser::default_clause() {
@@ -4814,16 +4706,12 @@ size_t VerilogParser::Inst_clauseContext::getRuleIndex() const {
   return VerilogParser::RuleInst_clause;
 }
 
-void VerilogParser::Inst_clauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInst_clause(this);
-}
 
-void VerilogParser::Inst_clauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInst_clause(this);
+std::any VerilogParser::Inst_clauseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInst_clause(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Inst_clauseContext* VerilogParser::inst_clause() {
@@ -4885,16 +4773,12 @@ size_t VerilogParser::Inst_nameContext::getRuleIndex() const {
   return VerilogParser::RuleInst_name;
 }
 
-void VerilogParser::Inst_nameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInst_name(this);
-}
 
-void VerilogParser::Inst_nameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInst_name(this);
+std::any VerilogParser::Inst_nameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInst_name(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Inst_nameContext* VerilogParser::inst_name() {
@@ -4963,16 +4847,12 @@ size_t VerilogParser::Cell_clauseContext::getRuleIndex() const {
   return VerilogParser::RuleCell_clause;
 }
 
-void VerilogParser::Cell_clauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCell_clause(this);
-}
 
-void VerilogParser::Cell_clauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCell_clause(this);
+std::any VerilogParser::Cell_clauseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCell_clause(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Cell_clauseContext* VerilogParser::cell_clause() {
@@ -5041,16 +4921,12 @@ size_t VerilogParser::Liblist_clauseContext::getRuleIndex() const {
   return VerilogParser::RuleLiblist_clause;
 }
 
-void VerilogParser::Liblist_clauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLiblist_clause(this);
-}
 
-void VerilogParser::Liblist_clauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLiblist_clause(this);
+std::any VerilogParser::Liblist_clauseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLiblist_clause(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Liblist_clauseContext* VerilogParser::liblist_clause() {
@@ -5127,16 +5003,12 @@ size_t VerilogParser::Use_clauseContext::getRuleIndex() const {
   return VerilogParser::RuleUse_clause;
 }
 
-void VerilogParser::Use_clauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUse_clause(this);
-}
 
-void VerilogParser::Use_clauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUse_clause(this);
+std::any VerilogParser::Use_clauseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUse_clause(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Use_clauseContext* VerilogParser::use_clause() {
@@ -5224,16 +5096,12 @@ size_t VerilogParser::Local_parameter_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleLocal_parameter_declaration;
 }
 
-void VerilogParser::Local_parameter_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLocal_parameter_declaration(this);
-}
 
-void VerilogParser::Local_parameter_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLocal_parameter_declaration(this);
+std::any VerilogParser::Local_parameter_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLocal_parameter_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Local_parameter_declarationContext* VerilogParser::local_parameter_declaration() {
@@ -5333,16 +5201,12 @@ size_t VerilogParser::Parameter_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleParameter_declaration;
 }
 
-void VerilogParser::Parameter_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParameter_declaration(this);
-}
 
-void VerilogParser::Parameter_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParameter_declaration(this);
+std::any VerilogParser::Parameter_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitParameter_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Parameter_declarationContext* VerilogParser::parameter_declaration() {
@@ -5438,16 +5302,12 @@ size_t VerilogParser::Specparam_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleSpecparam_declaration;
 }
 
-void VerilogParser::Specparam_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpecparam_declaration(this);
-}
 
-void VerilogParser::Specparam_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpecparam_declaration(this);
+std::any VerilogParser::Specparam_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSpecparam_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Specparam_declarationContext* VerilogParser::specparam_declaration() {
@@ -5516,16 +5376,12 @@ size_t VerilogParser::Parameter_typeContext::getRuleIndex() const {
   return VerilogParser::RuleParameter_type;
 }
 
-void VerilogParser::Parameter_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParameter_type(this);
-}
 
-void VerilogParser::Parameter_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParameter_type(this);
+std::any VerilogParser::Parameter_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitParameter_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Parameter_typeContext* VerilogParser::parameter_type() {
@@ -5594,16 +5450,12 @@ size_t VerilogParser::Inout_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleInout_declaration;
 }
 
-void VerilogParser::Inout_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInout_declaration(this);
-}
 
-void VerilogParser::Inout_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInout_declaration(this);
+std::any VerilogParser::Inout_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInout_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Inout_declarationContext* VerilogParser::inout_declaration() {
@@ -5691,16 +5543,12 @@ size_t VerilogParser::Input_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleInput_declaration;
 }
 
-void VerilogParser::Input_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInput_declaration(this);
-}
 
-void VerilogParser::Input_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInput_declaration(this);
+std::any VerilogParser::Input_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInput_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Input_declarationContext* VerilogParser::input_declaration() {
@@ -5800,16 +5648,12 @@ size_t VerilogParser::Output_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleOutput_declaration;
 }
 
-void VerilogParser::Output_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOutput_declaration(this);
-}
 
-void VerilogParser::Output_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOutput_declaration(this);
+std::any VerilogParser::Output_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOutput_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Output_declarationContext* VerilogParser::output_declaration() {
@@ -5937,16 +5781,12 @@ size_t VerilogParser::Event_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleEvent_declaration;
 }
 
-void VerilogParser::Event_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEvent_declaration(this);
-}
 
-void VerilogParser::Event_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEvent_declaration(this);
+std::any VerilogParser::Event_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEvent_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Event_declarationContext* VerilogParser::event_declaration() {
@@ -6002,16 +5842,12 @@ size_t VerilogParser::Integer_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleInteger_declaration;
 }
 
-void VerilogParser::Integer_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInteger_declaration(this);
-}
 
-void VerilogParser::Integer_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInteger_declaration(this);
+std::any VerilogParser::Integer_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInteger_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Integer_declarationContext* VerilogParser::integer_declaration() {
@@ -6103,16 +5939,12 @@ size_t VerilogParser::Net_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleNet_declaration;
 }
 
-void VerilogParser::Net_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNet_declaration(this);
-}
 
-void VerilogParser::Net_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNet_declaration(this);
+std::any VerilogParser::Net_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNet_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Net_declarationContext* VerilogParser::net_declaration() {
@@ -6516,16 +6348,12 @@ size_t VerilogParser::Real_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleReal_declaration;
 }
 
-void VerilogParser::Real_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReal_declaration(this);
-}
 
-void VerilogParser::Real_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReal_declaration(this);
+std::any VerilogParser::Real_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitReal_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Real_declarationContext* VerilogParser::real_declaration() {
@@ -6581,16 +6409,12 @@ size_t VerilogParser::Realtime_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleRealtime_declaration;
 }
 
-void VerilogParser::Realtime_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRealtime_declaration(this);
-}
 
-void VerilogParser::Realtime_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRealtime_declaration(this);
+std::any VerilogParser::Realtime_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitRealtime_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Realtime_declarationContext* VerilogParser::realtime_declaration() {
@@ -6654,16 +6478,12 @@ size_t VerilogParser::Reg_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleReg_declaration;
 }
 
-void VerilogParser::Reg_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReg_declaration(this);
-}
 
-void VerilogParser::Reg_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReg_declaration(this);
+std::any VerilogParser::Reg_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitReg_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Reg_declarationContext* VerilogParser::reg_declaration() {
@@ -6736,16 +6556,12 @@ size_t VerilogParser::Time_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleTime_declaration;
 }
 
-void VerilogParser::Time_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTime_declaration(this);
-}
 
-void VerilogParser::Time_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTime_declaration(this);
+std::any VerilogParser::Time_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTime_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Time_declarationContext* VerilogParser::time_declaration() {
@@ -6833,16 +6649,12 @@ size_t VerilogParser::Net_typeContext::getRuleIndex() const {
   return VerilogParser::RuleNet_type;
 }
 
-void VerilogParser::Net_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNet_type(this);
-}
 
-void VerilogParser::Net_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNet_type(this);
+std::any VerilogParser::Net_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNet_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Net_typeContext* VerilogParser::net_type() {
@@ -6899,16 +6711,12 @@ size_t VerilogParser::Output_variable_typeContext::getRuleIndex() const {
   return VerilogParser::RuleOutput_variable_type;
 }
 
-void VerilogParser::Output_variable_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOutput_variable_type(this);
-}
 
-void VerilogParser::Output_variable_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOutput_variable_type(this);
+std::any VerilogParser::Output_variable_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOutput_variable_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Output_variable_typeContext* VerilogParser::output_variable_type() {
@@ -6976,16 +6784,12 @@ size_t VerilogParser::Real_typeContext::getRuleIndex() const {
   return VerilogParser::RuleReal_type;
 }
 
-void VerilogParser::Real_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReal_type(this);
-}
 
-void VerilogParser::Real_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReal_type(this);
+std::any VerilogParser::Real_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitReal_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Real_typeContext* VerilogParser::real_type() {
@@ -7077,16 +6881,12 @@ size_t VerilogParser::Variable_typeContext::getRuleIndex() const {
   return VerilogParser::RuleVariable_type;
 }
 
-void VerilogParser::Variable_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVariable_type(this);
-}
 
-void VerilogParser::Variable_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVariable_type(this);
+std::any VerilogParser::Variable_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitVariable_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Variable_typeContext* VerilogParser::variable_type() {
@@ -7186,16 +6986,12 @@ size_t VerilogParser::Drive_strengthContext::getRuleIndex() const {
   return VerilogParser::RuleDrive_strength;
 }
 
-void VerilogParser::Drive_strengthContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDrive_strength(this);
-}
 
-void VerilogParser::Drive_strengthContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDrive_strength(this);
+std::any VerilogParser::Drive_strengthContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDrive_strength(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Drive_strengthContext* VerilogParser::drive_strength() {
@@ -7344,16 +7140,12 @@ size_t VerilogParser::Strength0Context::getRuleIndex() const {
   return VerilogParser::RuleStrength0;
 }
 
-void VerilogParser::Strength0Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStrength0(this);
-}
 
-void VerilogParser::Strength0Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStrength0(this);
+std::any VerilogParser::Strength0Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitStrength0(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Strength0Context* VerilogParser::strength0() {
@@ -7418,16 +7210,12 @@ size_t VerilogParser::Strength1Context::getRuleIndex() const {
   return VerilogParser::RuleStrength1;
 }
 
-void VerilogParser::Strength1Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStrength1(this);
-}
 
-void VerilogParser::Strength1Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStrength1(this);
+std::any VerilogParser::Strength1Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitStrength1(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Strength1Context* VerilogParser::strength1() {
@@ -7496,16 +7284,12 @@ size_t VerilogParser::Charge_strengthContext::getRuleIndex() const {
   return VerilogParser::RuleCharge_strength;
 }
 
-void VerilogParser::Charge_strengthContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCharge_strength(this);
-}
 
-void VerilogParser::Charge_strengthContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCharge_strength(this);
+std::any VerilogParser::Charge_strengthContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCharge_strength(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Charge_strengthContext* VerilogParser::charge_strength() {
@@ -7613,16 +7397,12 @@ size_t VerilogParser::Delay3Context::getRuleIndex() const {
   return VerilogParser::RuleDelay3;
 }
 
-void VerilogParser::Delay3Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelay3(this);
-}
 
-void VerilogParser::Delay3Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelay3(this);
+std::any VerilogParser::Delay3Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelay3(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delay3Context* VerilogParser::delay3() {
@@ -7736,16 +7516,12 @@ size_t VerilogParser::Delay2Context::getRuleIndex() const {
   return VerilogParser::RuleDelay2;
 }
 
-void VerilogParser::Delay2Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelay2(this);
-}
 
-void VerilogParser::Delay2Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelay2(this);
+std::any VerilogParser::Delay2Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelay2(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delay2Context* VerilogParser::delay2() {
@@ -7833,16 +7609,12 @@ size_t VerilogParser::Delay_valueContext::getRuleIndex() const {
   return VerilogParser::RuleDelay_value;
 }
 
-void VerilogParser::Delay_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelay_value(this);
-}
 
-void VerilogParser::Delay_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelay_value(this);
+std::any VerilogParser::Delay_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelay_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delay_valueContext* VerilogParser::delay_value() {
@@ -7924,16 +7696,12 @@ size_t VerilogParser::List_of_defparam_assignmentsContext::getRuleIndex() const 
   return VerilogParser::RuleList_of_defparam_assignments;
 }
 
-void VerilogParser::List_of_defparam_assignmentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_defparam_assignments(this);
-}
 
-void VerilogParser::List_of_defparam_assignmentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_defparam_assignments(this);
+std::any VerilogParser::List_of_defparam_assignmentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_defparam_assignments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_defparam_assignmentsContext* VerilogParser::list_of_defparam_assignments() {
@@ -8002,16 +7770,12 @@ size_t VerilogParser::List_of_event_identifiersContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_event_identifiers;
 }
 
-void VerilogParser::List_of_event_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_event_identifiers(this);
-}
 
-void VerilogParser::List_of_event_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_event_identifiers(this);
+std::any VerilogParser::List_of_event_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_event_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_event_identifiersContext* VerilogParser::list_of_event_identifiers() {
@@ -8076,16 +7840,12 @@ size_t VerilogParser::Event_idContext::getRuleIndex() const {
   return VerilogParser::RuleEvent_id;
 }
 
-void VerilogParser::Event_idContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEvent_id(this);
-}
 
-void VerilogParser::Event_idContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEvent_id(this);
+std::any VerilogParser::Event_idContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEvent_id(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Event_idContext* VerilogParser::event_id() {
@@ -8152,16 +7912,12 @@ size_t VerilogParser::List_of_net_decl_assignmentsContext::getRuleIndex() const 
   return VerilogParser::RuleList_of_net_decl_assignments;
 }
 
-void VerilogParser::List_of_net_decl_assignmentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_net_decl_assignments(this);
-}
 
-void VerilogParser::List_of_net_decl_assignmentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_net_decl_assignments(this);
+std::any VerilogParser::List_of_net_decl_assignmentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_net_decl_assignments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_net_decl_assignmentsContext* VerilogParser::list_of_net_decl_assignments() {
@@ -8230,16 +7986,12 @@ size_t VerilogParser::List_of_net_identifiersContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_net_identifiers;
 }
 
-void VerilogParser::List_of_net_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_net_identifiers(this);
-}
 
-void VerilogParser::List_of_net_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_net_identifiers(this);
+std::any VerilogParser::List_of_net_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_net_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_net_identifiersContext* VerilogParser::list_of_net_identifiers() {
@@ -8304,16 +8056,12 @@ size_t VerilogParser::Net_idContext::getRuleIndex() const {
   return VerilogParser::RuleNet_id;
 }
 
-void VerilogParser::Net_idContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNet_id(this);
-}
 
-void VerilogParser::Net_idContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNet_id(this);
+std::any VerilogParser::Net_idContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNet_id(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Net_idContext* VerilogParser::net_id() {
@@ -8380,16 +8128,12 @@ size_t VerilogParser::List_of_param_assignmentsContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_param_assignments;
 }
 
-void VerilogParser::List_of_param_assignmentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_param_assignments(this);
-}
 
-void VerilogParser::List_of_param_assignmentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_param_assignments(this);
+std::any VerilogParser::List_of_param_assignmentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_param_assignments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_param_assignmentsContext* VerilogParser::list_of_param_assignments() {
@@ -8460,16 +8204,12 @@ size_t VerilogParser::List_of_port_identifiersContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_port_identifiers;
 }
 
-void VerilogParser::List_of_port_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_port_identifiers(this);
-}
 
-void VerilogParser::List_of_port_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_port_identifiers(this);
+std::any VerilogParser::List_of_port_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_port_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_port_identifiersContext* VerilogParser::list_of_port_identifiers() {
@@ -8540,16 +8280,12 @@ size_t VerilogParser::List_of_real_identifiersContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_real_identifiers;
 }
 
-void VerilogParser::List_of_real_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_real_identifiers(this);
-}
 
-void VerilogParser::List_of_real_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_real_identifiers(this);
+std::any VerilogParser::List_of_real_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_real_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_real_identifiersContext* VerilogParser::list_of_real_identifiers() {
@@ -8618,16 +8354,12 @@ size_t VerilogParser::List_of_specparam_assignmentsContext::getRuleIndex() const
   return VerilogParser::RuleList_of_specparam_assignments;
 }
 
-void VerilogParser::List_of_specparam_assignmentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_specparam_assignments(this);
-}
 
-void VerilogParser::List_of_specparam_assignmentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_specparam_assignments(this);
+std::any VerilogParser::List_of_specparam_assignmentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_specparam_assignments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_specparam_assignmentsContext* VerilogParser::list_of_specparam_assignments() {
@@ -8696,16 +8428,12 @@ size_t VerilogParser::List_of_variable_identifiersContext::getRuleIndex() const 
   return VerilogParser::RuleList_of_variable_identifiers;
 }
 
-void VerilogParser::List_of_variable_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_variable_identifiers(this);
-}
 
-void VerilogParser::List_of_variable_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_variable_identifiers(this);
+std::any VerilogParser::List_of_variable_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_variable_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_variable_identifiersContext* VerilogParser::list_of_variable_identifiers() {
@@ -8774,16 +8502,12 @@ size_t VerilogParser::List_of_variable_port_identifiersContext::getRuleIndex() c
   return VerilogParser::RuleList_of_variable_port_identifiers;
 }
 
-void VerilogParser::List_of_variable_port_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_variable_port_identifiers(this);
-}
 
-void VerilogParser::List_of_variable_port_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_variable_port_identifiers(this);
+std::any VerilogParser::List_of_variable_port_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_variable_port_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_variable_port_identifiersContext* VerilogParser::list_of_variable_port_identifiers() {
@@ -8850,16 +8574,12 @@ size_t VerilogParser::Var_port_idContext::getRuleIndex() const {
   return VerilogParser::RuleVar_port_id;
 }
 
-void VerilogParser::Var_port_idContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVar_port_id(this);
-}
 
-void VerilogParser::Var_port_idContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVar_port_id(this);
+std::any VerilogParser::Var_port_idContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitVar_port_id(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Var_port_idContext* VerilogParser::var_port_id() {
@@ -8922,16 +8642,12 @@ size_t VerilogParser::Defparam_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleDefparam_assignment;
 }
 
-void VerilogParser::Defparam_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefparam_assignment(this);
-}
 
-void VerilogParser::Defparam_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefparam_assignment(this);
+std::any VerilogParser::Defparam_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDefparam_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Defparam_assignmentContext* VerilogParser::defparam_assignment() {
@@ -8987,16 +8703,12 @@ size_t VerilogParser::Net_decl_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleNet_decl_assignment;
 }
 
-void VerilogParser::Net_decl_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNet_decl_assignment(this);
-}
 
-void VerilogParser::Net_decl_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNet_decl_assignment(this);
+std::any VerilogParser::Net_decl_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNet_decl_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Net_decl_assignmentContext* VerilogParser::net_decl_assignment() {
@@ -9052,16 +8764,12 @@ size_t VerilogParser::Param_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleParam_assignment;
 }
 
-void VerilogParser::Param_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParam_assignment(this);
-}
 
-void VerilogParser::Param_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParam_assignment(this);
+std::any VerilogParser::Param_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitParam_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Param_assignmentContext* VerilogParser::param_assignment() {
@@ -9121,16 +8829,12 @@ size_t VerilogParser::Specparam_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleSpecparam_assignment;
 }
 
-void VerilogParser::Specparam_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpecparam_assignment(this);
-}
 
-void VerilogParser::Specparam_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpecparam_assignment(this);
+std::any VerilogParser::Specparam_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSpecparam_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Specparam_assignmentContext* VerilogParser::specparam_assignment() {
@@ -9232,16 +8936,12 @@ size_t VerilogParser::Pulse_control_specparamContext::getRuleIndex() const {
   return VerilogParser::RulePulse_control_specparam;
 }
 
-void VerilogParser::Pulse_control_specparamContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPulse_control_specparam(this);
-}
 
-void VerilogParser::Pulse_control_specparamContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPulse_control_specparam(this);
+std::any VerilogParser::Pulse_control_specparamContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPulse_control_specparam(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pulse_control_specparamContext* VerilogParser::pulse_control_specparam() {
@@ -9345,16 +9045,12 @@ size_t VerilogParser::Error_limit_valueContext::getRuleIndex() const {
   return VerilogParser::RuleError_limit_value;
 }
 
-void VerilogParser::Error_limit_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterError_limit_value(this);
-}
 
-void VerilogParser::Error_limit_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitError_limit_value(this);
+std::any VerilogParser::Error_limit_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitError_limit_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Error_limit_valueContext* VerilogParser::error_limit_value() {
@@ -9398,16 +9094,12 @@ size_t VerilogParser::Reject_limit_valueContext::getRuleIndex() const {
   return VerilogParser::RuleReject_limit_value;
 }
 
-void VerilogParser::Reject_limit_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReject_limit_value(this);
-}
 
-void VerilogParser::Reject_limit_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReject_limit_value(this);
+std::any VerilogParser::Reject_limit_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitReject_limit_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Reject_limit_valueContext* VerilogParser::reject_limit_value() {
@@ -9451,16 +9143,12 @@ size_t VerilogParser::Limit_valueContext::getRuleIndex() const {
   return VerilogParser::RuleLimit_value;
 }
 
-void VerilogParser::Limit_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLimit_value(this);
-}
 
-void VerilogParser::Limit_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLimit_value(this);
+std::any VerilogParser::Limit_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLimit_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Limit_valueContext* VerilogParser::limit_value() {
@@ -9520,16 +9208,12 @@ size_t VerilogParser::DimensionContext::getRuleIndex() const {
   return VerilogParser::RuleDimension;
 }
 
-void VerilogParser::DimensionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDimension(this);
-}
 
-void VerilogParser::DimensionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDimension(this);
+std::any VerilogParser::DimensionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDimension(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::DimensionContext* VerilogParser::dimension() {
@@ -9597,16 +9281,12 @@ size_t VerilogParser::Range_Context::getRuleIndex() const {
   return VerilogParser::RuleRange_;
 }
 
-void VerilogParser::Range_Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRange_(this);
-}
 
-void VerilogParser::Range_Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRange_(this);
+std::any VerilogParser::Range_Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitRange_(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Range_Context* VerilogParser::range_() {
@@ -9710,16 +9390,12 @@ size_t VerilogParser::Function_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleFunction_declaration;
 }
 
-void VerilogParser::Function_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunction_declaration(this);
-}
 
-void VerilogParser::Function_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunction_declaration(this);
+std::any VerilogParser::Function_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFunction_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Function_declarationContext* VerilogParser::function_declaration() {
@@ -9884,16 +9560,12 @@ size_t VerilogParser::Function_item_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleFunction_item_declaration;
 }
 
-void VerilogParser::Function_item_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunction_item_declaration(this);
-}
 
-void VerilogParser::Function_item_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunction_item_declaration(this);
+std::any VerilogParser::Function_item_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFunction_item_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Function_item_declarationContext* VerilogParser::function_item_declaration() {
@@ -9979,16 +9651,12 @@ size_t VerilogParser::Function_port_listContext::getRuleIndex() const {
   return VerilogParser::RuleFunction_port_list;
 }
 
-void VerilogParser::Function_port_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunction_port_list(this);
-}
 
-void VerilogParser::Function_port_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunction_port_list(this);
+std::any VerilogParser::Function_port_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFunction_port_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Function_port_listContext* VerilogParser::function_port_list() {
@@ -10053,16 +9721,12 @@ size_t VerilogParser::Func_port_itemContext::getRuleIndex() const {
   return VerilogParser::RuleFunc_port_item;
 }
 
-void VerilogParser::Func_port_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunc_port_item(this);
-}
 
-void VerilogParser::Func_port_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunc_port_item(this);
+std::any VerilogParser::Func_port_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFunc_port_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Func_port_itemContext* VerilogParser::func_port_item() {
@@ -10137,16 +9801,12 @@ size_t VerilogParser::Function_range_or_typeContext::getRuleIndex() const {
   return VerilogParser::RuleFunction_range_or_type;
 }
 
-void VerilogParser::Function_range_or_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunction_range_or_type(this);
-}
 
-void VerilogParser::Function_range_or_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunction_range_or_type(this);
+std::any VerilogParser::Function_range_or_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFunction_range_or_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Function_range_or_typeContext* VerilogParser::function_range_or_type() {
@@ -10292,16 +9952,12 @@ size_t VerilogParser::Task_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleTask_declaration;
 }
 
-void VerilogParser::Task_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTask_declaration(this);
-}
 
-void VerilogParser::Task_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTask_declaration(this);
+std::any VerilogParser::Task_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTask_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Task_declarationContext* VerilogParser::task_declaration() {
@@ -10457,16 +10113,12 @@ size_t VerilogParser::Task_item_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleTask_item_declaration;
 }
 
-void VerilogParser::Task_item_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTask_item_declaration(this);
-}
 
-void VerilogParser::Task_item_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTask_item_declaration(this);
+std::any VerilogParser::Task_item_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTask_item_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Task_item_declarationContext* VerilogParser::task_item_declaration() {
@@ -10590,16 +10242,12 @@ size_t VerilogParser::Task_port_listContext::getRuleIndex() const {
   return VerilogParser::RuleTask_port_list;
 }
 
-void VerilogParser::Task_port_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTask_port_list(this);
-}
 
-void VerilogParser::Task_port_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTask_port_list(this);
+std::any VerilogParser::Task_port_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTask_port_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Task_port_listContext* VerilogParser::task_port_list() {
@@ -10672,16 +10320,12 @@ size_t VerilogParser::Task_port_itemContext::getRuleIndex() const {
   return VerilogParser::RuleTask_port_item;
 }
 
-void VerilogParser::Task_port_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTask_port_item(this);
-}
 
-void VerilogParser::Task_port_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTask_port_item(this);
+std::any VerilogParser::Task_port_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTask_port_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Task_port_itemContext* VerilogParser::task_port_item() {
@@ -10800,16 +10444,12 @@ size_t VerilogParser::Tf_input_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleTf_input_declaration;
 }
 
-void VerilogParser::Tf_input_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTf_input_declaration(this);
-}
 
-void VerilogParser::Tf_input_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTf_input_declaration(this);
+std::any VerilogParser::Tf_input_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTf_input_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tf_input_declarationContext* VerilogParser::tf_input_declaration() {
@@ -10921,16 +10561,12 @@ size_t VerilogParser::Tf_output_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleTf_output_declaration;
 }
 
-void VerilogParser::Tf_output_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTf_output_declaration(this);
-}
 
-void VerilogParser::Tf_output_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTf_output_declaration(this);
+std::any VerilogParser::Tf_output_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTf_output_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tf_output_declarationContext* VerilogParser::tf_output_declaration() {
@@ -11042,16 +10678,12 @@ size_t VerilogParser::Tf_inout_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleTf_inout_declaration;
 }
 
-void VerilogParser::Tf_inout_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTf_inout_declaration(this);
-}
 
-void VerilogParser::Tf_inout_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTf_inout_declaration(this);
+std::any VerilogParser::Tf_inout_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTf_inout_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tf_inout_declarationContext* VerilogParser::tf_inout_declaration() {
@@ -11155,16 +10787,12 @@ size_t VerilogParser::Task_port_typeContext::getRuleIndex() const {
   return VerilogParser::RuleTask_port_type;
 }
 
-void VerilogParser::Task_port_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTask_port_type(this);
-}
 
-void VerilogParser::Task_port_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTask_port_type(this);
+std::any VerilogParser::Task_port_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTask_port_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Task_port_typeContext* VerilogParser::task_port_type() {
@@ -11273,16 +10901,12 @@ size_t VerilogParser::Block_item_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleBlock_item_declaration;
 }
 
-void VerilogParser::Block_item_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBlock_item_declaration(this);
-}
 
-void VerilogParser::Block_item_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBlock_item_declaration(this);
+std::any VerilogParser::Block_item_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBlock_item_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Block_item_declarationContext* VerilogParser::block_item_declaration() {
@@ -11518,16 +11142,12 @@ size_t VerilogParser::List_of_block_variable_identifiersContext::getRuleIndex() 
   return VerilogParser::RuleList_of_block_variable_identifiers;
 }
 
-void VerilogParser::List_of_block_variable_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_block_variable_identifiers(this);
-}
 
-void VerilogParser::List_of_block_variable_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_block_variable_identifiers(this);
+std::any VerilogParser::List_of_block_variable_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_block_variable_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_block_variable_identifiersContext* VerilogParser::list_of_block_variable_identifiers() {
@@ -11596,16 +11216,12 @@ size_t VerilogParser::List_of_block_real_identifiersContext::getRuleIndex() cons
   return VerilogParser::RuleList_of_block_real_identifiers;
 }
 
-void VerilogParser::List_of_block_real_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_block_real_identifiers(this);
-}
 
-void VerilogParser::List_of_block_real_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_block_real_identifiers(this);
+std::any VerilogParser::List_of_block_real_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_block_real_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_block_real_identifiersContext* VerilogParser::list_of_block_real_identifiers() {
@@ -11670,16 +11286,12 @@ size_t VerilogParser::Block_variable_typeContext::getRuleIndex() const {
   return VerilogParser::RuleBlock_variable_type;
 }
 
-void VerilogParser::Block_variable_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBlock_variable_type(this);
-}
 
-void VerilogParser::Block_variable_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBlock_variable_type(this);
+std::any VerilogParser::Block_variable_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBlock_variable_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Block_variable_typeContext* VerilogParser::block_variable_type() {
@@ -11742,16 +11354,12 @@ size_t VerilogParser::Block_real_typeContext::getRuleIndex() const {
   return VerilogParser::RuleBlock_real_type;
 }
 
-void VerilogParser::Block_real_typeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBlock_real_type(this);
-}
 
-void VerilogParser::Block_real_typeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBlock_real_type(this);
+std::any VerilogParser::Block_real_typeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBlock_real_type(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Block_real_typeContext* VerilogParser::block_real_type() {
@@ -11934,16 +11542,12 @@ size_t VerilogParser::Gate_instantiationContext::getRuleIndex() const {
   return VerilogParser::RuleGate_instantiation;
 }
 
-void VerilogParser::Gate_instantiationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGate_instantiation(this);
-}
 
-void VerilogParser::Gate_instantiationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGate_instantiation(this);
+std::any VerilogParser::Gate_instantiationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGate_instantiation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Gate_instantiationContext* VerilogParser::gate_instantiation() {
@@ -12360,16 +11964,12 @@ size_t VerilogParser::Cmos_switch_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleCmos_switch_instance;
 }
 
-void VerilogParser::Cmos_switch_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCmos_switch_instance(this);
-}
 
-void VerilogParser::Cmos_switch_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCmos_switch_instance(this);
+std::any VerilogParser::Cmos_switch_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCmos_switch_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Cmos_switch_instanceContext* VerilogParser::cmos_switch_instance() {
@@ -12468,16 +12068,12 @@ size_t VerilogParser::Enable_gate_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleEnable_gate_instance;
 }
 
-void VerilogParser::Enable_gate_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEnable_gate_instance(this);
-}
 
-void VerilogParser::Enable_gate_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEnable_gate_instance(this);
+std::any VerilogParser::Enable_gate_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEnable_gate_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Enable_gate_instanceContext* VerilogParser::enable_gate_instance() {
@@ -12572,16 +12168,12 @@ size_t VerilogParser::Mos_switch_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleMos_switch_instance;
 }
 
-void VerilogParser::Mos_switch_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMos_switch_instance(this);
-}
 
-void VerilogParser::Mos_switch_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMos_switch_instance(this);
+std::any VerilogParser::Mos_switch_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitMos_switch_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Mos_switch_instanceContext* VerilogParser::mos_switch_instance() {
@@ -12676,16 +12268,12 @@ size_t VerilogParser::N_input_gate_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleN_input_gate_instance;
 }
 
-void VerilogParser::N_input_gate_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterN_input_gate_instance(this);
-}
 
-void VerilogParser::N_input_gate_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitN_input_gate_instance(this);
+std::any VerilogParser::N_input_gate_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitN_input_gate_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::N_input_gate_instanceContext* VerilogParser::n_input_gate_instance() {
@@ -12788,16 +12376,12 @@ size_t VerilogParser::N_output_gate_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleN_output_gate_instance;
 }
 
-void VerilogParser::N_output_gate_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterN_output_gate_instance(this);
-}
 
-void VerilogParser::N_output_gate_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitN_output_gate_instance(this);
+std::any VerilogParser::N_output_gate_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitN_output_gate_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::N_output_gate_instanceContext* VerilogParser::n_output_gate_instance() {
@@ -12895,16 +12479,12 @@ size_t VerilogParser::Pass_switch_instanceContext::getRuleIndex() const {
   return VerilogParser::RulePass_switch_instance;
 }
 
-void VerilogParser::Pass_switch_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPass_switch_instance(this);
-}
 
-void VerilogParser::Pass_switch_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPass_switch_instance(this);
+std::any VerilogParser::Pass_switch_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPass_switch_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pass_switch_instanceContext* VerilogParser::pass_switch_instance() {
@@ -12995,16 +12575,12 @@ size_t VerilogParser::Pass_enable_switch_instanceContext::getRuleIndex() const {
   return VerilogParser::RulePass_enable_switch_instance;
 }
 
-void VerilogParser::Pass_enable_switch_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPass_enable_switch_instance(this);
-}
 
-void VerilogParser::Pass_enable_switch_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPass_enable_switch_instance(this);
+std::any VerilogParser::Pass_enable_switch_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPass_enable_switch_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pass_enable_switch_instanceContext* VerilogParser::pass_enable_switch_instance() {
@@ -13083,16 +12659,12 @@ size_t VerilogParser::Pull_gate_instanceContext::getRuleIndex() const {
   return VerilogParser::RulePull_gate_instance;
 }
 
-void VerilogParser::Pull_gate_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPull_gate_instance(this);
-}
 
-void VerilogParser::Pull_gate_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPull_gate_instance(this);
+std::any VerilogParser::Pull_gate_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPull_gate_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pull_gate_instanceContext* VerilogParser::pull_gate_instance() {
@@ -13155,16 +12727,12 @@ size_t VerilogParser::Name_of_gate_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleName_of_gate_instance;
 }
 
-void VerilogParser::Name_of_gate_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterName_of_gate_instance(this);
-}
 
-void VerilogParser::Name_of_gate_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitName_of_gate_instance(this);
+std::any VerilogParser::Name_of_gate_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitName_of_gate_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Name_of_gate_instanceContext* VerilogParser::name_of_gate_instance() {
@@ -13233,16 +12801,12 @@ size_t VerilogParser::Pulldown_strengthContext::getRuleIndex() const {
   return VerilogParser::RulePulldown_strength;
 }
 
-void VerilogParser::Pulldown_strengthContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPulldown_strength(this);
-}
 
-void VerilogParser::Pulldown_strengthContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPulldown_strength(this);
+std::any VerilogParser::Pulldown_strengthContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPulldown_strength(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pulldown_strengthContext* VerilogParser::pulldown_strength() {
@@ -13346,16 +12910,12 @@ size_t VerilogParser::Pullup_strengthContext::getRuleIndex() const {
   return VerilogParser::RulePullup_strength;
 }
 
-void VerilogParser::Pullup_strengthContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPullup_strength(this);
-}
 
-void VerilogParser::Pullup_strengthContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPullup_strength(this);
+std::any VerilogParser::Pullup_strengthContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPullup_strength(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pullup_strengthContext* VerilogParser::pullup_strength() {
@@ -13443,16 +13003,12 @@ size_t VerilogParser::Enable_terminalContext::getRuleIndex() const {
   return VerilogParser::RuleEnable_terminal;
 }
 
-void VerilogParser::Enable_terminalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEnable_terminal(this);
-}
 
-void VerilogParser::Enable_terminalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEnable_terminal(this);
+std::any VerilogParser::Enable_terminalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEnable_terminal(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Enable_terminalContext* VerilogParser::enable_terminal() {
@@ -13496,16 +13052,12 @@ size_t VerilogParser::Inout_terminalContext::getRuleIndex() const {
   return VerilogParser::RuleInout_terminal;
 }
 
-void VerilogParser::Inout_terminalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInout_terminal(this);
-}
 
-void VerilogParser::Inout_terminalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInout_terminal(this);
+std::any VerilogParser::Inout_terminalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInout_terminal(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Inout_terminalContext* VerilogParser::inout_terminal() {
@@ -13549,16 +13101,12 @@ size_t VerilogParser::Input_terminalContext::getRuleIndex() const {
   return VerilogParser::RuleInput_terminal;
 }
 
-void VerilogParser::Input_terminalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInput_terminal(this);
-}
 
-void VerilogParser::Input_terminalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInput_terminal(this);
+std::any VerilogParser::Input_terminalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInput_terminal(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Input_terminalContext* VerilogParser::input_terminal() {
@@ -13602,16 +13150,12 @@ size_t VerilogParser::Ncontrol_terminalContext::getRuleIndex() const {
   return VerilogParser::RuleNcontrol_terminal;
 }
 
-void VerilogParser::Ncontrol_terminalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNcontrol_terminal(this);
-}
 
-void VerilogParser::Ncontrol_terminalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNcontrol_terminal(this);
+std::any VerilogParser::Ncontrol_terminalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNcontrol_terminal(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Ncontrol_terminalContext* VerilogParser::ncontrol_terminal() {
@@ -13655,16 +13199,12 @@ size_t VerilogParser::Output_terminalContext::getRuleIndex() const {
   return VerilogParser::RuleOutput_terminal;
 }
 
-void VerilogParser::Output_terminalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOutput_terminal(this);
-}
 
-void VerilogParser::Output_terminalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOutput_terminal(this);
+std::any VerilogParser::Output_terminalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOutput_terminal(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Output_terminalContext* VerilogParser::output_terminal() {
@@ -13708,16 +13248,12 @@ size_t VerilogParser::Pcontrol_terminalContext::getRuleIndex() const {
   return VerilogParser::RulePcontrol_terminal;
 }
 
-void VerilogParser::Pcontrol_terminalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPcontrol_terminal(this);
-}
 
-void VerilogParser::Pcontrol_terminalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPcontrol_terminal(this);
+std::any VerilogParser::Pcontrol_terminalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPcontrol_terminal(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pcontrol_terminalContext* VerilogParser::pcontrol_terminal() {
@@ -13765,16 +13301,12 @@ size_t VerilogParser::Cmos_switchtypeContext::getRuleIndex() const {
   return VerilogParser::RuleCmos_switchtype;
 }
 
-void VerilogParser::Cmos_switchtypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCmos_switchtype(this);
-}
 
-void VerilogParser::Cmos_switchtypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCmos_switchtype(this);
+std::any VerilogParser::Cmos_switchtypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCmos_switchtype(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Cmos_switchtypeContext* VerilogParser::cmos_switchtype() {
@@ -13838,16 +13370,12 @@ size_t VerilogParser::Enable_gatetypeContext::getRuleIndex() const {
   return VerilogParser::RuleEnable_gatetype;
 }
 
-void VerilogParser::Enable_gatetypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEnable_gatetype(this);
-}
 
-void VerilogParser::Enable_gatetypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEnable_gatetype(this);
+std::any VerilogParser::Enable_gatetypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEnable_gatetype(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Enable_gatetypeContext* VerilogParser::enable_gatetype() {
@@ -13915,16 +13443,12 @@ size_t VerilogParser::Mos_switchtypeContext::getRuleIndex() const {
   return VerilogParser::RuleMos_switchtype;
 }
 
-void VerilogParser::Mos_switchtypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMos_switchtype(this);
-}
 
-void VerilogParser::Mos_switchtypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMos_switchtype(this);
+std::any VerilogParser::Mos_switchtypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitMos_switchtype(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Mos_switchtypeContext* VerilogParser::mos_switchtype() {
@@ -13997,16 +13521,12 @@ size_t VerilogParser::N_input_gatetypeContext::getRuleIndex() const {
   return VerilogParser::RuleN_input_gatetype;
 }
 
-void VerilogParser::N_input_gatetypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterN_input_gatetype(this);
-}
 
-void VerilogParser::N_input_gatetypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitN_input_gatetype(this);
+std::any VerilogParser::N_input_gatetypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitN_input_gatetype(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::N_input_gatetypeContext* VerilogParser::n_input_gatetype() {
@@ -14065,16 +13585,12 @@ size_t VerilogParser::N_output_gatetypeContext::getRuleIndex() const {
   return VerilogParser::RuleN_output_gatetype;
 }
 
-void VerilogParser::N_output_gatetypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterN_output_gatetype(this);
-}
 
-void VerilogParser::N_output_gatetypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitN_output_gatetype(this);
+std::any VerilogParser::N_output_gatetypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitN_output_gatetype(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::N_output_gatetypeContext* VerilogParser::n_output_gatetype() {
@@ -14138,16 +13654,12 @@ size_t VerilogParser::Pass_en_switchtypeContext::getRuleIndex() const {
   return VerilogParser::RulePass_en_switchtype;
 }
 
-void VerilogParser::Pass_en_switchtypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPass_en_switchtype(this);
-}
 
-void VerilogParser::Pass_en_switchtypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPass_en_switchtype(this);
+std::any VerilogParser::Pass_en_switchtypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPass_en_switchtype(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pass_en_switchtypeContext* VerilogParser::pass_en_switchtype() {
@@ -14204,16 +13716,12 @@ size_t VerilogParser::Pass_switchtypeContext::getRuleIndex() const {
   return VerilogParser::RulePass_switchtype;
 }
 
-void VerilogParser::Pass_switchtypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPass_switchtype(this);
-}
 
-void VerilogParser::Pass_switchtypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPass_switchtype(this);
+std::any VerilogParser::Pass_switchtypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPass_switchtype(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pass_switchtypeContext* VerilogParser::pass_switchtype() {
@@ -14291,16 +13799,12 @@ size_t VerilogParser::Module_instantiationContext::getRuleIndex() const {
   return VerilogParser::RuleModule_instantiation;
 }
 
-void VerilogParser::Module_instantiationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_instantiation(this);
-}
 
-void VerilogParser::Module_instantiationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_instantiation(this);
+std::any VerilogParser::Module_instantiationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_instantiation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_instantiationContext* VerilogParser::module_instantiation() {
@@ -14381,16 +13885,12 @@ size_t VerilogParser::Parameter_value_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleParameter_value_assignment;
 }
 
-void VerilogParser::Parameter_value_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParameter_value_assignment(this);
-}
 
-void VerilogParser::Parameter_value_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParameter_value_assignment(this);
+std::any VerilogParser::Parameter_value_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitParameter_value_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Parameter_value_assignmentContext* VerilogParser::parameter_value_assignment() {
@@ -14460,16 +13960,12 @@ size_t VerilogParser::List_of_parameter_assignmentsContext::getRuleIndex() const
   return VerilogParser::RuleList_of_parameter_assignments;
 }
 
-void VerilogParser::List_of_parameter_assignmentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_parameter_assignments(this);
-}
 
-void VerilogParser::List_of_parameter_assignmentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_parameter_assignments(this);
+std::any VerilogParser::List_of_parameter_assignmentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_parameter_assignments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_parameter_assignmentsContext* VerilogParser::list_of_parameter_assignments() {
@@ -14578,16 +14074,12 @@ size_t VerilogParser::Ordered_parameter_assignmentContext::getRuleIndex() const 
   return VerilogParser::RuleOrdered_parameter_assignment;
 }
 
-void VerilogParser::Ordered_parameter_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOrdered_parameter_assignment(this);
-}
 
-void VerilogParser::Ordered_parameter_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOrdered_parameter_assignment(this);
+std::any VerilogParser::Ordered_parameter_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOrdered_parameter_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Ordered_parameter_assignmentContext* VerilogParser::ordered_parameter_assignment() {
@@ -14647,16 +14139,12 @@ size_t VerilogParser::Named_parameter_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleNamed_parameter_assignment;
 }
 
-void VerilogParser::Named_parameter_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNamed_parameter_assignment(this);
-}
 
-void VerilogParser::Named_parameter_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNamed_parameter_assignment(this);
+std::any VerilogParser::Named_parameter_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNamed_parameter_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Named_parameter_assignmentContext* VerilogParser::named_parameter_assignment() {
@@ -14730,16 +14218,12 @@ size_t VerilogParser::Module_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleModule_instance;
 }
 
-void VerilogParser::Module_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_instance(this);
-}
 
-void VerilogParser::Module_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_instance(this);
+std::any VerilogParser::Module_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_instanceContext* VerilogParser::module_instance() {
@@ -14793,16 +14277,12 @@ size_t VerilogParser::Name_of_module_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleName_of_module_instance;
 }
 
-void VerilogParser::Name_of_module_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterName_of_module_instance(this);
-}
 
-void VerilogParser::Name_of_module_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitName_of_module_instance(this);
+std::any VerilogParser::Name_of_module_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitName_of_module_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Name_of_module_instanceContext* VerilogParser::name_of_module_instance() {
@@ -14875,16 +14355,12 @@ size_t VerilogParser::List_of_port_connectionsContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_port_connections;
 }
 
-void VerilogParser::List_of_port_connectionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_port_connections(this);
-}
 
-void VerilogParser::List_of_port_connectionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_port_connections(this);
+std::any VerilogParser::List_of_port_connectionsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_port_connections(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_port_connectionsContext* VerilogParser::list_of_port_connections() {
@@ -14978,16 +14454,12 @@ size_t VerilogParser::Ordered_port_connectionContext::getRuleIndex() const {
   return VerilogParser::RuleOrdered_port_connection;
 }
 
-void VerilogParser::Ordered_port_connectionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOrdered_port_connection(this);
-}
 
-void VerilogParser::Ordered_port_connectionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOrdered_port_connection(this);
+std::any VerilogParser::Ordered_port_connectionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOrdered_port_connection(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Ordered_port_connectionContext* VerilogParser::ordered_port_connection() {
@@ -15078,16 +14550,12 @@ size_t VerilogParser::Named_port_connectionContext::getRuleIndex() const {
   return VerilogParser::RuleNamed_port_connection;
 }
 
-void VerilogParser::Named_port_connectionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNamed_port_connection(this);
-}
 
-void VerilogParser::Named_port_connectionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNamed_port_connection(this);
+std::any VerilogParser::Named_port_connectionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNamed_port_connection(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Named_port_connectionContext* VerilogParser::named_port_connection() {
@@ -15171,16 +14639,12 @@ size_t VerilogParser::Generate_regionContext::getRuleIndex() const {
   return VerilogParser::RuleGenerate_region;
 }
 
-void VerilogParser::Generate_regionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenerate_region(this);
-}
 
-void VerilogParser::Generate_regionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenerate_region(this);
+std::any VerilogParser::Generate_regionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenerate_region(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Generate_regionContext* VerilogParser::generate_region() {
@@ -15248,16 +14712,12 @@ size_t VerilogParser::Genvar_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleGenvar_declaration;
 }
 
-void VerilogParser::Genvar_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenvar_declaration(this);
-}
 
-void VerilogParser::Genvar_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenvar_declaration(this);
+std::any VerilogParser::Genvar_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenvar_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Genvar_declarationContext* VerilogParser::genvar_declaration() {
@@ -15317,16 +14777,12 @@ size_t VerilogParser::List_of_genvar_identifiersContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_genvar_identifiers;
 }
 
-void VerilogParser::List_of_genvar_identifiersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_genvar_identifiers(this);
-}
 
-void VerilogParser::List_of_genvar_identifiersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_genvar_identifiers(this);
+std::any VerilogParser::List_of_genvar_identifiersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_genvar_identifiers(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_genvar_identifiersContext* VerilogParser::list_of_genvar_identifiers() {
@@ -15415,16 +14871,12 @@ size_t VerilogParser::Loop_generate_constructContext::getRuleIndex() const {
   return VerilogParser::RuleLoop_generate_construct;
 }
 
-void VerilogParser::Loop_generate_constructContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoop_generate_construct(this);
-}
 
-void VerilogParser::Loop_generate_constructContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoop_generate_construct(this);
+std::any VerilogParser::Loop_generate_constructContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLoop_generate_construct(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Loop_generate_constructContext* VerilogParser::loop_generate_construct() {
@@ -15492,16 +14944,12 @@ size_t VerilogParser::Genvar_initializationContext::getRuleIndex() const {
   return VerilogParser::RuleGenvar_initialization;
 }
 
-void VerilogParser::Genvar_initializationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenvar_initialization(this);
-}
 
-void VerilogParser::Genvar_initializationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenvar_initialization(this);
+std::any VerilogParser::Genvar_initializationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenvar_initialization(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Genvar_initializationContext* VerilogParser::genvar_initialization() {
@@ -15549,16 +14997,12 @@ size_t VerilogParser::Genvar_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleGenvar_expression;
 }
 
-void VerilogParser::Genvar_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenvar_expression(this);
-}
 
-void VerilogParser::Genvar_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenvar_expression(this);
+std::any VerilogParser::Genvar_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenvar_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Genvar_expressionContext* VerilogParser::genvar_expression() {
@@ -15610,16 +15054,12 @@ size_t VerilogParser::Genvar_iterationContext::getRuleIndex() const {
   return VerilogParser::RuleGenvar_iteration;
 }
 
-void VerilogParser::Genvar_iterationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenvar_iteration(this);
-}
 
-void VerilogParser::Genvar_iterationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenvar_iteration(this);
+std::any VerilogParser::Genvar_iterationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenvar_iteration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Genvar_iterationContext* VerilogParser::genvar_iteration() {
@@ -15671,16 +15111,12 @@ size_t VerilogParser::Conditional_generate_constructContext::getRuleIndex() cons
   return VerilogParser::RuleConditional_generate_construct;
 }
 
-void VerilogParser::Conditional_generate_constructContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConditional_generate_construct(this);
-}
 
-void VerilogParser::Conditional_generate_constructContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConditional_generate_construct(this);
+std::any VerilogParser::Conditional_generate_constructContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConditional_generate_construct(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Conditional_generate_constructContext* VerilogParser::conditional_generate_construct() {
@@ -15765,16 +15201,12 @@ size_t VerilogParser::If_generate_constructContext::getRuleIndex() const {
   return VerilogParser::RuleIf_generate_construct;
 }
 
-void VerilogParser::If_generate_constructContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIf_generate_construct(this);
-}
 
-void VerilogParser::If_generate_constructContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIf_generate_construct(this);
+std::any VerilogParser::If_generate_constructContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitIf_generate_construct(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::If_generate_constructContext* VerilogParser::if_generate_construct() {
@@ -15865,16 +15297,12 @@ size_t VerilogParser::Case_generate_constructContext::getRuleIndex() const {
   return VerilogParser::RuleCase_generate_construct;
 }
 
-void VerilogParser::Case_generate_constructContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCase_generate_construct(this);
-}
 
-void VerilogParser::Case_generate_constructContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCase_generate_construct(this);
+std::any VerilogParser::Case_generate_constructContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCase_generate_construct(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Case_generate_constructContext* VerilogParser::case_generate_construct() {
@@ -15964,16 +15392,12 @@ size_t VerilogParser::Case_generate_itemContext::getRuleIndex() const {
   return VerilogParser::RuleCase_generate_item;
 }
 
-void VerilogParser::Case_generate_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCase_generate_item(this);
-}
 
-void VerilogParser::Case_generate_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCase_generate_item(this);
+std::any VerilogParser::Case_generate_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCase_generate_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Case_generate_itemContext* VerilogParser::case_generate_item() {
@@ -16100,16 +15524,12 @@ size_t VerilogParser::Generate_blockContext::getRuleIndex() const {
   return VerilogParser::RuleGenerate_block;
 }
 
-void VerilogParser::Generate_blockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenerate_block(this);
-}
 
-void VerilogParser::Generate_blockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenerate_block(this);
+std::any VerilogParser::Generate_blockContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenerate_block(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Generate_blockContext* VerilogParser::generate_block() {
@@ -16255,16 +15675,12 @@ size_t VerilogParser::Generate_block_nameContext::getRuleIndex() const {
   return VerilogParser::RuleGenerate_block_name;
 }
 
-void VerilogParser::Generate_block_nameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenerate_block_name(this);
-}
 
-void VerilogParser::Generate_block_nameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenerate_block_name(this);
+std::any VerilogParser::Generate_block_nameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenerate_block_name(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Generate_block_nameContext* VerilogParser::generate_block_name() {
@@ -16314,16 +15730,12 @@ size_t VerilogParser::Generate_block_or_nullContext::getRuleIndex() const {
   return VerilogParser::RuleGenerate_block_or_null;
 }
 
-void VerilogParser::Generate_block_or_nullContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenerate_block_or_null(this);
-}
 
-void VerilogParser::Generate_block_or_nullContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenerate_block_or_null(this);
+std::any VerilogParser::Generate_block_or_nullContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenerate_block_or_null(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Generate_block_or_nullContext* VerilogParser::generate_block_or_null() {
@@ -16490,16 +15902,12 @@ size_t VerilogParser::Udp_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_declaration;
 }
 
-void VerilogParser::Udp_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_declaration(this);
-}
 
-void VerilogParser::Udp_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_declaration(this);
+std::any VerilogParser::Udp_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_declarationContext* VerilogParser::udp_declaration() {
@@ -16636,16 +16044,12 @@ size_t VerilogParser::Udp_port_listContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_port_list;
 }
 
-void VerilogParser::Udp_port_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_port_list(this);
-}
 
-void VerilogParser::Udp_port_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_port_list(this);
+std::any VerilogParser::Udp_port_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_port_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_port_listContext* VerilogParser::udp_port_list() {
@@ -16722,16 +16126,12 @@ size_t VerilogParser::Udp_declaration_port_listContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_declaration_port_list;
 }
 
-void VerilogParser::Udp_declaration_port_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_declaration_port_list(this);
-}
 
-void VerilogParser::Udp_declaration_port_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_declaration_port_list(this);
+std::any VerilogParser::Udp_declaration_port_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_declaration_port_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_declaration_port_listContext* VerilogParser::udp_declaration_port_list() {
@@ -16804,16 +16204,12 @@ size_t VerilogParser::Udp_port_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_port_declaration;
 }
 
-void VerilogParser::Udp_port_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_port_declaration(this);
-}
 
-void VerilogParser::Udp_port_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_port_declaration(this);
+std::any VerilogParser::Udp_port_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_port_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_port_declarationContext* VerilogParser::udp_port_declaration() {
@@ -16911,16 +16307,12 @@ size_t VerilogParser::Udp_output_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_output_declaration;
 }
 
-void VerilogParser::Udp_output_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_output_declaration(this);
-}
 
-void VerilogParser::Udp_output_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_output_declaration(this);
+std::any VerilogParser::Udp_output_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_output_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_output_declarationContext* VerilogParser::udp_output_declaration() {
@@ -17030,16 +16422,12 @@ size_t VerilogParser::Udp_input_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_input_declaration;
 }
 
-void VerilogParser::Udp_input_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_input_declaration(this);
-}
 
-void VerilogParser::Udp_input_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_input_declaration(this);
+std::any VerilogParser::Udp_input_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_input_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_input_declarationContext* VerilogParser::udp_input_declaration() {
@@ -17108,16 +16496,12 @@ size_t VerilogParser::Udp_reg_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_reg_declaration;
 }
 
-void VerilogParser::Udp_reg_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_reg_declaration(this);
-}
 
-void VerilogParser::Udp_reg_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_reg_declaration(this);
+std::any VerilogParser::Udp_reg_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_reg_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_reg_declarationContext* VerilogParser::udp_reg_declaration() {
@@ -17178,16 +16562,12 @@ size_t VerilogParser::Udp_bodyContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_body;
 }
 
-void VerilogParser::Udp_bodyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_body(this);
-}
 
-void VerilogParser::Udp_bodyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_body(this);
+std::any VerilogParser::Udp_bodyContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_body(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_bodyContext* VerilogParser::udp_body() {
@@ -17260,16 +16640,12 @@ size_t VerilogParser::Combinational_bodyContext::getRuleIndex() const {
   return VerilogParser::RuleCombinational_body;
 }
 
-void VerilogParser::Combinational_bodyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCombinational_body(this);
-}
 
-void VerilogParser::Combinational_bodyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCombinational_body(this);
+std::any VerilogParser::Combinational_bodyContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCombinational_body(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Combinational_bodyContext* VerilogParser::combinational_body() {
@@ -17340,16 +16716,12 @@ size_t VerilogParser::Combinational_entryContext::getRuleIndex() const {
   return VerilogParser::RuleCombinational_entry;
 }
 
-void VerilogParser::Combinational_entryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCombinational_entry(this);
-}
 
-void VerilogParser::Combinational_entryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCombinational_entry(this);
+std::any VerilogParser::Combinational_entryContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCombinational_entry(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Combinational_entryContext* VerilogParser::combinational_entry() {
@@ -17415,16 +16787,12 @@ size_t VerilogParser::Sequential_bodyContext::getRuleIndex() const {
   return VerilogParser::RuleSequential_body;
 }
 
-void VerilogParser::Sequential_bodyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSequential_body(this);
-}
 
-void VerilogParser::Sequential_bodyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSequential_body(this);
+std::any VerilogParser::Sequential_bodyContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSequential_body(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Sequential_bodyContext* VerilogParser::sequential_body() {
@@ -17506,16 +16874,12 @@ size_t VerilogParser::Udp_initial_statementContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_initial_statement;
 }
 
-void VerilogParser::Udp_initial_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_initial_statement(this);
-}
 
-void VerilogParser::Udp_initial_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_initial_statement(this);
+std::any VerilogParser::Udp_initial_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_initial_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_initial_statementContext* VerilogParser::udp_initial_statement() {
@@ -17571,16 +16935,12 @@ size_t VerilogParser::Init_valContext::getRuleIndex() const {
   return VerilogParser::RuleInit_val;
 }
 
-void VerilogParser::Init_valContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInit_val(this);
-}
 
-void VerilogParser::Init_valContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInit_val(this);
+std::any VerilogParser::Init_valContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInit_val(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Init_valContext* VerilogParser::init_val() {
@@ -17661,16 +17021,12 @@ size_t VerilogParser::Sequential_entryContext::getRuleIndex() const {
   return VerilogParser::RuleSequential_entry;
 }
 
-void VerilogParser::Sequential_entryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSequential_entry(this);
-}
 
-void VerilogParser::Sequential_entryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSequential_entry(this);
+std::any VerilogParser::Sequential_entryContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSequential_entry(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Sequential_entryContext* VerilogParser::sequential_entry() {
@@ -17728,16 +17084,12 @@ size_t VerilogParser::Seq_input_listContext::getRuleIndex() const {
   return VerilogParser::RuleSeq_input_list;
 }
 
-void VerilogParser::Seq_input_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSeq_input_list(this);
-}
 
-void VerilogParser::Seq_input_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSeq_input_list(this);
+std::any VerilogParser::Seq_input_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSeq_input_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Seq_input_listContext* VerilogParser::seq_input_list() {
@@ -17802,16 +17154,12 @@ size_t VerilogParser::Level_input_listContext::getRuleIndex() const {
   return VerilogParser::RuleLevel_input_list;
 }
 
-void VerilogParser::Level_input_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLevel_input_list(this);
-}
 
-void VerilogParser::Level_input_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLevel_input_list(this);
+std::any VerilogParser::Level_input_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLevel_input_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Level_input_listContext* VerilogParser::level_input_list() {
@@ -17874,16 +17222,12 @@ size_t VerilogParser::Edge_input_listContext::getRuleIndex() const {
   return VerilogParser::RuleEdge_input_list;
 }
 
-void VerilogParser::Edge_input_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEdge_input_list(this);
-}
 
-void VerilogParser::Edge_input_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEdge_input_list(this);
+std::any VerilogParser::Edge_input_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEdge_input_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Edge_input_listContext* VerilogParser::edge_input_list() {
@@ -17968,16 +17312,12 @@ size_t VerilogParser::Edge_indicatorContext::getRuleIndex() const {
   return VerilogParser::RuleEdge_indicator;
 }
 
-void VerilogParser::Edge_indicatorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEdge_indicator(this);
-}
 
-void VerilogParser::Edge_indicatorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEdge_indicator(this);
+std::any VerilogParser::Edge_indicatorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEdge_indicator(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Edge_indicatorContext* VerilogParser::edge_indicator() {
@@ -18044,16 +17384,12 @@ size_t VerilogParser::Current_stateContext::getRuleIndex() const {
   return VerilogParser::RuleCurrent_state;
 }
 
-void VerilogParser::Current_stateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCurrent_state(this);
-}
 
-void VerilogParser::Current_stateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCurrent_state(this);
+std::any VerilogParser::Current_stateContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCurrent_state(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Current_stateContext* VerilogParser::current_state() {
@@ -18101,16 +17437,12 @@ size_t VerilogParser::Next_stateContext::getRuleIndex() const {
   return VerilogParser::RuleNext_state;
 }
 
-void VerilogParser::Next_stateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNext_state(this);
-}
 
-void VerilogParser::Next_stateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNext_state(this);
+std::any VerilogParser::Next_stateContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNext_state(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Next_stateContext* VerilogParser::next_state() {
@@ -18171,16 +17503,12 @@ size_t VerilogParser::Output_symbolContext::getRuleIndex() const {
   return VerilogParser::RuleOutput_symbol;
 }
 
-void VerilogParser::Output_symbolContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOutput_symbol(this);
-}
 
-void VerilogParser::Output_symbolContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOutput_symbol(this);
+std::any VerilogParser::Output_symbolContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOutput_symbol(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Output_symbolContext* VerilogParser::output_symbol() {
@@ -18228,16 +17556,12 @@ size_t VerilogParser::Level_symbolContext::getRuleIndex() const {
   return VerilogParser::RuleLevel_symbol;
 }
 
-void VerilogParser::Level_symbolContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLevel_symbol(this);
-}
 
-void VerilogParser::Level_symbolContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLevel_symbol(this);
+std::any VerilogParser::Level_symbolContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLevel_symbol(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Level_symbolContext* VerilogParser::level_symbol() {
@@ -18291,16 +17615,12 @@ size_t VerilogParser::Edge_symbolContext::getRuleIndex() const {
   return VerilogParser::RuleEdge_symbol;
 }
 
-void VerilogParser::Edge_symbolContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEdge_symbol(this);
-}
 
-void VerilogParser::Edge_symbolContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEdge_symbol(this);
+std::any VerilogParser::Edge_symbolContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEdge_symbol(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Edge_symbolContext* VerilogParser::edge_symbol() {
@@ -18372,16 +17692,12 @@ size_t VerilogParser::Udp_instantiationContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_instantiation;
 }
 
-void VerilogParser::Udp_instantiationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_instantiation(this);
-}
 
-void VerilogParser::Udp_instantiationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_instantiation(this);
+std::any VerilogParser::Udp_instantiationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_instantiation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_instantiationContext* VerilogParser::udp_instantiation() {
@@ -18491,16 +17807,12 @@ size_t VerilogParser::Udp_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_instance;
 }
 
-void VerilogParser::Udp_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_instance(this);
-}
 
-void VerilogParser::Udp_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_instance(this);
+std::any VerilogParser::Udp_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_instanceContext* VerilogParser::udp_instance() {
@@ -18579,16 +17891,12 @@ size_t VerilogParser::Name_of_udp_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleName_of_udp_instance;
 }
 
-void VerilogParser::Name_of_udp_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterName_of_udp_instance(this);
-}
 
-void VerilogParser::Name_of_udp_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitName_of_udp_instance(this);
+std::any VerilogParser::Name_of_udp_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitName_of_udp_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Name_of_udp_instanceContext* VerilogParser::name_of_udp_instance() {
@@ -18657,16 +17965,12 @@ size_t VerilogParser::Continuous_assignContext::getRuleIndex() const {
   return VerilogParser::RuleContinuous_assign;
 }
 
-void VerilogParser::Continuous_assignContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterContinuous_assign(this);
-}
 
-void VerilogParser::Continuous_assignContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitContinuous_assign(this);
+std::any VerilogParser::Continuous_assignContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitContinuous_assign(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Continuous_assignContext* VerilogParser::continuous_assign() {
@@ -18743,16 +18047,12 @@ size_t VerilogParser::List_of_net_assignmentsContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_net_assignments;
 }
 
-void VerilogParser::List_of_net_assignmentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_net_assignments(this);
-}
 
-void VerilogParser::List_of_net_assignmentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_net_assignments(this);
+std::any VerilogParser::List_of_net_assignmentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_net_assignments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_net_assignmentsContext* VerilogParser::list_of_net_assignments() {
@@ -18817,16 +18117,12 @@ size_t VerilogParser::Net_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleNet_assignment;
 }
 
-void VerilogParser::Net_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNet_assignment(this);
-}
 
-void VerilogParser::Net_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNet_assignment(this);
+std::any VerilogParser::Net_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNet_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Net_assignmentContext* VerilogParser::net_assignment() {
@@ -18878,16 +18174,12 @@ size_t VerilogParser::Initial_constructContext::getRuleIndex() const {
   return VerilogParser::RuleInitial_construct;
 }
 
-void VerilogParser::Initial_constructContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInitial_construct(this);
-}
 
-void VerilogParser::Initial_constructContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInitial_construct(this);
+std::any VerilogParser::Initial_constructContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInitial_construct(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Initial_constructContext* VerilogParser::initial_construct() {
@@ -18937,16 +18229,12 @@ size_t VerilogParser::Always_constructContext::getRuleIndex() const {
   return VerilogParser::RuleAlways_construct;
 }
 
-void VerilogParser::Always_constructContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlways_construct(this);
-}
 
-void VerilogParser::Always_constructContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlways_construct(this);
+std::any VerilogParser::Always_constructContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitAlways_construct(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Always_constructContext* VerilogParser::always_construct() {
@@ -19004,16 +18292,12 @@ size_t VerilogParser::Blocking_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleBlocking_assignment;
 }
 
-void VerilogParser::Blocking_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBlocking_assignment(this);
-}
 
-void VerilogParser::Blocking_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBlocking_assignment(this);
+std::any VerilogParser::Blocking_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBlocking_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Blocking_assignmentContext* VerilogParser::blocking_assignment() {
@@ -19084,16 +18368,12 @@ size_t VerilogParser::Nonblocking_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleNonblocking_assignment;
 }
 
-void VerilogParser::Nonblocking_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNonblocking_assignment(this);
-}
 
-void VerilogParser::Nonblocking_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNonblocking_assignment(this);
+std::any VerilogParser::Nonblocking_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNonblocking_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Nonblocking_assignmentContext* VerilogParser::nonblocking_assignment() {
@@ -19172,16 +18452,12 @@ size_t VerilogParser::Procedural_continuous_assignmentsContext::getRuleIndex() c
   return VerilogParser::RuleProcedural_continuous_assignments;
 }
 
-void VerilogParser::Procedural_continuous_assignmentsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProcedural_continuous_assignments(this);
-}
 
-void VerilogParser::Procedural_continuous_assignmentsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProcedural_continuous_assignments(this);
+std::any VerilogParser::Procedural_continuous_assignmentsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitProcedural_continuous_assignments(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Procedural_continuous_assignmentsContext* VerilogParser::procedural_continuous_assignments() {
@@ -19272,16 +18548,12 @@ size_t VerilogParser::Variable_assignmentContext::getRuleIndex() const {
   return VerilogParser::RuleVariable_assignment;
 }
 
-void VerilogParser::Variable_assignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVariable_assignment(this);
-}
 
-void VerilogParser::Variable_assignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVariable_assignment(this);
+std::any VerilogParser::Variable_assignmentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitVariable_assignment(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Variable_assignmentContext* VerilogParser::variable_assignment() {
@@ -19353,16 +18625,12 @@ size_t VerilogParser::Par_blockContext::getRuleIndex() const {
   return VerilogParser::RulePar_block;
 }
 
-void VerilogParser::Par_blockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPar_block(this);
-}
 
-void VerilogParser::Par_blockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPar_block(this);
+std::any VerilogParser::Par_blockContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPar_block(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Par_blockContext* VerilogParser::par_block() {
@@ -19447,16 +18715,12 @@ size_t VerilogParser::Block_nameContext::getRuleIndex() const {
   return VerilogParser::RuleBlock_name;
 }
 
-void VerilogParser::Block_nameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBlock_name(this);
-}
 
-void VerilogParser::Block_nameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBlock_name(this);
+std::any VerilogParser::Block_nameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBlock_name(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Block_nameContext* VerilogParser::block_name() {
@@ -19526,16 +18790,12 @@ size_t VerilogParser::Seq_blockContext::getRuleIndex() const {
   return VerilogParser::RuleSeq_block;
 }
 
-void VerilogParser::Seq_blockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSeq_block(this);
-}
 
-void VerilogParser::Seq_blockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSeq_block(this);
+std::any VerilogParser::Seq_blockContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSeq_block(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Seq_blockContext* VerilogParser::seq_block() {
@@ -19680,16 +18940,12 @@ size_t VerilogParser::StatementContext::getRuleIndex() const {
   return VerilogParser::RuleStatement;
 }
 
-void VerilogParser::StatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStatement(this);
-}
 
-void VerilogParser::StatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStatement(this);
+std::any VerilogParser::StatementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitStatement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::StatementContext* VerilogParser::statement() {
@@ -19993,16 +19249,12 @@ size_t VerilogParser::Statement_or_nullContext::getRuleIndex() const {
   return VerilogParser::RuleStatement_or_null;
 }
 
-void VerilogParser::Statement_or_nullContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStatement_or_null(this);
-}
 
-void VerilogParser::Statement_or_nullContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStatement_or_null(this);
+std::any VerilogParser::Statement_or_nullContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitStatement_or_null(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Statement_or_nullContext* VerilogParser::statement_or_null() {
@@ -20074,16 +19326,12 @@ size_t VerilogParser::Function_statementContext::getRuleIndex() const {
   return VerilogParser::RuleFunction_statement;
 }
 
-void VerilogParser::Function_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunction_statement(this);
-}
 
-void VerilogParser::Function_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunction_statement(this);
+std::any VerilogParser::Function_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFunction_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Function_statementContext* VerilogParser::function_statement() {
@@ -20143,16 +19391,12 @@ size_t VerilogParser::Delay_controlContext::getRuleIndex() const {
   return VerilogParser::RuleDelay_control;
 }
 
-void VerilogParser::Delay_controlContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelay_control(this);
-}
 
-void VerilogParser::Delay_controlContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelay_control(this);
+std::any VerilogParser::Delay_controlContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelay_control(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delay_controlContext* VerilogParser::delay_control() {
@@ -20241,16 +19485,12 @@ size_t VerilogParser::Delay_or_event_controlContext::getRuleIndex() const {
   return VerilogParser::RuleDelay_or_event_control;
 }
 
-void VerilogParser::Delay_or_event_controlContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelay_or_event_control(this);
-}
 
-void VerilogParser::Delay_or_event_controlContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelay_or_event_control(this);
+std::any VerilogParser::Delay_or_event_controlContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelay_or_event_control(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delay_or_event_controlContext* VerilogParser::delay_or_event_control() {
@@ -20334,16 +19574,12 @@ size_t VerilogParser::Disable_statementContext::getRuleIndex() const {
   return VerilogParser::RuleDisable_statement;
 }
 
-void VerilogParser::Disable_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDisable_statement(this);
-}
 
-void VerilogParser::Disable_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDisable_statement(this);
+std::any VerilogParser::Disable_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDisable_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Disable_statementContext* VerilogParser::disable_statement() {
@@ -20411,16 +19647,12 @@ size_t VerilogParser::Event_controlContext::getRuleIndex() const {
   return VerilogParser::RuleEvent_control;
 }
 
-void VerilogParser::Event_controlContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEvent_control(this);
-}
 
-void VerilogParser::Event_controlContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEvent_control(this);
+std::any VerilogParser::Event_controlContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEvent_control(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Event_controlContext* VerilogParser::event_control() {
@@ -20523,16 +19755,12 @@ size_t VerilogParser::Event_triggerContext::getRuleIndex() const {
   return VerilogParser::RuleEvent_trigger;
 }
 
-void VerilogParser::Event_triggerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEvent_trigger(this);
-}
 
-void VerilogParser::Event_triggerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEvent_trigger(this);
+std::any VerilogParser::Event_triggerContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEvent_trigger(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Event_triggerContext* VerilogParser::event_trigger() {
@@ -20613,16 +19841,12 @@ size_t VerilogParser::Event_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleEvent_expression;
 }
 
-void VerilogParser::Event_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEvent_expression(this);
-}
 
-void VerilogParser::Event_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEvent_expression(this);
+std::any VerilogParser::Event_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEvent_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 
@@ -20776,16 +20000,12 @@ size_t VerilogParser::Procedural_timing_controlContext::getRuleIndex() const {
   return VerilogParser::RuleProcedural_timing_control;
 }
 
-void VerilogParser::Procedural_timing_controlContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProcedural_timing_control(this);
-}
 
-void VerilogParser::Procedural_timing_controlContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProcedural_timing_control(this);
+std::any VerilogParser::Procedural_timing_controlContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitProcedural_timing_control(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Procedural_timing_controlContext* VerilogParser::procedural_timing_control() {
@@ -20850,16 +20070,12 @@ size_t VerilogParser::Procedural_timing_control_statementContext::getRuleIndex()
   return VerilogParser::RuleProcedural_timing_control_statement;
 }
 
-void VerilogParser::Procedural_timing_control_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProcedural_timing_control_statement(this);
-}
 
-void VerilogParser::Procedural_timing_control_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProcedural_timing_control_statement(this);
+std::any VerilogParser::Procedural_timing_control_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitProcedural_timing_control_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Procedural_timing_control_statementContext* VerilogParser::procedural_timing_control_statement() {
@@ -20921,16 +20137,12 @@ size_t VerilogParser::Wait_statementContext::getRuleIndex() const {
   return VerilogParser::RuleWait_statement;
 }
 
-void VerilogParser::Wait_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWait_statement(this);
-}
 
-void VerilogParser::Wait_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWait_statement(this);
+std::any VerilogParser::Wait_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitWait_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Wait_statementContext* VerilogParser::wait_statement() {
@@ -21006,16 +20218,12 @@ size_t VerilogParser::Conditional_statementContext::getRuleIndex() const {
   return VerilogParser::RuleConditional_statement;
 }
 
-void VerilogParser::Conditional_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConditional_statement(this);
-}
 
-void VerilogParser::Conditional_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConditional_statement(this);
+std::any VerilogParser::Conditional_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConditional_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Conditional_statementContext* VerilogParser::conditional_statement() {
@@ -21114,16 +20322,12 @@ size_t VerilogParser::Case_statementContext::getRuleIndex() const {
   return VerilogParser::RuleCase_statement;
 }
 
-void VerilogParser::Case_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCase_statement(this);
-}
 
-void VerilogParser::Case_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCase_statement(this);
+std::any VerilogParser::Case_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCase_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Case_statementContext* VerilogParser::case_statement() {
@@ -21279,16 +20483,12 @@ size_t VerilogParser::Case_itemContext::getRuleIndex() const {
   return VerilogParser::RuleCase_item;
 }
 
-void VerilogParser::Case_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCase_item(this);
-}
 
-void VerilogParser::Case_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCase_item(this);
+std::any VerilogParser::Case_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCase_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Case_itemContext* VerilogParser::case_item() {
@@ -21443,16 +20643,12 @@ size_t VerilogParser::Loop_statementContext::getRuleIndex() const {
   return VerilogParser::RuleLoop_statement;
 }
 
-void VerilogParser::Loop_statementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoop_statement(this);
-}
 
-void VerilogParser::Loop_statementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoop_statement(this);
+std::any VerilogParser::Loop_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLoop_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Loop_statementContext* VerilogParser::loop_statement() {
@@ -21569,16 +20765,12 @@ size_t VerilogParser::System_task_enableContext::getRuleIndex() const {
   return VerilogParser::RuleSystem_task_enable;
 }
 
-void VerilogParser::System_task_enableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSystem_task_enable(this);
-}
 
-void VerilogParser::System_task_enableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSystem_task_enable(this);
+std::any VerilogParser::System_task_enableContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSystem_task_enable(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::System_task_enableContext* VerilogParser::system_task_enable() {
@@ -21653,16 +20845,12 @@ size_t VerilogParser::Sys_task_en_port_listContext::getRuleIndex() const {
   return VerilogParser::RuleSys_task_en_port_list;
 }
 
-void VerilogParser::Sys_task_en_port_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSys_task_en_port_list(this);
-}
 
-void VerilogParser::Sys_task_en_port_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSys_task_en_port_list(this);
+std::any VerilogParser::Sys_task_en_port_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSys_task_en_port_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Sys_task_en_port_listContext* VerilogParser::sys_task_en_port_list() {
@@ -21723,16 +20911,12 @@ size_t VerilogParser::Sys_task_en_port_itemContext::getRuleIndex() const {
   return VerilogParser::RuleSys_task_en_port_item;
 }
 
-void VerilogParser::Sys_task_en_port_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSys_task_en_port_item(this);
-}
 
-void VerilogParser::Sys_task_en_port_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSys_task_en_port_item(this);
+std::any VerilogParser::Sys_task_en_port_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSys_task_en_port_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Sys_task_en_port_itemContext* VerilogParser::sys_task_en_port_item() {
@@ -21794,16 +20978,12 @@ size_t VerilogParser::Task_enableContext::getRuleIndex() const {
   return VerilogParser::RuleTask_enable;
 }
 
-void VerilogParser::Task_enableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTask_enable(this);
-}
 
-void VerilogParser::Task_enableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTask_enable(this);
+std::any VerilogParser::Task_enableContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTask_enable(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Task_enableContext* VerilogParser::task_enable() {
@@ -21878,16 +21058,12 @@ size_t VerilogParser::Task_en_port_listContext::getRuleIndex() const {
   return VerilogParser::RuleTask_en_port_list;
 }
 
-void VerilogParser::Task_en_port_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTask_en_port_list(this);
-}
 
-void VerilogParser::Task_en_port_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTask_en_port_list(this);
+std::any VerilogParser::Task_en_port_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTask_en_port_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Task_en_port_listContext* VerilogParser::task_en_port_list() {
@@ -21960,16 +21136,12 @@ size_t VerilogParser::Specify_blockContext::getRuleIndex() const {
   return VerilogParser::RuleSpecify_block;
 }
 
-void VerilogParser::Specify_blockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpecify_block(this);
-}
 
-void VerilogParser::Specify_blockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpecify_block(this);
+std::any VerilogParser::Specify_blockContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSpecify_block(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Specify_blockContext* VerilogParser::specify_block() {
@@ -22044,16 +21216,12 @@ size_t VerilogParser::Specify_itemContext::getRuleIndex() const {
   return VerilogParser::RuleSpecify_item;
 }
 
-void VerilogParser::Specify_itemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpecify_item(this);
-}
 
-void VerilogParser::Specify_itemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpecify_item(this);
+std::any VerilogParser::Specify_itemContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSpecify_item(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Specify_itemContext* VerilogParser::specify_item() {
@@ -22162,16 +21330,12 @@ size_t VerilogParser::Pulsestyle_declarationContext::getRuleIndex() const {
   return VerilogParser::RulePulsestyle_declaration;
 }
 
-void VerilogParser::Pulsestyle_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPulsestyle_declaration(this);
-}
 
-void VerilogParser::Pulsestyle_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPulsestyle_declaration(this);
+std::any VerilogParser::Pulsestyle_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPulsestyle_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Pulsestyle_declarationContext* VerilogParser::pulsestyle_declaration() {
@@ -22252,16 +21416,12 @@ size_t VerilogParser::Showcancelled_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleShowcancelled_declaration;
 }
 
-void VerilogParser::Showcancelled_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowcancelled_declaration(this);
-}
 
-void VerilogParser::Showcancelled_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowcancelled_declaration(this);
+std::any VerilogParser::Showcancelled_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitShowcancelled_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Showcancelled_declarationContext* VerilogParser::showcancelled_declaration() {
@@ -22342,16 +21502,12 @@ size_t VerilogParser::Path_declarationContext::getRuleIndex() const {
   return VerilogParser::RulePath_declaration;
 }
 
-void VerilogParser::Path_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPath_declaration(this);
-}
 
-void VerilogParser::Path_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPath_declaration(this);
+std::any VerilogParser::Path_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPath_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Path_declarationContext* VerilogParser::path_declaration() {
@@ -22437,16 +21593,12 @@ size_t VerilogParser::Simple_path_declarationContext::getRuleIndex() const {
   return VerilogParser::RuleSimple_path_declaration;
 }
 
-void VerilogParser::Simple_path_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimple_path_declaration(this);
-}
 
-void VerilogParser::Simple_path_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimple_path_declaration(this);
+std::any VerilogParser::Simple_path_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSimple_path_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Simple_path_declarationContext* VerilogParser::simple_path_declaration() {
@@ -22535,16 +21687,12 @@ size_t VerilogParser::Parallel_path_descriptionContext::getRuleIndex() const {
   return VerilogParser::RuleParallel_path_description;
 }
 
-void VerilogParser::Parallel_path_descriptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParallel_path_description(this);
-}
 
-void VerilogParser::Parallel_path_descriptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParallel_path_description(this);
+std::any VerilogParser::Parallel_path_descriptionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitParallel_path_description(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Parallel_path_descriptionContext* VerilogParser::parallel_path_description() {
@@ -22627,16 +21775,12 @@ size_t VerilogParser::Full_path_descriptionContext::getRuleIndex() const {
   return VerilogParser::RuleFull_path_description;
 }
 
-void VerilogParser::Full_path_descriptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFull_path_description(this);
-}
 
-void VerilogParser::Full_path_descriptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFull_path_description(this);
+std::any VerilogParser::Full_path_descriptionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFull_path_description(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Full_path_descriptionContext* VerilogParser::full_path_description() {
@@ -22711,16 +21855,12 @@ size_t VerilogParser::List_of_path_inputsContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_path_inputs;
 }
 
-void VerilogParser::List_of_path_inputsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_path_inputs(this);
-}
 
-void VerilogParser::List_of_path_inputsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_path_inputs(this);
+std::any VerilogParser::List_of_path_inputsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_path_inputs(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_path_inputsContext* VerilogParser::list_of_path_inputs() {
@@ -22789,16 +21929,12 @@ size_t VerilogParser::List_of_path_outputsContext::getRuleIndex() const {
   return VerilogParser::RuleList_of_path_outputs;
 }
 
-void VerilogParser::List_of_path_outputsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_path_outputs(this);
-}
 
-void VerilogParser::List_of_path_outputsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_path_outputs(this);
+std::any VerilogParser::List_of_path_outputsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_path_outputs(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_path_outputsContext* VerilogParser::list_of_path_outputs() {
@@ -22867,16 +22003,12 @@ size_t VerilogParser::Specify_input_terminal_descriptorContext::getRuleIndex() c
   return VerilogParser::RuleSpecify_input_terminal_descriptor;
 }
 
-void VerilogParser::Specify_input_terminal_descriptorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpecify_input_terminal_descriptor(this);
-}
 
-void VerilogParser::Specify_input_terminal_descriptorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpecify_input_terminal_descriptor(this);
+std::any VerilogParser::Specify_input_terminal_descriptorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSpecify_input_terminal_descriptor(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Specify_input_terminal_descriptorContext* VerilogParser::specify_input_terminal_descriptor() {
@@ -22945,16 +22077,12 @@ size_t VerilogParser::Specify_output_terminal_descriptorContext::getRuleIndex() 
   return VerilogParser::RuleSpecify_output_terminal_descriptor;
 }
 
-void VerilogParser::Specify_output_terminal_descriptorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpecify_output_terminal_descriptor(this);
-}
 
-void VerilogParser::Specify_output_terminal_descriptorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpecify_output_terminal_descriptor(this);
+std::any VerilogParser::Specify_output_terminal_descriptorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSpecify_output_terminal_descriptor(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Specify_output_terminal_descriptorContext* VerilogParser::specify_output_terminal_descriptor() {
@@ -23011,16 +22139,12 @@ size_t VerilogParser::Input_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleInput_identifier;
 }
 
-void VerilogParser::Input_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInput_identifier(this);
-}
 
-void VerilogParser::Input_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInput_identifier(this);
+std::any VerilogParser::Input_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInput_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Input_identifierContext* VerilogParser::input_identifier() {
@@ -23064,16 +22188,12 @@ size_t VerilogParser::Output_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleOutput_identifier;
 }
 
-void VerilogParser::Output_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOutput_identifier(this);
-}
 
-void VerilogParser::Output_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOutput_identifier(this);
+std::any VerilogParser::Output_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOutput_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Output_identifierContext* VerilogParser::output_identifier() {
@@ -23125,16 +22245,12 @@ size_t VerilogParser::Path_delay_valueContext::getRuleIndex() const {
   return VerilogParser::RulePath_delay_value;
 }
 
-void VerilogParser::Path_delay_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPath_delay_value(this);
-}
 
-void VerilogParser::Path_delay_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPath_delay_value(this);
+std::any VerilogParser::Path_delay_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPath_delay_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Path_delay_valueContext* VerilogParser::path_delay_value() {
@@ -23267,16 +22383,12 @@ size_t VerilogParser::List_of_path_delay_expressionsContext::getRuleIndex() cons
   return VerilogParser::RuleList_of_path_delay_expressions;
 }
 
-void VerilogParser::List_of_path_delay_expressionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_path_delay_expressions(this);
-}
 
-void VerilogParser::List_of_path_delay_expressionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_path_delay_expressions(this);
+std::any VerilogParser::List_of_path_delay_expressionsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitList_of_path_delay_expressions(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::List_of_path_delay_expressionsContext* VerilogParser::list_of_path_delay_expressions() {
@@ -23409,16 +22521,12 @@ size_t VerilogParser::T_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleT_path_delay_expression;
 }
 
-void VerilogParser::T_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterT_path_delay_expression(this);
-}
 
-void VerilogParser::T_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitT_path_delay_expression(this);
+std::any VerilogParser::T_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitT_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::T_path_delay_expressionContext* VerilogParser::t_path_delay_expression() {
@@ -23462,16 +22570,12 @@ size_t VerilogParser::Trise_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTrise_path_delay_expression;
 }
 
-void VerilogParser::Trise_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTrise_path_delay_expression(this);
-}
 
-void VerilogParser::Trise_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTrise_path_delay_expression(this);
+std::any VerilogParser::Trise_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTrise_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Trise_path_delay_expressionContext* VerilogParser::trise_path_delay_expression() {
@@ -23515,16 +22619,12 @@ size_t VerilogParser::Tfall_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTfall_path_delay_expression;
 }
 
-void VerilogParser::Tfall_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTfall_path_delay_expression(this);
-}
 
-void VerilogParser::Tfall_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTfall_path_delay_expression(this);
+std::any VerilogParser::Tfall_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTfall_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tfall_path_delay_expressionContext* VerilogParser::tfall_path_delay_expression() {
@@ -23568,16 +22668,12 @@ size_t VerilogParser::Tz_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTz_path_delay_expression;
 }
 
-void VerilogParser::Tz_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTz_path_delay_expression(this);
-}
 
-void VerilogParser::Tz_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTz_path_delay_expression(this);
+std::any VerilogParser::Tz_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTz_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tz_path_delay_expressionContext* VerilogParser::tz_path_delay_expression() {
@@ -23621,16 +22717,12 @@ size_t VerilogParser::T01_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleT01_path_delay_expression;
 }
 
-void VerilogParser::T01_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterT01_path_delay_expression(this);
-}
 
-void VerilogParser::T01_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitT01_path_delay_expression(this);
+std::any VerilogParser::T01_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitT01_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::T01_path_delay_expressionContext* VerilogParser::t01_path_delay_expression() {
@@ -23674,16 +22766,12 @@ size_t VerilogParser::T10_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleT10_path_delay_expression;
 }
 
-void VerilogParser::T10_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterT10_path_delay_expression(this);
-}
 
-void VerilogParser::T10_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitT10_path_delay_expression(this);
+std::any VerilogParser::T10_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitT10_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::T10_path_delay_expressionContext* VerilogParser::t10_path_delay_expression() {
@@ -23727,16 +22815,12 @@ size_t VerilogParser::T0z_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleT0z_path_delay_expression;
 }
 
-void VerilogParser::T0z_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterT0z_path_delay_expression(this);
-}
 
-void VerilogParser::T0z_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitT0z_path_delay_expression(this);
+std::any VerilogParser::T0z_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitT0z_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::T0z_path_delay_expressionContext* VerilogParser::t0z_path_delay_expression() {
@@ -23780,16 +22864,12 @@ size_t VerilogParser::Tz1_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTz1_path_delay_expression;
 }
 
-void VerilogParser::Tz1_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTz1_path_delay_expression(this);
-}
 
-void VerilogParser::Tz1_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTz1_path_delay_expression(this);
+std::any VerilogParser::Tz1_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTz1_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tz1_path_delay_expressionContext* VerilogParser::tz1_path_delay_expression() {
@@ -23833,16 +22913,12 @@ size_t VerilogParser::T1z_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleT1z_path_delay_expression;
 }
 
-void VerilogParser::T1z_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterT1z_path_delay_expression(this);
-}
 
-void VerilogParser::T1z_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitT1z_path_delay_expression(this);
+std::any VerilogParser::T1z_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitT1z_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::T1z_path_delay_expressionContext* VerilogParser::t1z_path_delay_expression() {
@@ -23886,16 +22962,12 @@ size_t VerilogParser::Tz0_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTz0_path_delay_expression;
 }
 
-void VerilogParser::Tz0_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTz0_path_delay_expression(this);
-}
 
-void VerilogParser::Tz0_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTz0_path_delay_expression(this);
+std::any VerilogParser::Tz0_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTz0_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tz0_path_delay_expressionContext* VerilogParser::tz0_path_delay_expression() {
@@ -23939,16 +23011,12 @@ size_t VerilogParser::T0x_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleT0x_path_delay_expression;
 }
 
-void VerilogParser::T0x_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterT0x_path_delay_expression(this);
-}
 
-void VerilogParser::T0x_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitT0x_path_delay_expression(this);
+std::any VerilogParser::T0x_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitT0x_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::T0x_path_delay_expressionContext* VerilogParser::t0x_path_delay_expression() {
@@ -23992,16 +23060,12 @@ size_t VerilogParser::Tx1_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTx1_path_delay_expression;
 }
 
-void VerilogParser::Tx1_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTx1_path_delay_expression(this);
-}
 
-void VerilogParser::Tx1_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTx1_path_delay_expression(this);
+std::any VerilogParser::Tx1_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTx1_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tx1_path_delay_expressionContext* VerilogParser::tx1_path_delay_expression() {
@@ -24045,16 +23109,12 @@ size_t VerilogParser::T1x_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleT1x_path_delay_expression;
 }
 
-void VerilogParser::T1x_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterT1x_path_delay_expression(this);
-}
 
-void VerilogParser::T1x_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitT1x_path_delay_expression(this);
+std::any VerilogParser::T1x_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitT1x_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::T1x_path_delay_expressionContext* VerilogParser::t1x_path_delay_expression() {
@@ -24098,16 +23158,12 @@ size_t VerilogParser::Tx0_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTx0_path_delay_expression;
 }
 
-void VerilogParser::Tx0_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTx0_path_delay_expression(this);
-}
 
-void VerilogParser::Tx0_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTx0_path_delay_expression(this);
+std::any VerilogParser::Tx0_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTx0_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tx0_path_delay_expressionContext* VerilogParser::tx0_path_delay_expression() {
@@ -24151,16 +23207,12 @@ size_t VerilogParser::Txz_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTxz_path_delay_expression;
 }
 
-void VerilogParser::Txz_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTxz_path_delay_expression(this);
-}
 
-void VerilogParser::Txz_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTxz_path_delay_expression(this);
+std::any VerilogParser::Txz_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTxz_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Txz_path_delay_expressionContext* VerilogParser::txz_path_delay_expression() {
@@ -24204,16 +23256,12 @@ size_t VerilogParser::Tzx_path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleTzx_path_delay_expression;
 }
 
-void VerilogParser::Tzx_path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTzx_path_delay_expression(this);
-}
 
-void VerilogParser::Tzx_path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTzx_path_delay_expression(this);
+std::any VerilogParser::Tzx_path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTzx_path_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Tzx_path_delay_expressionContext* VerilogParser::tzx_path_delay_expression() {
@@ -24257,16 +23305,12 @@ size_t VerilogParser::Path_delay_expressionContext::getRuleIndex() const {
   return VerilogParser::RulePath_delay_expression;
 }
 
-void VerilogParser::Path_delay_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPath_delay_expression(this);
-}
 
-void VerilogParser::Path_delay_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPath_delay_expression(this);
+std::any VerilogParser::Path_delay_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPath_delay_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Path_delay_expressionContext* VerilogParser::path_delay_expression() {
@@ -24322,16 +23366,12 @@ size_t VerilogParser::Edge_sensitive_path_declarationContext::getRuleIndex() con
   return VerilogParser::RuleEdge_sensitive_path_declaration;
 }
 
-void VerilogParser::Edge_sensitive_path_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEdge_sensitive_path_declaration(this);
-}
 
-void VerilogParser::Edge_sensitive_path_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEdge_sensitive_path_declaration(this);
+std::any VerilogParser::Edge_sensitive_path_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEdge_sensitive_path_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Edge_sensitive_path_declarationContext* VerilogParser::edge_sensitive_path_declaration() {
@@ -24440,16 +23480,12 @@ size_t VerilogParser::Parallel_edge_sensitive_path_descriptionContext::getRuleIn
   return VerilogParser::RuleParallel_edge_sensitive_path_description;
 }
 
-void VerilogParser::Parallel_edge_sensitive_path_descriptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParallel_edge_sensitive_path_description(this);
-}
 
-void VerilogParser::Parallel_edge_sensitive_path_descriptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParallel_edge_sensitive_path_description(this);
+std::any VerilogParser::Parallel_edge_sensitive_path_descriptionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitParallel_edge_sensitive_path_description(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Parallel_edge_sensitive_path_descriptionContext* VerilogParser::parallel_edge_sensitive_path_description() {
@@ -24570,16 +23606,12 @@ size_t VerilogParser::Full_edge_sensitive_path_descriptionContext::getRuleIndex(
   return VerilogParser::RuleFull_edge_sensitive_path_description;
 }
 
-void VerilogParser::Full_edge_sensitive_path_descriptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFull_edge_sensitive_path_description(this);
-}
 
-void VerilogParser::Full_edge_sensitive_path_descriptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFull_edge_sensitive_path_description(this);
+std::any VerilogParser::Full_edge_sensitive_path_descriptionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFull_edge_sensitive_path_description(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Full_edge_sensitive_path_descriptionContext* VerilogParser::full_edge_sensitive_path_description() {
@@ -24660,16 +23692,12 @@ size_t VerilogParser::Data_source_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleData_source_expression;
 }
 
-void VerilogParser::Data_source_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterData_source_expression(this);
-}
 
-void VerilogParser::Data_source_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitData_source_expression(this);
+std::any VerilogParser::Data_source_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitData_source_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Data_source_expressionContext* VerilogParser::data_source_expression() {
@@ -24717,16 +23745,12 @@ size_t VerilogParser::Edge_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleEdge_identifier;
 }
 
-void VerilogParser::Edge_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEdge_identifier(this);
-}
 
-void VerilogParser::Edge_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEdge_identifier(this);
+std::any VerilogParser::Edge_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEdge_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Edge_identifierContext* VerilogParser::edge_identifier() {
@@ -24804,16 +23828,12 @@ size_t VerilogParser::State_dependent_path_declarationContext::getRuleIndex() co
   return VerilogParser::RuleState_dependent_path_declaration;
 }
 
-void VerilogParser::State_dependent_path_declarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterState_dependent_path_declaration(this);
-}
 
-void VerilogParser::State_dependent_path_declarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitState_dependent_path_declaration(this);
+std::any VerilogParser::State_dependent_path_declarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitState_dependent_path_declaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::State_dependent_path_declarationContext* VerilogParser::state_dependent_path_declaration() {
@@ -24903,16 +23923,12 @@ size_t VerilogParser::Polarity_operatorContext::getRuleIndex() const {
   return VerilogParser::RulePolarity_operator;
 }
 
-void VerilogParser::Polarity_operatorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPolarity_operator(this);
-}
 
-void VerilogParser::Polarity_operatorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPolarity_operator(this);
+std::any VerilogParser::Polarity_operatorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPolarity_operator(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Polarity_operatorContext* VerilogParser::polarity_operator() {
@@ -25010,16 +24026,12 @@ size_t VerilogParser::System_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleSystem_timing_check;
 }
 
-void VerilogParser::System_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSystem_timing_check(this);
-}
 
-void VerilogParser::System_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSystem_timing_check(this);
+std::any VerilogParser::System_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSystem_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::System_timing_checkContext* VerilogParser::system_timing_check() {
@@ -25186,16 +24198,12 @@ size_t VerilogParser::Setup_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleSetup_timing_check;
 }
 
-void VerilogParser::Setup_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSetup_timing_check(this);
-}
 
-void VerilogParser::Setup_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSetup_timing_check(this);
+std::any VerilogParser::Setup_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSetup_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Setup_timing_checkContext* VerilogParser::setup_timing_check() {
@@ -25268,16 +24276,12 @@ size_t VerilogParser::Notifier_optContext::getRuleIndex() const {
   return VerilogParser::RuleNotifier_opt;
 }
 
-void VerilogParser::Notifier_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNotifier_opt(this);
-}
 
-void VerilogParser::Notifier_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNotifier_opt(this);
+std::any VerilogParser::Notifier_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNotifier_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Notifier_optContext* VerilogParser::notifier_opt() {
@@ -25368,16 +24372,12 @@ size_t VerilogParser::Hold_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleHold_timing_check;
 }
 
-void VerilogParser::Hold_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHold_timing_check(this);
-}
 
-void VerilogParser::Hold_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHold_timing_check(this);
+std::any VerilogParser::Hold_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitHold_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Hold_timing_checkContext* VerilogParser::hold_timing_check() {
@@ -25486,16 +24486,12 @@ size_t VerilogParser::Setuphold_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleSetuphold_timing_check;
 }
 
-void VerilogParser::Setuphold_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSetuphold_timing_check(this);
-}
 
-void VerilogParser::Setuphold_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSetuphold_timing_check(this);
+std::any VerilogParser::Setuphold_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSetuphold_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Setuphold_timing_checkContext* VerilogParser::setuphold_timing_check() {
@@ -25576,16 +24572,12 @@ size_t VerilogParser::Timing_check_optContext::getRuleIndex() const {
   return VerilogParser::RuleTiming_check_opt;
 }
 
-void VerilogParser::Timing_check_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTiming_check_opt(this);
-}
 
-void VerilogParser::Timing_check_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTiming_check_opt(this);
+std::any VerilogParser::Timing_check_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTiming_check_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Timing_check_optContext* VerilogParser::timing_check_opt() {
@@ -25656,16 +24648,12 @@ size_t VerilogParser::Stamptime_cond_optContext::getRuleIndex() const {
   return VerilogParser::RuleStamptime_cond_opt;
 }
 
-void VerilogParser::Stamptime_cond_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStamptime_cond_opt(this);
-}
 
-void VerilogParser::Stamptime_cond_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStamptime_cond_opt(this);
+std::any VerilogParser::Stamptime_cond_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitStamptime_cond_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Stamptime_cond_optContext* VerilogParser::stamptime_cond_opt() {
@@ -25737,16 +24725,12 @@ size_t VerilogParser::Checktime_cond_optContext::getRuleIndex() const {
   return VerilogParser::RuleChecktime_cond_opt;
 }
 
-void VerilogParser::Checktime_cond_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChecktime_cond_opt(this);
-}
 
-void VerilogParser::Checktime_cond_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChecktime_cond_opt(this);
+std::any VerilogParser::Checktime_cond_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitChecktime_cond_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Checktime_cond_optContext* VerilogParser::checktime_cond_opt() {
@@ -25818,16 +24802,12 @@ size_t VerilogParser::Delayed_ref_optContext::getRuleIndex() const {
   return VerilogParser::RuleDelayed_ref_opt;
 }
 
-void VerilogParser::Delayed_ref_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelayed_ref_opt(this);
-}
 
-void VerilogParser::Delayed_ref_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelayed_ref_opt(this);
+std::any VerilogParser::Delayed_ref_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelayed_ref_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delayed_ref_optContext* VerilogParser::delayed_ref_opt() {
@@ -25894,16 +24874,12 @@ size_t VerilogParser::Delayed_data_optContext::getRuleIndex() const {
   return VerilogParser::RuleDelayed_data_opt;
 }
 
-void VerilogParser::Delayed_data_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelayed_data_opt(this);
-}
 
-void VerilogParser::Delayed_data_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelayed_data_opt(this);
+std::any VerilogParser::Delayed_data_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelayed_data_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delayed_data_optContext* VerilogParser::delayed_data_opt() {
@@ -25994,16 +24970,12 @@ size_t VerilogParser::Recovery_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleRecovery_timing_check;
 }
 
-void VerilogParser::Recovery_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRecovery_timing_check(this);
-}
 
-void VerilogParser::Recovery_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRecovery_timing_check(this);
+std::any VerilogParser::Recovery_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitRecovery_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Recovery_timing_checkContext* VerilogParser::recovery_timing_check() {
@@ -26108,16 +25080,12 @@ size_t VerilogParser::Removal_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleRemoval_timing_check;
 }
 
-void VerilogParser::Removal_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRemoval_timing_check(this);
-}
 
-void VerilogParser::Removal_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRemoval_timing_check(this);
+std::any VerilogParser::Removal_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitRemoval_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Removal_timing_checkContext* VerilogParser::removal_timing_check() {
@@ -26226,16 +25194,12 @@ size_t VerilogParser::Recrem_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleRecrem_timing_check;
 }
 
-void VerilogParser::Recrem_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRecrem_timing_check(this);
-}
 
-void VerilogParser::Recrem_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRecrem_timing_check(this);
+std::any VerilogParser::Recrem_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitRecrem_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Recrem_timing_checkContext* VerilogParser::recrem_timing_check() {
@@ -26344,16 +25308,12 @@ size_t VerilogParser::Skew_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleSkew_timing_check;
 }
 
-void VerilogParser::Skew_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSkew_timing_check(this);
-}
 
-void VerilogParser::Skew_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSkew_timing_check(this);
+std::any VerilogParser::Skew_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSkew_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Skew_timing_checkContext* VerilogParser::skew_timing_check() {
@@ -26458,16 +25418,12 @@ size_t VerilogParser::Timeskew_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleTimeskew_timing_check;
 }
 
-void VerilogParser::Timeskew_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTimeskew_timing_check(this);
-}
 
-void VerilogParser::Timeskew_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTimeskew_timing_check(this);
+std::any VerilogParser::Timeskew_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTimeskew_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Timeskew_timing_checkContext* VerilogParser::timeskew_timing_check() {
@@ -26544,16 +25500,12 @@ size_t VerilogParser::Skew_timing_check_optContext::getRuleIndex() const {
   return VerilogParser::RuleSkew_timing_check_opt;
 }
 
-void VerilogParser::Skew_timing_check_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSkew_timing_check_opt(this);
-}
 
-void VerilogParser::Skew_timing_check_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSkew_timing_check_opt(this);
+std::any VerilogParser::Skew_timing_check_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSkew_timing_check_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Skew_timing_check_optContext* VerilogParser::skew_timing_check_opt() {
@@ -26624,16 +25576,12 @@ size_t VerilogParser::Event_based_flag_optContext::getRuleIndex() const {
   return VerilogParser::RuleEvent_based_flag_opt;
 }
 
-void VerilogParser::Event_based_flag_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEvent_based_flag_opt(this);
-}
 
-void VerilogParser::Event_based_flag_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEvent_based_flag_opt(this);
+std::any VerilogParser::Event_based_flag_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEvent_based_flag_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Event_based_flag_optContext* VerilogParser::event_based_flag_opt() {
@@ -26701,16 +25649,12 @@ size_t VerilogParser::Remain_active_flag_optContext::getRuleIndex() const {
   return VerilogParser::RuleRemain_active_flag_opt;
 }
 
-void VerilogParser::Remain_active_flag_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRemain_active_flag_opt(this);
-}
 
-void VerilogParser::Remain_active_flag_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRemain_active_flag_opt(this);
+std::any VerilogParser::Remain_active_flag_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitRemain_active_flag_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Remain_active_flag_optContext* VerilogParser::remain_active_flag_opt() {
@@ -26806,16 +25750,12 @@ size_t VerilogParser::Fullskew_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleFullskew_timing_check;
 }
 
-void VerilogParser::Fullskew_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFullskew_timing_check(this);
-}
 
-void VerilogParser::Fullskew_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFullskew_timing_check(this);
+std::any VerilogParser::Fullskew_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFullskew_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Fullskew_timing_checkContext* VerilogParser::fullskew_timing_check() {
@@ -26916,16 +25856,12 @@ size_t VerilogParser::Period_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RulePeriod_timing_check;
 }
 
-void VerilogParser::Period_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPeriod_timing_check(this);
-}
 
-void VerilogParser::Period_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPeriod_timing_check(this);
+std::any VerilogParser::Period_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPeriod_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Period_timing_checkContext* VerilogParser::period_timing_check() {
@@ -27018,16 +25954,12 @@ size_t VerilogParser::Width_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleWidth_timing_check;
 }
 
-void VerilogParser::Width_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWidth_timing_check(this);
-}
 
-void VerilogParser::Width_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWidth_timing_check(this);
+std::any VerilogParser::Width_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitWidth_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Width_timing_checkContext* VerilogParser::width_timing_check() {
@@ -27104,16 +26036,12 @@ size_t VerilogParser::Threshold_optContext::getRuleIndex() const {
   return VerilogParser::RuleThreshold_opt;
 }
 
-void VerilogParser::Threshold_optContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterThreshold_opt(this);
-}
 
-void VerilogParser::Threshold_optContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitThreshold_opt(this);
+std::any VerilogParser::Threshold_optContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitThreshold_opt(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Threshold_optContext* VerilogParser::threshold_opt() {
@@ -27210,16 +26138,12 @@ size_t VerilogParser::Nochange_timing_checkContext::getRuleIndex() const {
   return VerilogParser::RuleNochange_timing_check;
 }
 
-void VerilogParser::Nochange_timing_checkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNochange_timing_check(this);
-}
 
-void VerilogParser::Nochange_timing_checkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNochange_timing_check(this);
+std::any VerilogParser::Nochange_timing_checkContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNochange_timing_check(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Nochange_timing_checkContext* VerilogParser::nochange_timing_check() {
@@ -27292,16 +26216,12 @@ size_t VerilogParser::Checktime_conditionContext::getRuleIndex() const {
   return VerilogParser::RuleChecktime_condition;
 }
 
-void VerilogParser::Checktime_conditionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChecktime_condition(this);
-}
 
-void VerilogParser::Checktime_conditionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChecktime_condition(this);
+std::any VerilogParser::Checktime_conditionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitChecktime_condition(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Checktime_conditionContext* VerilogParser::checktime_condition() {
@@ -27345,16 +26265,12 @@ size_t VerilogParser::Controlled_reference_eventContext::getRuleIndex() const {
   return VerilogParser::RuleControlled_reference_event;
 }
 
-void VerilogParser::Controlled_reference_eventContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterControlled_reference_event(this);
-}
 
-void VerilogParser::Controlled_reference_eventContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitControlled_reference_event(this);
+std::any VerilogParser::Controlled_reference_eventContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitControlled_reference_event(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Controlled_reference_eventContext* VerilogParser::controlled_reference_event() {
@@ -27398,16 +26314,12 @@ size_t VerilogParser::Data_eventContext::getRuleIndex() const {
   return VerilogParser::RuleData_event;
 }
 
-void VerilogParser::Data_eventContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterData_event(this);
-}
 
-void VerilogParser::Data_eventContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitData_event(this);
+std::any VerilogParser::Data_eventContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitData_event(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Data_eventContext* VerilogParser::data_event() {
@@ -27463,16 +26375,12 @@ size_t VerilogParser::Delayed_dataContext::getRuleIndex() const {
   return VerilogParser::RuleDelayed_data;
 }
 
-void VerilogParser::Delayed_dataContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelayed_data(this);
-}
 
-void VerilogParser::Delayed_dataContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelayed_data(this);
+std::any VerilogParser::Delayed_dataContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelayed_data(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delayed_dataContext* VerilogParser::delayed_data() {
@@ -27541,16 +26449,12 @@ size_t VerilogParser::Delayed_referenceContext::getRuleIndex() const {
   return VerilogParser::RuleDelayed_reference;
 }
 
-void VerilogParser::Delayed_referenceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDelayed_reference(this);
-}
 
-void VerilogParser::Delayed_referenceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDelayed_reference(this);
+std::any VerilogParser::Delayed_referenceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDelayed_reference(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Delayed_referenceContext* VerilogParser::delayed_reference() {
@@ -27607,16 +26511,12 @@ size_t VerilogParser::End_edge_offsetContext::getRuleIndex() const {
   return VerilogParser::RuleEnd_edge_offset;
 }
 
-void VerilogParser::End_edge_offsetContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEnd_edge_offset(this);
-}
 
-void VerilogParser::End_edge_offsetContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEnd_edge_offset(this);
+std::any VerilogParser::End_edge_offsetContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEnd_edge_offset(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::End_edge_offsetContext* VerilogParser::end_edge_offset() {
@@ -27660,16 +26560,12 @@ size_t VerilogParser::Event_based_flagContext::getRuleIndex() const {
   return VerilogParser::RuleEvent_based_flag;
 }
 
-void VerilogParser::Event_based_flagContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEvent_based_flag(this);
-}
 
-void VerilogParser::Event_based_flagContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEvent_based_flag(this);
+std::any VerilogParser::Event_based_flagContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEvent_based_flag(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Event_based_flagContext* VerilogParser::event_based_flag() {
@@ -27713,16 +26609,12 @@ size_t VerilogParser::NotifierContext::getRuleIndex() const {
   return VerilogParser::RuleNotifier;
 }
 
-void VerilogParser::NotifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNotifier(this);
-}
 
-void VerilogParser::NotifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNotifier(this);
+std::any VerilogParser::NotifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNotifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::NotifierContext* VerilogParser::notifier() {
@@ -27766,16 +26658,12 @@ size_t VerilogParser::Reference_eventContext::getRuleIndex() const {
   return VerilogParser::RuleReference_event;
 }
 
-void VerilogParser::Reference_eventContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReference_event(this);
-}
 
-void VerilogParser::Reference_eventContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReference_event(this);
+std::any VerilogParser::Reference_eventContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitReference_event(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Reference_eventContext* VerilogParser::reference_event() {
@@ -27819,16 +26707,12 @@ size_t VerilogParser::Remain_active_flagContext::getRuleIndex() const {
   return VerilogParser::RuleRemain_active_flag;
 }
 
-void VerilogParser::Remain_active_flagContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRemain_active_flag(this);
-}
 
-void VerilogParser::Remain_active_flagContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRemain_active_flag(this);
+std::any VerilogParser::Remain_active_flagContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitRemain_active_flag(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Remain_active_flagContext* VerilogParser::remain_active_flag() {
@@ -27872,16 +26756,12 @@ size_t VerilogParser::Stamptime_conditionContext::getRuleIndex() const {
   return VerilogParser::RuleStamptime_condition;
 }
 
-void VerilogParser::Stamptime_conditionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStamptime_condition(this);
-}
 
-void VerilogParser::Stamptime_conditionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStamptime_condition(this);
+std::any VerilogParser::Stamptime_conditionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitStamptime_condition(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Stamptime_conditionContext* VerilogParser::stamptime_condition() {
@@ -27925,16 +26805,12 @@ size_t VerilogParser::Start_edge_offsetContext::getRuleIndex() const {
   return VerilogParser::RuleStart_edge_offset;
 }
 
-void VerilogParser::Start_edge_offsetContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStart_edge_offset(this);
-}
 
-void VerilogParser::Start_edge_offsetContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStart_edge_offset(this);
+std::any VerilogParser::Start_edge_offsetContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitStart_edge_offset(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Start_edge_offsetContext* VerilogParser::start_edge_offset() {
@@ -27978,16 +26854,12 @@ size_t VerilogParser::ThresholdContext::getRuleIndex() const {
   return VerilogParser::RuleThreshold;
 }
 
-void VerilogParser::ThresholdContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterThreshold(this);
-}
 
-void VerilogParser::ThresholdContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitThreshold(this);
+std::any VerilogParser::ThresholdContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitThreshold(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::ThresholdContext* VerilogParser::threshold() {
@@ -28031,16 +26903,12 @@ size_t VerilogParser::Timing_check_limitContext::getRuleIndex() const {
   return VerilogParser::RuleTiming_check_limit;
 }
 
-void VerilogParser::Timing_check_limitContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTiming_check_limit(this);
-}
 
-void VerilogParser::Timing_check_limitContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTiming_check_limit(this);
+std::any VerilogParser::Timing_check_limitContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTiming_check_limit(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Timing_check_limitContext* VerilogParser::timing_check_limit() {
@@ -28096,16 +26964,12 @@ size_t VerilogParser::Timing_check_eventContext::getRuleIndex() const {
   return VerilogParser::RuleTiming_check_event;
 }
 
-void VerilogParser::Timing_check_eventContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTiming_check_event(this);
-}
 
-void VerilogParser::Timing_check_eventContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTiming_check_event(this);
+std::any VerilogParser::Timing_check_eventContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTiming_check_event(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Timing_check_eventContext* VerilogParser::timing_check_event() {
@@ -28182,16 +27046,12 @@ size_t VerilogParser::Controlled_timing_check_eventContext::getRuleIndex() const
   return VerilogParser::RuleControlled_timing_check_event;
 }
 
-void VerilogParser::Controlled_timing_check_eventContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterControlled_timing_check_event(this);
-}
 
-void VerilogParser::Controlled_timing_check_eventContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitControlled_timing_check_event(this);
+std::any VerilogParser::Controlled_timing_check_eventContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitControlled_timing_check_event(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Controlled_timing_check_eventContext* VerilogParser::controlled_timing_check_event() {
@@ -28256,16 +27116,12 @@ size_t VerilogParser::Timing_check_event_controlContext::getRuleIndex() const {
   return VerilogParser::RuleTiming_check_event_control;
 }
 
-void VerilogParser::Timing_check_event_controlContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTiming_check_event_control(this);
-}
 
-void VerilogParser::Timing_check_event_controlContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTiming_check_event_control(this);
+std::any VerilogParser::Timing_check_event_controlContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTiming_check_event_control(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Timing_check_event_controlContext* VerilogParser::timing_check_event_control() {
@@ -28337,16 +27193,12 @@ size_t VerilogParser::Specify_terminal_descriptorContext::getRuleIndex() const {
   return VerilogParser::RuleSpecify_terminal_descriptor;
 }
 
-void VerilogParser::Specify_terminal_descriptorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpecify_terminal_descriptor(this);
-}
 
-void VerilogParser::Specify_terminal_descriptorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpecify_terminal_descriptor(this);
+std::any VerilogParser::Specify_terminal_descriptorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSpecify_terminal_descriptor(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Specify_terminal_descriptorContext* VerilogParser::specify_terminal_descriptor() {
@@ -28431,16 +27283,12 @@ size_t VerilogParser::Edge_control_specifierContext::getRuleIndex() const {
   return VerilogParser::RuleEdge_control_specifier;
 }
 
-void VerilogParser::Edge_control_specifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEdge_control_specifier(this);
-}
 
-void VerilogParser::Edge_control_specifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEdge_control_specifier(this);
+std::any VerilogParser::Edge_control_specifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEdge_control_specifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Edge_control_specifierContext* VerilogParser::edge_control_specifier() {
@@ -28503,16 +27351,12 @@ size_t VerilogParser::Edge_descriptorContext::getRuleIndex() const {
   return VerilogParser::RuleEdge_descriptor;
 }
 
-void VerilogParser::Edge_descriptorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEdge_descriptor(this);
-}
 
-void VerilogParser::Edge_descriptorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEdge_descriptor(this);
+std::any VerilogParser::Edge_descriptorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEdge_descriptor(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Edge_descriptorContext* VerilogParser::edge_descriptor() {
@@ -28564,16 +27408,12 @@ size_t VerilogParser::Timing_check_conditionContext::getRuleIndex() const {
   return VerilogParser::RuleTiming_check_condition;
 }
 
-void VerilogParser::Timing_check_conditionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTiming_check_condition(this);
-}
 
-void VerilogParser::Timing_check_conditionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTiming_check_condition(this);
+std::any VerilogParser::Timing_check_conditionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTiming_check_condition(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Timing_check_conditionContext* VerilogParser::timing_check_condition() {
@@ -28662,16 +27502,12 @@ size_t VerilogParser::Scalar_timing_check_conditionContext::getRuleIndex() const
   return VerilogParser::RuleScalar_timing_check_condition;
 }
 
-void VerilogParser::Scalar_timing_check_conditionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterScalar_timing_check_condition(this);
-}
 
-void VerilogParser::Scalar_timing_check_conditionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitScalar_timing_check_condition(this);
+std::any VerilogParser::Scalar_timing_check_conditionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitScalar_timing_check_condition(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Scalar_timing_check_conditionContext* VerilogParser::scalar_timing_check_condition() {
@@ -28782,16 +27618,12 @@ size_t VerilogParser::Scalar_constantContext::getRuleIndex() const {
   return VerilogParser::RuleScalar_constant;
 }
 
-void VerilogParser::Scalar_constantContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterScalar_constant(this);
-}
 
-void VerilogParser::Scalar_constantContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitScalar_constant(this);
+std::any VerilogParser::Scalar_constantContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitScalar_constant(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Scalar_constantContext* VerilogParser::scalar_constant() {
@@ -28872,16 +27704,12 @@ size_t VerilogParser::ConcatenationContext::getRuleIndex() const {
   return VerilogParser::RuleConcatenation;
 }
 
-void VerilogParser::ConcatenationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConcatenation(this);
-}
 
-void VerilogParser::ConcatenationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConcatenation(this);
+std::any VerilogParser::ConcatenationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConcatenation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::ConcatenationContext* VerilogParser::concatenation() {
@@ -28962,16 +27790,12 @@ size_t VerilogParser::Constant_concatenationContext::getRuleIndex() const {
   return VerilogParser::RuleConstant_concatenation;
 }
 
-void VerilogParser::Constant_concatenationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_concatenation(this);
-}
 
-void VerilogParser::Constant_concatenationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_concatenation(this);
+std::any VerilogParser::Constant_concatenationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_concatenation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Constant_concatenationContext* VerilogParser::constant_concatenation() {
@@ -29044,16 +27868,12 @@ size_t VerilogParser::Constant_multiple_concatenationContext::getRuleIndex() con
   return VerilogParser::RuleConstant_multiple_concatenation;
 }
 
-void VerilogParser::Constant_multiple_concatenationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_multiple_concatenation(this);
-}
 
-void VerilogParser::Constant_multiple_concatenationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_multiple_concatenation(this);
+std::any VerilogParser::Constant_multiple_concatenationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_multiple_concatenation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Constant_multiple_concatenationContext* VerilogParser::constant_multiple_concatenation() {
@@ -29123,16 +27943,12 @@ size_t VerilogParser::Module_path_concatenationContext::getRuleIndex() const {
   return VerilogParser::RuleModule_path_concatenation;
 }
 
-void VerilogParser::Module_path_concatenationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_path_concatenation(this);
-}
 
-void VerilogParser::Module_path_concatenationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_path_concatenation(this);
+std::any VerilogParser::Module_path_concatenationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_path_concatenation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_path_concatenationContext* VerilogParser::module_path_concatenation() {
@@ -29205,16 +28021,12 @@ size_t VerilogParser::Module_path_multiple_concatenationContext::getRuleIndex() 
   return VerilogParser::RuleModule_path_multiple_concatenation;
 }
 
-void VerilogParser::Module_path_multiple_concatenationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_path_multiple_concatenation(this);
-}
 
-void VerilogParser::Module_path_multiple_concatenationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_path_multiple_concatenation(this);
+std::any VerilogParser::Module_path_multiple_concatenationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_path_multiple_concatenation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_path_multiple_concatenationContext* VerilogParser::module_path_multiple_concatenation() {
@@ -29276,16 +28088,12 @@ size_t VerilogParser::Multiple_concatenationContext::getRuleIndex() const {
   return VerilogParser::RuleMultiple_concatenation;
 }
 
-void VerilogParser::Multiple_concatenationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMultiple_concatenation(this);
-}
 
-void VerilogParser::Multiple_concatenationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMultiple_concatenation(this);
+std::any VerilogParser::Multiple_concatenationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitMultiple_concatenation(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Multiple_concatenationContext* VerilogParser::multiple_concatenation() {
@@ -29367,16 +28175,12 @@ size_t VerilogParser::Constant_function_callContext::getRuleIndex() const {
   return VerilogParser::RuleConstant_function_call;
 }
 
-void VerilogParser::Constant_function_callContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_function_call(this);
-}
 
-void VerilogParser::Constant_function_callContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_function_call(this);
+std::any VerilogParser::Constant_function_callContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_function_call(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Constant_function_callContext* VerilogParser::constant_function_call() {
@@ -29476,16 +28280,12 @@ size_t VerilogParser::Constant_system_function_callContext::getRuleIndex() const
   return VerilogParser::RuleConstant_system_function_call;
 }
 
-void VerilogParser::Constant_system_function_callContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_system_function_call(this);
-}
 
-void VerilogParser::Constant_system_function_callContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_system_function_call(this);
+std::any VerilogParser::Constant_system_function_callContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_system_function_call(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Constant_system_function_callContext* VerilogParser::constant_system_function_call() {
@@ -29580,16 +28380,12 @@ size_t VerilogParser::Function_callContext::getRuleIndex() const {
   return VerilogParser::RuleFunction_call;
 }
 
-void VerilogParser::Function_callContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunction_call(this);
-}
 
-void VerilogParser::Function_callContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunction_call(this);
+std::any VerilogParser::Function_callContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFunction_call(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Function_callContext* VerilogParser::function_call() {
@@ -29669,16 +28465,12 @@ size_t VerilogParser::System_function_callContext::getRuleIndex() const {
   return VerilogParser::RuleSystem_function_call;
 }
 
-void VerilogParser::System_function_callContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSystem_function_call(this);
-}
 
-void VerilogParser::System_function_callContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSystem_function_call(this);
+std::any VerilogParser::System_function_callContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSystem_function_call(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::System_function_callContext* VerilogParser::system_function_call() {
@@ -29755,16 +28547,12 @@ size_t VerilogParser::Sys_func_call_port_listContext::getRuleIndex() const {
   return VerilogParser::RuleSys_func_call_port_list;
 }
 
-void VerilogParser::Sys_func_call_port_listContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSys_func_call_port_list(this);
-}
 
-void VerilogParser::Sys_func_call_port_listContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSys_func_call_port_list(this);
+std::any VerilogParser::Sys_func_call_port_listContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSys_func_call_port_list(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Sys_func_call_port_listContext* VerilogParser::sys_func_call_port_list() {
@@ -29825,16 +28613,12 @@ size_t VerilogParser::Base_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleBase_expression;
 }
 
-void VerilogParser::Base_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBase_expression(this);
-}
 
-void VerilogParser::Base_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBase_expression(this);
+std::any VerilogParser::Base_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBase_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Base_expressionContext* VerilogParser::base_expression() {
@@ -29878,16 +28662,12 @@ size_t VerilogParser::Constant_base_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleConstant_base_expression;
 }
 
-void VerilogParser::Constant_base_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_base_expression(this);
-}
 
-void VerilogParser::Constant_base_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_base_expression(this);
+std::any VerilogParser::Constant_base_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_base_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Constant_base_expressionContext* VerilogParser::constant_base_expression() {
@@ -30059,16 +28839,12 @@ size_t VerilogParser::Constant_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleConstant_expression;
 }
 
-void VerilogParser::Constant_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_expression(this);
-}
 
-void VerilogParser::Constant_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_expression(this);
+std::any VerilogParser::Constant_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 
@@ -30562,16 +29338,12 @@ size_t VerilogParser::Constant_mintypmax_expressionContext::getRuleIndex() const
   return VerilogParser::RuleConstant_mintypmax_expression;
 }
 
-void VerilogParser::Constant_mintypmax_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_mintypmax_expression(this);
-}
 
-void VerilogParser::Constant_mintypmax_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_mintypmax_expression(this);
+std::any VerilogParser::Constant_mintypmax_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_mintypmax_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Constant_mintypmax_expressionContext* VerilogParser::constant_mintypmax_expression() {
@@ -30658,16 +29430,12 @@ size_t VerilogParser::Constant_range_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleConstant_range_expression;
 }
 
-void VerilogParser::Constant_range_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_range_expression(this);
-}
 
-void VerilogParser::Constant_range_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_range_expression(this);
+std::any VerilogParser::Constant_range_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_range_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Constant_range_expressionContext* VerilogParser::constant_range_expression() {
@@ -30754,16 +29522,12 @@ size_t VerilogParser::Dimension_constant_expressionContext::getRuleIndex() const
   return VerilogParser::RuleDimension_constant_expression;
 }
 
-void VerilogParser::Dimension_constant_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDimension_constant_expression(this);
-}
 
-void VerilogParser::Dimension_constant_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDimension_constant_expression(this);
+std::any VerilogParser::Dimension_constant_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDimension_constant_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Dimension_constant_expressionContext* VerilogParser::dimension_constant_expression() {
@@ -30935,16 +29699,12 @@ size_t VerilogParser::ExpressionContext::getRuleIndex() const {
   return VerilogParser::RuleExpression;
 }
 
-void VerilogParser::ExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExpression(this);
-}
 
-void VerilogParser::ExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExpression(this);
+std::any VerilogParser::ExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitExpression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 
@@ -31426,16 +30186,12 @@ size_t VerilogParser::Lsb_constant_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleLsb_constant_expression;
 }
 
-void VerilogParser::Lsb_constant_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLsb_constant_expression(this);
-}
 
-void VerilogParser::Lsb_constant_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLsb_constant_expression(this);
+std::any VerilogParser::Lsb_constant_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLsb_constant_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Lsb_constant_expressionContext* VerilogParser::lsb_constant_expression() {
@@ -31491,16 +30247,12 @@ size_t VerilogParser::Mintypmax_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleMintypmax_expression;
 }
 
-void VerilogParser::Mintypmax_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMintypmax_expression(this);
-}
 
-void VerilogParser::Mintypmax_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMintypmax_expression(this);
+std::any VerilogParser::Mintypmax_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitMintypmax_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Mintypmax_expressionContext* VerilogParser::mintypmax_expression() {
@@ -31623,16 +30375,12 @@ size_t VerilogParser::Module_path_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleModule_path_expression;
 }
 
-void VerilogParser::Module_path_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_path_expression(this);
-}
 
-void VerilogParser::Module_path_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_path_expression(this);
+std::any VerilogParser::Module_path_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_path_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 
@@ -31965,16 +30713,12 @@ size_t VerilogParser::Module_path_mintypmax_expressionContext::getRuleIndex() co
   return VerilogParser::RuleModule_path_mintypmax_expression;
 }
 
-void VerilogParser::Module_path_mintypmax_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_path_mintypmax_expression(this);
-}
 
-void VerilogParser::Module_path_mintypmax_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_path_mintypmax_expression(this);
+std::any VerilogParser::Module_path_mintypmax_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_path_mintypmax_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_path_mintypmax_expressionContext* VerilogParser::module_path_mintypmax_expression() {
@@ -32033,16 +30777,12 @@ size_t VerilogParser::Msb_constant_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleMsb_constant_expression;
 }
 
-void VerilogParser::Msb_constant_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMsb_constant_expression(this);
-}
 
-void VerilogParser::Msb_constant_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMsb_constant_expression(this);
+std::any VerilogParser::Msb_constant_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitMsb_constant_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Msb_constant_expressionContext* VerilogParser::msb_constant_expression() {
@@ -32114,16 +30854,12 @@ size_t VerilogParser::Range_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleRange_expression;
 }
 
-void VerilogParser::Range_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRange_expression(this);
-}
 
-void VerilogParser::Range_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRange_expression(this);
+std::any VerilogParser::Range_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitRange_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Range_expressionContext* VerilogParser::range_expression() {
@@ -32210,16 +30946,12 @@ size_t VerilogParser::Width_constant_expressionContext::getRuleIndex() const {
   return VerilogParser::RuleWidth_constant_expression;
 }
 
-void VerilogParser::Width_constant_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWidth_constant_expression(this);
-}
 
-void VerilogParser::Width_constant_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWidth_constant_expression(this);
+std::any VerilogParser::Width_constant_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitWidth_constant_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Width_constant_expressionContext* VerilogParser::width_constant_expression() {
@@ -32311,16 +31043,12 @@ size_t VerilogParser::Constant_primaryContext::getRuleIndex() const {
   return VerilogParser::RuleConstant_primary;
 }
 
-void VerilogParser::Constant_primaryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstant_primary(this);
-}
 
-void VerilogParser::Constant_primaryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstant_primary(this);
+std::any VerilogParser::Constant_primaryContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConstant_primary(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Constant_primaryContext* VerilogParser::constant_primary() {
@@ -32476,16 +31204,12 @@ size_t VerilogParser::Module_path_primaryContext::getRuleIndex() const {
   return VerilogParser::RuleModule_path_primary;
 }
 
-void VerilogParser::Module_path_primaryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_path_primary(this);
-}
 
-void VerilogParser::Module_path_primaryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_path_primary(this);
+std::any VerilogParser::Module_path_primaryContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_path_primary(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_path_primaryContext* VerilogParser::module_path_primary() {
@@ -32625,16 +31349,12 @@ size_t VerilogParser::PrimaryContext::getRuleIndex() const {
   return VerilogParser::RulePrimary;
 }
 
-void VerilogParser::PrimaryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPrimary(this);
-}
 
-void VerilogParser::PrimaryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPrimary(this);
+std::any VerilogParser::PrimaryContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPrimary(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::PrimaryContext* VerilogParser::primary() {
@@ -32766,16 +31486,12 @@ size_t VerilogParser::Select_Context::getRuleIndex() const {
   return VerilogParser::RuleSelect_;
 }
 
-void VerilogParser::Select_Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSelect_(this);
-}
 
-void VerilogParser::Select_Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSelect_(this);
+std::any VerilogParser::Select_Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSelect_(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Select_Context* VerilogParser::select_() {
@@ -32856,16 +31572,12 @@ size_t VerilogParser::Bit_selectContext::getRuleIndex() const {
   return VerilogParser::RuleBit_select;
 }
 
-void VerilogParser::Bit_selectContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBit_select(this);
-}
 
-void VerilogParser::Bit_selectContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBit_select(this);
+std::any VerilogParser::Bit_selectContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBit_select(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Bit_selectContext* VerilogParser::bit_select() {
@@ -32958,16 +31670,12 @@ size_t VerilogParser::Net_lvalueContext::getRuleIndex() const {
   return VerilogParser::RuleNet_lvalue;
 }
 
-void VerilogParser::Net_lvalueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNet_lvalue(this);
-}
 
-void VerilogParser::Net_lvalueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNet_lvalue(this);
+std::any VerilogParser::Net_lvalueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNet_lvalue(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Net_lvalueContext* VerilogParser::net_lvalue() {
@@ -33066,16 +31774,12 @@ size_t VerilogParser::Const_selectContext::getRuleIndex() const {
   return VerilogParser::RuleConst_select;
 }
 
-void VerilogParser::Const_selectContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConst_select(this);
-}
 
-void VerilogParser::Const_selectContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConst_select(this);
+std::any VerilogParser::Const_selectContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConst_select(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Const_selectContext* VerilogParser::const_select() {
@@ -33156,16 +31860,12 @@ size_t VerilogParser::Const_bit_selectContext::getRuleIndex() const {
   return VerilogParser::RuleConst_bit_select;
 }
 
-void VerilogParser::Const_bit_selectContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConst_bit_select(this);
-}
 
-void VerilogParser::Const_bit_selectContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConst_bit_select(this);
+std::any VerilogParser::Const_bit_selectContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConst_bit_select(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Const_bit_selectContext* VerilogParser::const_bit_select() {
@@ -33258,16 +31958,12 @@ size_t VerilogParser::Variable_lvalueContext::getRuleIndex() const {
   return VerilogParser::RuleVariable_lvalue;
 }
 
-void VerilogParser::Variable_lvalueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVariable_lvalue(this);
-}
 
-void VerilogParser::Variable_lvalueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVariable_lvalue(this);
+std::any VerilogParser::Variable_lvalueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitVariable_lvalue(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Variable_lvalueContext* VerilogParser::variable_lvalue() {
@@ -33394,16 +32090,12 @@ size_t VerilogParser::Unary_operatorContext::getRuleIndex() const {
   return VerilogParser::RuleUnary_operator;
 }
 
-void VerilogParser::Unary_operatorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnary_operator(this);
-}
 
-void VerilogParser::Unary_operatorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnary_operator(this);
+std::any VerilogParser::Unary_operatorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUnary_operator(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Unary_operatorContext* VerilogParser::unary_operator() {
@@ -33489,16 +32181,12 @@ size_t VerilogParser::Unary_module_path_operatorContext::getRuleIndex() const {
   return VerilogParser::RuleUnary_module_path_operator;
 }
 
-void VerilogParser::Unary_module_path_operatorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnary_module_path_operator(this);
-}
 
-void VerilogParser::Unary_module_path_operatorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnary_module_path_operator(this);
+std::any VerilogParser::Unary_module_path_operatorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUnary_module_path_operator(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Unary_module_path_operatorContext* VerilogParser::unary_module_path_operator() {
@@ -33568,16 +32256,12 @@ size_t VerilogParser::NumberContext::getRuleIndex() const {
   return VerilogParser::RuleNumber;
 }
 
-void VerilogParser::NumberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNumber(this);
-}
 
-void VerilogParser::NumberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNumber(this);
+std::any VerilogParser::NumberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNumber(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::NumberContext* VerilogParser::number() {
@@ -33663,16 +32347,12 @@ size_t VerilogParser::Real_numberContext::getRuleIndex() const {
   return VerilogParser::RuleReal_number;
 }
 
-void VerilogParser::Real_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReal_number(this);
-}
 
-void VerilogParser::Real_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReal_number(this);
+std::any VerilogParser::Real_numberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitReal_number(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Real_numberContext* VerilogParser::real_number() {
@@ -33745,16 +32425,12 @@ size_t VerilogParser::Decimal_numberContext::getRuleIndex() const {
   return VerilogParser::RuleDecimal_number;
 }
 
-void VerilogParser::Decimal_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDecimal_number(this);
-}
 
-void VerilogParser::Decimal_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDecimal_number(this);
+std::any VerilogParser::Decimal_numberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDecimal_number(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Decimal_numberContext* VerilogParser::decimal_number() {
@@ -33834,16 +32510,12 @@ size_t VerilogParser::Binary_numberContext::getRuleIndex() const {
   return VerilogParser::RuleBinary_number;
 }
 
-void VerilogParser::Binary_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_number(this);
-}
 
-void VerilogParser::Binary_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_number(this);
+std::any VerilogParser::Binary_numberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBinary_number(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Binary_numberContext* VerilogParser::binary_number() {
@@ -33906,16 +32578,12 @@ size_t VerilogParser::Octal_numberContext::getRuleIndex() const {
   return VerilogParser::RuleOctal_number;
 }
 
-void VerilogParser::Octal_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOctal_number(this);
-}
 
-void VerilogParser::Octal_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOctal_number(this);
+std::any VerilogParser::Octal_numberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOctal_number(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Octal_numberContext* VerilogParser::octal_number() {
@@ -33978,16 +32646,12 @@ size_t VerilogParser::Hex_numberContext::getRuleIndex() const {
   return VerilogParser::RuleHex_number;
 }
 
-void VerilogParser::Hex_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHex_number(this);
-}
 
-void VerilogParser::Hex_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHex_number(this);
+std::any VerilogParser::Hex_numberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitHex_number(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Hex_numberContext* VerilogParser::hex_number() {
@@ -34042,16 +32706,12 @@ size_t VerilogParser::SizeContext::getRuleIndex() const {
   return VerilogParser::RuleSize;
 }
 
-void VerilogParser::SizeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSize(this);
-}
 
-void VerilogParser::SizeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSize(this);
+std::any VerilogParser::SizeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSize(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::SizeContext* VerilogParser::size() {
@@ -34095,16 +32755,12 @@ size_t VerilogParser::Fixed_point_numberContext::getRuleIndex() const {
   return VerilogParser::RuleFixed_point_number;
 }
 
-void VerilogParser::Fixed_point_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFixed_point_number(this);
-}
 
-void VerilogParser::Fixed_point_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFixed_point_number(this);
+std::any VerilogParser::Fixed_point_numberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFixed_point_number(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Fixed_point_numberContext* VerilogParser::fixed_point_number() {
@@ -34148,16 +32804,12 @@ size_t VerilogParser::Exponential_numberContext::getRuleIndex() const {
   return VerilogParser::RuleExponential_number;
 }
 
-void VerilogParser::Exponential_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExponential_number(this);
-}
 
-void VerilogParser::Exponential_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExponential_number(this);
+std::any VerilogParser::Exponential_numberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitExponential_number(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Exponential_numberContext* VerilogParser::exponential_number() {
@@ -34201,16 +32853,12 @@ size_t VerilogParser::Unsigned_numberContext::getRuleIndex() const {
   return VerilogParser::RuleUnsigned_number;
 }
 
-void VerilogParser::Unsigned_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnsigned_number(this);
-}
 
-void VerilogParser::Unsigned_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnsigned_number(this);
+std::any VerilogParser::Unsigned_numberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUnsigned_number(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Unsigned_numberContext* VerilogParser::unsigned_number() {
@@ -34258,16 +32906,12 @@ size_t VerilogParser::Decimal_valueContext::getRuleIndex() const {
   return VerilogParser::RuleDecimal_value;
 }
 
-void VerilogParser::Decimal_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDecimal_value(this);
-}
 
-void VerilogParser::Decimal_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDecimal_value(this);
+std::any VerilogParser::Decimal_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDecimal_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Decimal_valueContext* VerilogParser::decimal_value() {
@@ -34321,16 +32965,12 @@ size_t VerilogParser::Binary_valueContext::getRuleIndex() const {
   return VerilogParser::RuleBinary_value;
 }
 
-void VerilogParser::Binary_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_value(this);
-}
 
-void VerilogParser::Binary_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_value(this);
+std::any VerilogParser::Binary_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBinary_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Binary_valueContext* VerilogParser::binary_value() {
@@ -34374,16 +33014,12 @@ size_t VerilogParser::Octal_valueContext::getRuleIndex() const {
   return VerilogParser::RuleOctal_value;
 }
 
-void VerilogParser::Octal_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOctal_value(this);
-}
 
-void VerilogParser::Octal_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOctal_value(this);
+std::any VerilogParser::Octal_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOctal_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Octal_valueContext* VerilogParser::octal_value() {
@@ -34427,16 +33063,12 @@ size_t VerilogParser::Hex_valueContext::getRuleIndex() const {
   return VerilogParser::RuleHex_value;
 }
 
-void VerilogParser::Hex_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHex_value(this);
-}
 
-void VerilogParser::Hex_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHex_value(this);
+std::any VerilogParser::Hex_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitHex_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Hex_valueContext* VerilogParser::hex_value() {
@@ -34480,16 +33112,12 @@ size_t VerilogParser::Decimal_baseContext::getRuleIndex() const {
   return VerilogParser::RuleDecimal_base;
 }
 
-void VerilogParser::Decimal_baseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDecimal_base(this);
-}
 
-void VerilogParser::Decimal_baseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDecimal_base(this);
+std::any VerilogParser::Decimal_baseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitDecimal_base(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Decimal_baseContext* VerilogParser::decimal_base() {
@@ -34533,16 +33161,12 @@ size_t VerilogParser::Binary_baseContext::getRuleIndex() const {
   return VerilogParser::RuleBinary_base;
 }
 
-void VerilogParser::Binary_baseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBinary_base(this);
-}
 
-void VerilogParser::Binary_baseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBinary_base(this);
+std::any VerilogParser::Binary_baseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBinary_base(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Binary_baseContext* VerilogParser::binary_base() {
@@ -34586,16 +33210,12 @@ size_t VerilogParser::Octal_baseContext::getRuleIndex() const {
   return VerilogParser::RuleOctal_base;
 }
 
-void VerilogParser::Octal_baseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOctal_base(this);
-}
 
-void VerilogParser::Octal_baseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOctal_base(this);
+std::any VerilogParser::Octal_baseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOctal_base(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Octal_baseContext* VerilogParser::octal_base() {
@@ -34639,16 +33259,12 @@ size_t VerilogParser::Hex_baseContext::getRuleIndex() const {
   return VerilogParser::RuleHex_base;
 }
 
-void VerilogParser::Hex_baseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHex_base(this);
-}
 
-void VerilogParser::Hex_baseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHex_base(this);
+std::any VerilogParser::Hex_baseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitHex_base(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Hex_baseContext* VerilogParser::hex_base() {
@@ -34692,16 +33308,12 @@ size_t VerilogParser::String_Context::getRuleIndex() const {
   return VerilogParser::RuleString_;
 }
 
-void VerilogParser::String_Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterString_(this);
-}
 
-void VerilogParser::String_Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitString_(this);
+std::any VerilogParser::String_Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitString_(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::String_Context* VerilogParser::string_() {
@@ -34773,16 +33385,12 @@ size_t VerilogParser::Attribute_instanceContext::getRuleIndex() const {
   return VerilogParser::RuleAttribute_instance;
 }
 
-void VerilogParser::Attribute_instanceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAttribute_instance(this);
-}
 
-void VerilogParser::Attribute_instanceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAttribute_instance(this);
+std::any VerilogParser::Attribute_instanceContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitAttribute_instance(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Attribute_instanceContext* VerilogParser::attribute_instance() {
@@ -34855,16 +33463,12 @@ size_t VerilogParser::Attr_specContext::getRuleIndex() const {
   return VerilogParser::RuleAttr_spec;
 }
 
-void VerilogParser::Attr_specContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAttr_spec(this);
-}
 
-void VerilogParser::Attr_specContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAttr_spec(this);
+std::any VerilogParser::Attr_specContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitAttr_spec(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Attr_specContext* VerilogParser::attr_spec() {
@@ -34919,16 +33523,12 @@ size_t VerilogParser::Attr_nameContext::getRuleIndex() const {
   return VerilogParser::RuleAttr_name;
 }
 
-void VerilogParser::Attr_nameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAttr_name(this);
-}
 
-void VerilogParser::Attr_nameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAttr_name(this);
+std::any VerilogParser::Attr_nameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitAttr_name(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Attr_nameContext* VerilogParser::attr_name() {
@@ -34972,16 +33572,12 @@ size_t VerilogParser::Block_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleBlock_identifier;
 }
 
-void VerilogParser::Block_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBlock_identifier(this);
-}
 
-void VerilogParser::Block_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBlock_identifier(this);
+std::any VerilogParser::Block_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitBlock_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Block_identifierContext* VerilogParser::block_identifier() {
@@ -35025,16 +33621,12 @@ size_t VerilogParser::Cell_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleCell_identifier;
 }
 
-void VerilogParser::Cell_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCell_identifier(this);
-}
 
-void VerilogParser::Cell_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCell_identifier(this);
+std::any VerilogParser::Cell_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitCell_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Cell_identifierContext* VerilogParser::cell_identifier() {
@@ -35078,16 +33670,12 @@ size_t VerilogParser::Config_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleConfig_identifier;
 }
 
-void VerilogParser::Config_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConfig_identifier(this);
-}
 
-void VerilogParser::Config_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConfig_identifier(this);
+std::any VerilogParser::Config_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitConfig_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Config_identifierContext* VerilogParser::config_identifier() {
@@ -35131,16 +33719,12 @@ size_t VerilogParser::Escaped_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleEscaped_identifier;
 }
 
-void VerilogParser::Escaped_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEscaped_identifier(this);
-}
 
-void VerilogParser::Escaped_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEscaped_identifier(this);
+std::any VerilogParser::Escaped_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEscaped_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Escaped_identifierContext* VerilogParser::escaped_identifier() {
@@ -35184,16 +33768,12 @@ size_t VerilogParser::Event_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleEvent_identifier;
 }
 
-void VerilogParser::Event_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEvent_identifier(this);
-}
 
-void VerilogParser::Event_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEvent_identifier(this);
+std::any VerilogParser::Event_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitEvent_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Event_identifierContext* VerilogParser::event_identifier() {
@@ -35237,16 +33817,12 @@ size_t VerilogParser::Function_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleFunction_identifier;
 }
 
-void VerilogParser::Function_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunction_identifier(this);
-}
 
-void VerilogParser::Function_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunction_identifier(this);
+std::any VerilogParser::Function_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitFunction_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Function_identifierContext* VerilogParser::function_identifier() {
@@ -35290,16 +33866,12 @@ size_t VerilogParser::Gate_instance_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleGate_instance_identifier;
 }
 
-void VerilogParser::Gate_instance_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGate_instance_identifier(this);
-}
 
-void VerilogParser::Gate_instance_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGate_instance_identifier(this);
+std::any VerilogParser::Gate_instance_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGate_instance_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Gate_instance_identifierContext* VerilogParser::gate_instance_identifier() {
@@ -35343,16 +33915,12 @@ size_t VerilogParser::Generate_block_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleGenerate_block_identifier;
 }
 
-void VerilogParser::Generate_block_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenerate_block_identifier(this);
-}
 
-void VerilogParser::Generate_block_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenerate_block_identifier(this);
+std::any VerilogParser::Generate_block_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenerate_block_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Generate_block_identifierContext* VerilogParser::generate_block_identifier() {
@@ -35396,16 +33964,12 @@ size_t VerilogParser::Genvar_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleGenvar_identifier;
 }
 
-void VerilogParser::Genvar_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGenvar_identifier(this);
-}
 
-void VerilogParser::Genvar_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGenvar_identifier(this);
+std::any VerilogParser::Genvar_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitGenvar_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Genvar_identifierContext* VerilogParser::genvar_identifier() {
@@ -35457,16 +34021,12 @@ size_t VerilogParser::Hierarchical_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleHierarchical_identifier;
 }
 
-void VerilogParser::Hierarchical_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHierarchical_identifier(this);
-}
 
-void VerilogParser::Hierarchical_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHierarchical_identifier(this);
+std::any VerilogParser::Hierarchical_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitHierarchical_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Hierarchical_identifierContext* VerilogParser::hierarchical_identifier() {
@@ -35531,16 +34091,12 @@ size_t VerilogParser::Hier_refContext::getRuleIndex() const {
   return VerilogParser::RuleHier_ref;
 }
 
-void VerilogParser::Hier_refContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHier_ref(this);
-}
 
-void VerilogParser::Hier_refContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHier_ref(this);
+std::any VerilogParser::Hier_refContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitHier_ref(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Hier_refContext* VerilogParser::hier_ref() {
@@ -35599,16 +34155,12 @@ size_t VerilogParser::IdentifierContext::getRuleIndex() const {
   return VerilogParser::RuleIdentifier;
 }
 
-void VerilogParser::IdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifier(this);
-}
 
-void VerilogParser::IdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifier(this);
+std::any VerilogParser::IdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitIdentifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::IdentifierContext* VerilogParser::identifier() {
@@ -35669,16 +34221,12 @@ size_t VerilogParser::Input_port_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleInput_port_identifier;
 }
 
-void VerilogParser::Input_port_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInput_port_identifier(this);
-}
 
-void VerilogParser::Input_port_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInput_port_identifier(this);
+std::any VerilogParser::Input_port_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInput_port_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Input_port_identifierContext* VerilogParser::input_port_identifier() {
@@ -35722,16 +34270,12 @@ size_t VerilogParser::Instance_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleInstance_identifier;
 }
 
-void VerilogParser::Instance_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInstance_identifier(this);
-}
 
-void VerilogParser::Instance_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInstance_identifier(this);
+std::any VerilogParser::Instance_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitInstance_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Instance_identifierContext* VerilogParser::instance_identifier() {
@@ -35775,16 +34319,12 @@ size_t VerilogParser::Library_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleLibrary_identifier;
 }
 
-void VerilogParser::Library_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLibrary_identifier(this);
-}
 
-void VerilogParser::Library_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLibrary_identifier(this);
+std::any VerilogParser::Library_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitLibrary_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Library_identifierContext* VerilogParser::library_identifier() {
@@ -35828,16 +34368,12 @@ size_t VerilogParser::Module_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleModule_identifier;
 }
 
-void VerilogParser::Module_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_identifier(this);
-}
 
-void VerilogParser::Module_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_identifier(this);
+std::any VerilogParser::Module_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_identifierContext* VerilogParser::module_identifier() {
@@ -35881,16 +34417,12 @@ size_t VerilogParser::Module_instance_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleModule_instance_identifier;
 }
 
-void VerilogParser::Module_instance_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModule_instance_identifier(this);
-}
 
-void VerilogParser::Module_instance_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModule_instance_identifier(this);
+std::any VerilogParser::Module_instance_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitModule_instance_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Module_instance_identifierContext* VerilogParser::module_instance_identifier() {
@@ -35934,16 +34466,12 @@ size_t VerilogParser::Net_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleNet_identifier;
 }
 
-void VerilogParser::Net_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNet_identifier(this);
-}
 
-void VerilogParser::Net_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNet_identifier(this);
+std::any VerilogParser::Net_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitNet_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Net_identifierContext* VerilogParser::net_identifier() {
@@ -35987,16 +34515,12 @@ size_t VerilogParser::Output_port_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleOutput_port_identifier;
 }
 
-void VerilogParser::Output_port_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOutput_port_identifier(this);
-}
 
-void VerilogParser::Output_port_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOutput_port_identifier(this);
+std::any VerilogParser::Output_port_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitOutput_port_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Output_port_identifierContext* VerilogParser::output_port_identifier() {
@@ -36040,16 +34564,12 @@ size_t VerilogParser::Parameter_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleParameter_identifier;
 }
 
-void VerilogParser::Parameter_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParameter_identifier(this);
-}
 
-void VerilogParser::Parameter_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParameter_identifier(this);
+std::any VerilogParser::Parameter_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitParameter_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Parameter_identifierContext* VerilogParser::parameter_identifier() {
@@ -36093,16 +34613,12 @@ size_t VerilogParser::Port_identifierContext::getRuleIndex() const {
   return VerilogParser::RulePort_identifier;
 }
 
-void VerilogParser::Port_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPort_identifier(this);
-}
 
-void VerilogParser::Port_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPort_identifier(this);
+std::any VerilogParser::Port_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitPort_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Port_identifierContext* VerilogParser::port_identifier() {
@@ -36146,16 +34662,12 @@ size_t VerilogParser::Real_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleReal_identifier;
 }
 
-void VerilogParser::Real_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReal_identifier(this);
-}
 
-void VerilogParser::Real_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReal_identifier(this);
+std::any VerilogParser::Real_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitReal_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Real_identifierContext* VerilogParser::real_identifier() {
@@ -36199,16 +34711,12 @@ size_t VerilogParser::Simple_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleSimple_identifier;
 }
 
-void VerilogParser::Simple_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimple_identifier(this);
-}
 
-void VerilogParser::Simple_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimple_identifier(this);
+std::any VerilogParser::Simple_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSimple_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Simple_identifierContext* VerilogParser::simple_identifier() {
@@ -36252,16 +34760,12 @@ size_t VerilogParser::Specparam_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleSpecparam_identifier;
 }
 
-void VerilogParser::Specparam_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpecparam_identifier(this);
-}
 
-void VerilogParser::Specparam_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpecparam_identifier(this);
+std::any VerilogParser::Specparam_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSpecparam_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Specparam_identifierContext* VerilogParser::specparam_identifier() {
@@ -36305,16 +34809,12 @@ size_t VerilogParser::System_function_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleSystem_function_identifier;
 }
 
-void VerilogParser::System_function_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSystem_function_identifier(this);
-}
 
-void VerilogParser::System_function_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSystem_function_identifier(this);
+std::any VerilogParser::System_function_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSystem_function_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::System_function_identifierContext* VerilogParser::system_function_identifier() {
@@ -36358,16 +34858,12 @@ size_t VerilogParser::System_task_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleSystem_task_identifier;
 }
 
-void VerilogParser::System_task_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSystem_task_identifier(this);
-}
 
-void VerilogParser::System_task_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSystem_task_identifier(this);
+std::any VerilogParser::System_task_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitSystem_task_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::System_task_identifierContext* VerilogParser::system_task_identifier() {
@@ -36411,16 +34907,12 @@ size_t VerilogParser::Task_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleTask_identifier;
 }
 
-void VerilogParser::Task_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTask_identifier(this);
-}
 
-void VerilogParser::Task_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTask_identifier(this);
+std::any VerilogParser::Task_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTask_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Task_identifierContext* VerilogParser::task_identifier() {
@@ -36464,16 +34956,12 @@ size_t VerilogParser::Terminal_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleTerminal_identifier;
 }
 
-void VerilogParser::Terminal_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTerminal_identifier(this);
-}
 
-void VerilogParser::Terminal_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTerminal_identifier(this);
+std::any VerilogParser::Terminal_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTerminal_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Terminal_identifierContext* VerilogParser::terminal_identifier() {
@@ -36517,16 +35005,12 @@ size_t VerilogParser::Topmodule_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleTopmodule_identifier;
 }
 
-void VerilogParser::Topmodule_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTopmodule_identifier(this);
-}
 
-void VerilogParser::Topmodule_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTopmodule_identifier(this);
+std::any VerilogParser::Topmodule_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitTopmodule_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Topmodule_identifierContext* VerilogParser::topmodule_identifier() {
@@ -36570,16 +35054,12 @@ size_t VerilogParser::Udp_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_identifier;
 }
 
-void VerilogParser::Udp_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_identifier(this);
-}
 
-void VerilogParser::Udp_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_identifier(this);
+std::any VerilogParser::Udp_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_identifierContext* VerilogParser::udp_identifier() {
@@ -36623,16 +35103,12 @@ size_t VerilogParser::Udp_instance_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleUdp_instance_identifier;
 }
 
-void VerilogParser::Udp_instance_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdp_instance_identifier(this);
-}
 
-void VerilogParser::Udp_instance_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdp_instance_identifier(this);
+std::any VerilogParser::Udp_instance_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitUdp_instance_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Udp_instance_identifierContext* VerilogParser::udp_instance_identifier() {
@@ -36676,16 +35152,12 @@ size_t VerilogParser::Variable_identifierContext::getRuleIndex() const {
   return VerilogParser::RuleVariable_identifier;
 }
 
-void VerilogParser::Variable_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVariable_identifier(this);
-}
 
-void VerilogParser::Variable_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<VerilogParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVariable_identifier(this);
+std::any VerilogParser::Variable_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VerilogParserVisitor*>(visitor))
+    return parserVisitor->visitVariable_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 VerilogParser::Variable_identifierContext* VerilogParser::variable_identifier() {

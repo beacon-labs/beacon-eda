@@ -2,7 +2,7 @@
 // Generated from SystemVerilogPreParser.g4 by ANTLR 4.11.1
 
 
-#include "SystemVerilogPreParserListener.h"
+#include "SystemVerilogPreParserVisitor.h"
 
 #include "SystemVerilogPreParser.h"
 
@@ -369,16 +369,12 @@ size_t SystemVerilogPreParser::Source_textContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleSource_text;
 }
 
-void SystemVerilogPreParser::Source_textContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSource_text(this);
-}
 
-void SystemVerilogPreParser::Source_textContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSource_text(this);
+std::any SystemVerilogPreParser::Source_textContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitSource_text(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Source_textContext* SystemVerilogPreParser::source_text() {
@@ -507,16 +503,12 @@ size_t SystemVerilogPreParser::Compiler_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleCompiler_directive;
 }
 
-void SystemVerilogPreParser::Compiler_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCompiler_directive(this);
-}
 
-void SystemVerilogPreParser::Compiler_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCompiler_directive(this);
+std::any SystemVerilogPreParser::Compiler_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitCompiler_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Compiler_directiveContext* SystemVerilogPreParser::compiler_directive() {
@@ -719,16 +711,12 @@ size_t SystemVerilogPreParser::Begin_keywords_directiveContext::getRuleIndex() c
   return SystemVerilogPreParser::RuleBegin_keywords_directive;
 }
 
-void SystemVerilogPreParser::Begin_keywords_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBegin_keywords_directive(this);
-}
 
-void SystemVerilogPreParser::Begin_keywords_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBegin_keywords_directive(this);
+std::any SystemVerilogPreParser::Begin_keywords_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitBegin_keywords_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Begin_keywords_directiveContext* SystemVerilogPreParser::begin_keywords_directive() {
@@ -784,16 +772,12 @@ size_t SystemVerilogPreParser::Celldefine_directiveContext::getRuleIndex() const
   return SystemVerilogPreParser::RuleCelldefine_directive;
 }
 
-void SystemVerilogPreParser::Celldefine_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCelldefine_directive(this);
-}
 
-void SystemVerilogPreParser::Celldefine_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCelldefine_directive(this);
+std::any SystemVerilogPreParser::Celldefine_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitCelldefine_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Celldefine_directiveContext* SystemVerilogPreParser::celldefine_directive() {
@@ -847,16 +831,12 @@ size_t SystemVerilogPreParser::Default_nettype_directiveContext::getRuleIndex() 
   return SystemVerilogPreParser::RuleDefault_nettype_directive;
 }
 
-void SystemVerilogPreParser::Default_nettype_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefault_nettype_directive(this);
-}
 
-void SystemVerilogPreParser::Default_nettype_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefault_nettype_directive(this);
+std::any SystemVerilogPreParser::Default_nettype_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitDefault_nettype_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Default_nettype_directiveContext* SystemVerilogPreParser::default_nettype_directive() {
@@ -904,16 +884,12 @@ size_t SystemVerilogPreParser::Default_nettype_valueContext::getRuleIndex() cons
   return SystemVerilogPreParser::RuleDefault_nettype_value;
 }
 
-void SystemVerilogPreParser::Default_nettype_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefault_nettype_value(this);
-}
 
-void SystemVerilogPreParser::Default_nettype_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefault_nettype_value(this);
+std::any SystemVerilogPreParser::Default_nettype_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitDefault_nettype_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Default_nettype_valueContext* SystemVerilogPreParser::default_nettype_value() {
@@ -965,16 +941,12 @@ size_t SystemVerilogPreParser::Else_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleElse_directive;
 }
 
-void SystemVerilogPreParser::Else_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterElse_directive(this);
-}
 
-void SystemVerilogPreParser::Else_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitElse_directive(this);
+std::any SystemVerilogPreParser::Else_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitElse_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Else_directiveContext* SystemVerilogPreParser::else_directive() {
@@ -1034,16 +1006,12 @@ size_t SystemVerilogPreParser::Elsif_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleElsif_directive;
 }
 
-void SystemVerilogPreParser::Elsif_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterElsif_directive(this);
-}
 
-void SystemVerilogPreParser::Elsif_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitElsif_directive(this);
+std::any SystemVerilogPreParser::Elsif_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitElsif_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Elsif_directiveContext* SystemVerilogPreParser::elsif_directive() {
@@ -1097,16 +1065,12 @@ size_t SystemVerilogPreParser::End_keywords_directiveContext::getRuleIndex() con
   return SystemVerilogPreParser::RuleEnd_keywords_directive;
 }
 
-void SystemVerilogPreParser::End_keywords_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEnd_keywords_directive(this);
-}
 
-void SystemVerilogPreParser::End_keywords_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEnd_keywords_directive(this);
+std::any SystemVerilogPreParser::End_keywords_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitEnd_keywords_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::End_keywords_directiveContext* SystemVerilogPreParser::end_keywords_directive() {
@@ -1156,16 +1120,12 @@ size_t SystemVerilogPreParser::Endcelldefine_directiveContext::getRuleIndex() co
   return SystemVerilogPreParser::RuleEndcelldefine_directive;
 }
 
-void SystemVerilogPreParser::Endcelldefine_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEndcelldefine_directive(this);
-}
 
-void SystemVerilogPreParser::Endcelldefine_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEndcelldefine_directive(this);
+std::any SystemVerilogPreParser::Endcelldefine_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitEndcelldefine_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Endcelldefine_directiveContext* SystemVerilogPreParser::endcelldefine_directive() {
@@ -1215,16 +1175,12 @@ size_t SystemVerilogPreParser::Endif_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleEndif_directive;
 }
 
-void SystemVerilogPreParser::Endif_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEndif_directive(this);
-}
 
-void SystemVerilogPreParser::Endif_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEndif_directive(this);
+std::any SystemVerilogPreParser::Endif_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitEndif_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Endif_directiveContext* SystemVerilogPreParser::endif_directive() {
@@ -1274,16 +1230,12 @@ size_t SystemVerilogPreParser::File_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleFile_directive;
 }
 
-void SystemVerilogPreParser::File_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFile_directive(this);
-}
 
-void SystemVerilogPreParser::File_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFile_directive(this);
+std::any SystemVerilogPreParser::File_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitFile_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::File_directiveContext* SystemVerilogPreParser::file_directive() {
@@ -1329,16 +1281,12 @@ size_t SystemVerilogPreParser::FilenameContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleFilename;
 }
 
-void SystemVerilogPreParser::FilenameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFilename(this);
-}
 
-void SystemVerilogPreParser::FilenameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFilename(this);
+std::any SystemVerilogPreParser::FilenameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitFilename(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::FilenameContext* SystemVerilogPreParser::filename() {
@@ -1394,16 +1342,12 @@ size_t SystemVerilogPreParser::Group_of_linesContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleGroup_of_lines;
 }
 
-void SystemVerilogPreParser::Group_of_linesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroup_of_lines(this);
-}
 
-void SystemVerilogPreParser::Group_of_linesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroup_of_lines(this);
+std::any SystemVerilogPreParser::Group_of_linesContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitGroup_of_lines(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Group_of_linesContext* SystemVerilogPreParser::group_of_lines() {
@@ -1474,16 +1418,12 @@ size_t SystemVerilogPreParser::IdentifierContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleIdentifier;
 }
 
-void SystemVerilogPreParser::IdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifier(this);
-}
 
-void SystemVerilogPreParser::IdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifier(this);
+std::any SystemVerilogPreParser::IdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitIdentifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::IdentifierContext* SystemVerilogPreParser::identifier() {
@@ -1555,16 +1495,12 @@ size_t SystemVerilogPreParser::Ifdef_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleIfdef_directive;
 }
 
-void SystemVerilogPreParser::Ifdef_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIfdef_directive(this);
-}
 
-void SystemVerilogPreParser::Ifdef_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIfdef_directive(this);
+std::any SystemVerilogPreParser::Ifdef_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitIfdef_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Ifdef_directiveContext* SystemVerilogPreParser::ifdef_directive() {
@@ -1670,16 +1606,12 @@ size_t SystemVerilogPreParser::Ifndef_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleIfndef_directive;
 }
 
-void SystemVerilogPreParser::Ifndef_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIfndef_directive(this);
-}
 
-void SystemVerilogPreParser::Ifndef_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIfndef_directive(this);
+std::any SystemVerilogPreParser::Ifndef_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitIfndef_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Ifndef_directiveContext* SystemVerilogPreParser::ifndef_directive() {
@@ -1785,16 +1717,12 @@ size_t SystemVerilogPreParser::Include_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleInclude_directive;
 }
 
-void SystemVerilogPreParser::Include_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInclude_directive(this);
-}
 
-void SystemVerilogPreParser::Include_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInclude_directive(this);
+std::any SystemVerilogPreParser::Include_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitInclude_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Include_directiveContext* SystemVerilogPreParser::include_directive() {
@@ -1872,16 +1800,12 @@ size_t SystemVerilogPreParser::LevelContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleLevel;
 }
 
-void SystemVerilogPreParser::LevelContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLevel(this);
-}
 
-void SystemVerilogPreParser::LevelContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLevel(this);
+std::any SystemVerilogPreParser::LevelContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitLevel(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::LevelContext* SystemVerilogPreParser::level() {
@@ -1949,16 +1873,12 @@ size_t SystemVerilogPreParser::Line_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleLine_directive;
 }
 
-void SystemVerilogPreParser::Line_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLine_directive(this);
-}
 
-void SystemVerilogPreParser::Line_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLine_directive(this);
+std::any SystemVerilogPreParser::Line_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitLine_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Line_directiveContext* SystemVerilogPreParser::line_directive() {
@@ -2018,16 +1938,12 @@ size_t SystemVerilogPreParser::Line_directive_Context::getRuleIndex() const {
   return SystemVerilogPreParser::RuleLine_directive_;
 }
 
-void SystemVerilogPreParser::Line_directive_Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLine_directive_(this);
-}
 
-void SystemVerilogPreParser::Line_directive_Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLine_directive_(this);
+std::any SystemVerilogPreParser::Line_directive_Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitLine_directive_(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Line_directive_Context* SystemVerilogPreParser::line_directive_() {
@@ -2073,16 +1989,12 @@ size_t SystemVerilogPreParser::Macro_delimiterContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleMacro_delimiter;
 }
 
-void SystemVerilogPreParser::Macro_delimiterContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMacro_delimiter(this);
-}
 
-void SystemVerilogPreParser::Macro_delimiterContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMacro_delimiter(this);
+std::any SystemVerilogPreParser::Macro_delimiterContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitMacro_delimiter(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Macro_delimiterContext* SystemVerilogPreParser::macro_delimiter() {
@@ -2126,16 +2038,12 @@ size_t SystemVerilogPreParser::Macro_esc_newlineContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleMacro_esc_newline;
 }
 
-void SystemVerilogPreParser::Macro_esc_newlineContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMacro_esc_newline(this);
-}
 
-void SystemVerilogPreParser::Macro_esc_newlineContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMacro_esc_newline(this);
+std::any SystemVerilogPreParser::Macro_esc_newlineContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitMacro_esc_newline(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Macro_esc_newlineContext* SystemVerilogPreParser::macro_esc_newline() {
@@ -2179,16 +2087,12 @@ size_t SystemVerilogPreParser::Macro_esc_quoteContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleMacro_esc_quote;
 }
 
-void SystemVerilogPreParser::Macro_esc_quoteContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMacro_esc_quote(this);
-}
 
-void SystemVerilogPreParser::Macro_esc_quoteContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMacro_esc_quote(this);
+std::any SystemVerilogPreParser::Macro_esc_quoteContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitMacro_esc_quote(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Macro_esc_quoteContext* SystemVerilogPreParser::macro_esc_quote() {
@@ -2232,16 +2136,12 @@ size_t SystemVerilogPreParser::Macro_identifierContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleMacro_identifier;
 }
 
-void SystemVerilogPreParser::Macro_identifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMacro_identifier(this);
-}
 
-void SystemVerilogPreParser::Macro_identifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMacro_identifier(this);
+std::any SystemVerilogPreParser::Macro_identifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitMacro_identifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Macro_identifierContext* SystemVerilogPreParser::macro_identifier() {
@@ -2285,16 +2185,12 @@ size_t SystemVerilogPreParser::Macro_nameContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleMacro_name;
 }
 
-void SystemVerilogPreParser::Macro_nameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMacro_name(this);
-}
 
-void SystemVerilogPreParser::Macro_nameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMacro_name(this);
+std::any SystemVerilogPreParser::Macro_nameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitMacro_name(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Macro_nameContext* SystemVerilogPreParser::macro_name() {
@@ -2338,16 +2234,12 @@ size_t SystemVerilogPreParser::Macro_quoteContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleMacro_quote;
 }
 
-void SystemVerilogPreParser::Macro_quoteContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMacro_quote(this);
-}
 
-void SystemVerilogPreParser::Macro_quoteContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMacro_quote(this);
+std::any SystemVerilogPreParser::Macro_quoteContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitMacro_quote(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Macro_quoteContext* SystemVerilogPreParser::macro_quote() {
@@ -2435,16 +2327,12 @@ size_t SystemVerilogPreParser::Macro_textContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleMacro_text;
 }
 
-void SystemVerilogPreParser::Macro_textContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMacro_text(this);
-}
 
-void SystemVerilogPreParser::Macro_textContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMacro_text(this);
+std::any SystemVerilogPreParser::Macro_textContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitMacro_text(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Macro_textContext* SystemVerilogPreParser::macro_text() {
@@ -2538,16 +2426,12 @@ size_t SystemVerilogPreParser::Macro_usageContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleMacro_usage;
 }
 
-void SystemVerilogPreParser::Macro_usageContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMacro_usage(this);
-}
 
-void SystemVerilogPreParser::Macro_usageContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMacro_usage(this);
+std::any SystemVerilogPreParser::Macro_usageContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitMacro_usage(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Macro_usageContext* SystemVerilogPreParser::macro_usage() {
@@ -2595,16 +2479,12 @@ size_t SystemVerilogPreParser::Nounconnected_drive_directiveContext::getRuleInde
   return SystemVerilogPreParser::RuleNounconnected_drive_directive;
 }
 
-void SystemVerilogPreParser::Nounconnected_drive_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNounconnected_drive_directive(this);
-}
 
-void SystemVerilogPreParser::Nounconnected_drive_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNounconnected_drive_directive(this);
+std::any SystemVerilogPreParser::Nounconnected_drive_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitNounconnected_drive_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Nounconnected_drive_directiveContext* SystemVerilogPreParser::nounconnected_drive_directive() {
@@ -2650,16 +2530,12 @@ size_t SystemVerilogPreParser::NumberContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleNumber;
 }
 
-void SystemVerilogPreParser::NumberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNumber(this);
-}
 
-void SystemVerilogPreParser::NumberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNumber(this);
+std::any SystemVerilogPreParser::NumberContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitNumber(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::NumberContext* SystemVerilogPreParser::number() {
@@ -2727,16 +2603,12 @@ size_t SystemVerilogPreParser::Pragma_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RulePragma_directive;
 }
 
-void SystemVerilogPreParser::Pragma_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPragma_directive(this);
-}
 
-void SystemVerilogPreParser::Pragma_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPragma_directive(this);
+std::any SystemVerilogPreParser::Pragma_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitPragma_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Pragma_directiveContext* SystemVerilogPreParser::pragma_directive() {
@@ -2814,16 +2686,12 @@ size_t SystemVerilogPreParser::Pragma_expressionContext::getRuleIndex() const {
   return SystemVerilogPreParser::RulePragma_expression;
 }
 
-void SystemVerilogPreParser::Pragma_expressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPragma_expression(this);
-}
 
-void SystemVerilogPreParser::Pragma_expressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPragma_expression(this);
+std::any SystemVerilogPreParser::Pragma_expressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitPragma_expression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Pragma_expressionContext* SystemVerilogPreParser::pragma_expression() {
@@ -2882,16 +2750,12 @@ size_t SystemVerilogPreParser::Pragma_keywordContext::getRuleIndex() const {
   return SystemVerilogPreParser::RulePragma_keyword;
 }
 
-void SystemVerilogPreParser::Pragma_keywordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPragma_keyword(this);
-}
 
-void SystemVerilogPreParser::Pragma_keywordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPragma_keyword(this);
+std::any SystemVerilogPreParser::Pragma_keywordContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitPragma_keyword(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Pragma_keywordContext* SystemVerilogPreParser::pragma_keyword() {
@@ -2935,16 +2799,12 @@ size_t SystemVerilogPreParser::Pragma_nameContext::getRuleIndex() const {
   return SystemVerilogPreParser::RulePragma_name;
 }
 
-void SystemVerilogPreParser::Pragma_nameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPragma_name(this);
-}
 
-void SystemVerilogPreParser::Pragma_nameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPragma_name(this);
+std::any SystemVerilogPreParser::Pragma_nameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitPragma_name(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Pragma_nameContext* SystemVerilogPreParser::pragma_name() {
@@ -3020,16 +2880,12 @@ size_t SystemVerilogPreParser::Pragma_valueContext::getRuleIndex() const {
   return SystemVerilogPreParser::RulePragma_value;
 }
 
-void SystemVerilogPreParser::Pragma_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPragma_value(this);
-}
 
-void SystemVerilogPreParser::Pragma_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPragma_value(this);
+std::any SystemVerilogPreParser::Pragma_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitPragma_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Pragma_valueContext* SystemVerilogPreParser::pragma_value() {
@@ -3125,16 +2981,12 @@ size_t SystemVerilogPreParser::Resetall_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleResetall_directive;
 }
 
-void SystemVerilogPreParser::Resetall_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterResetall_directive(this);
-}
 
-void SystemVerilogPreParser::Resetall_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitResetall_directive(this);
+std::any SystemVerilogPreParser::Resetall_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitResetall_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Resetall_directiveContext* SystemVerilogPreParser::resetall_directive() {
@@ -3180,16 +3032,12 @@ size_t SystemVerilogPreParser::Source_text_Context::getRuleIndex() const {
   return SystemVerilogPreParser::RuleSource_text_;
 }
 
-void SystemVerilogPreParser::Source_text_Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSource_text_(this);
-}
 
-void SystemVerilogPreParser::Source_text_Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSource_text_(this);
+std::any SystemVerilogPreParser::Source_text_Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitSource_text_(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Source_text_Context* SystemVerilogPreParser::source_text_() {
@@ -3233,16 +3081,12 @@ size_t SystemVerilogPreParser::String_literalContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleString_literal;
 }
 
-void SystemVerilogPreParser::String_literalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterString_literal(this);
-}
 
-void SystemVerilogPreParser::String_literalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitString_literal(this);
+std::any SystemVerilogPreParser::String_literalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitString_literal(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::String_literalContext* SystemVerilogPreParser::string_literal() {
@@ -3298,16 +3142,12 @@ size_t SystemVerilogPreParser::Text_macro_definitionContext::getRuleIndex() cons
   return SystemVerilogPreParser::RuleText_macro_definition;
 }
 
-void SystemVerilogPreParser::Text_macro_definitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterText_macro_definition(this);
-}
 
-void SystemVerilogPreParser::Text_macro_definitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitText_macro_definition(this);
+std::any SystemVerilogPreParser::Text_macro_definitionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitText_macro_definition(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Text_macro_definitionContext* SystemVerilogPreParser::text_macro_definition() {
@@ -3361,16 +3201,12 @@ size_t SystemVerilogPreParser::Text_macro_usageContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleText_macro_usage;
 }
 
-void SystemVerilogPreParser::Text_macro_usageContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterText_macro_usage(this);
-}
 
-void SystemVerilogPreParser::Text_macro_usageContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitText_macro_usage(this);
+std::any SystemVerilogPreParser::Text_macro_usageContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitText_macro_usage(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Text_macro_usageContext* SystemVerilogPreParser::text_macro_usage() {
@@ -3420,16 +3256,12 @@ size_t SystemVerilogPreParser::Time_precisionContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleTime_precision;
 }
 
-void SystemVerilogPreParser::Time_precisionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTime_precision(this);
-}
 
-void SystemVerilogPreParser::Time_precisionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTime_precision(this);
+std::any SystemVerilogPreParser::Time_precisionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitTime_precision(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Time_precisionContext* SystemVerilogPreParser::time_precision() {
@@ -3479,16 +3311,12 @@ size_t SystemVerilogPreParser::Time_unitContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleTime_unit;
 }
 
-void SystemVerilogPreParser::Time_unitContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTime_unit(this);
-}
 
-void SystemVerilogPreParser::Time_unitContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTime_unit(this);
+std::any SystemVerilogPreParser::Time_unitContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitTime_unit(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Time_unitContext* SystemVerilogPreParser::time_unit() {
@@ -3550,16 +3378,12 @@ size_t SystemVerilogPreParser::Timescale_directiveContext::getRuleIndex() const 
   return SystemVerilogPreParser::RuleTimescale_directive;
 }
 
-void SystemVerilogPreParser::Timescale_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTimescale_directive(this);
-}
 
-void SystemVerilogPreParser::Timescale_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTimescale_directive(this);
+std::any SystemVerilogPreParser::Timescale_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitTimescale_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Timescale_directiveContext* SystemVerilogPreParser::timescale_directive() {
@@ -3619,16 +3443,12 @@ size_t SystemVerilogPreParser::Unconnected_drive_directiveContext::getRuleIndex(
   return SystemVerilogPreParser::RuleUnconnected_drive_directive;
 }
 
-void SystemVerilogPreParser::Unconnected_drive_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnconnected_drive_directive(this);
-}
 
-void SystemVerilogPreParser::Unconnected_drive_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnconnected_drive_directive(this);
+std::any SystemVerilogPreParser::Unconnected_drive_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitUnconnected_drive_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Unconnected_drive_directiveContext* SystemVerilogPreParser::unconnected_drive_directive() {
@@ -3676,16 +3496,12 @@ size_t SystemVerilogPreParser::Unconnected_drive_valueContext::getRuleIndex() co
   return SystemVerilogPreParser::RuleUnconnected_drive_value;
 }
 
-void SystemVerilogPreParser::Unconnected_drive_valueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnconnected_drive_value(this);
-}
 
-void SystemVerilogPreParser::Unconnected_drive_valueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnconnected_drive_value(this);
+std::any SystemVerilogPreParser::Unconnected_drive_valueContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitUnconnected_drive_value(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Unconnected_drive_valueContext* SystemVerilogPreParser::unconnected_drive_value() {
@@ -3737,16 +3553,12 @@ size_t SystemVerilogPreParser::Undef_directiveContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleUndef_directive;
 }
 
-void SystemVerilogPreParser::Undef_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUndef_directive(this);
-}
 
-void SystemVerilogPreParser::Undef_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUndef_directive(this);
+std::any SystemVerilogPreParser::Undef_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitUndef_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Undef_directiveContext* SystemVerilogPreParser::undef_directive() {
@@ -3798,16 +3610,12 @@ size_t SystemVerilogPreParser::Undefineall_directiveContext::getRuleIndex() cons
   return SystemVerilogPreParser::RuleUndefineall_directive;
 }
 
-void SystemVerilogPreParser::Undefineall_directiveContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUndefineall_directive(this);
-}
 
-void SystemVerilogPreParser::Undefineall_directiveContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUndefineall_directive(this);
+std::any SystemVerilogPreParser::Undefineall_directiveContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitUndefineall_directive(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Undefineall_directiveContext* SystemVerilogPreParser::undefineall_directive() {
@@ -3853,16 +3661,12 @@ size_t SystemVerilogPreParser::Version_specifierContext::getRuleIndex() const {
   return SystemVerilogPreParser::RuleVersion_specifier;
 }
 
-void SystemVerilogPreParser::Version_specifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVersion_specifier(this);
-}
 
-void SystemVerilogPreParser::Version_specifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<SystemVerilogPreParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVersion_specifier(this);
+std::any SystemVerilogPreParser::Version_specifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<SystemVerilogPreParserVisitor*>(visitor))
+    return parserVisitor->visitVersion_specifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 SystemVerilogPreParser::Version_specifierContext* SystemVerilogPreParser::version_specifier() {
