@@ -19,6 +19,18 @@
         }
     
 
+    list<string> BLLibrary::get_filenames()
+    {
+        return this->filenames;
+    }
+
+    
+        void BLLibrary::add_filename(string value)
+        {
+            this->filenames.push_back( value );
+        }
+    
+
     list<shared_ptr<BLDesign>> BLLibrary::get_designs()
     {
         return this->designs;

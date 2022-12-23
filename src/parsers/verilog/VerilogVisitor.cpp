@@ -24,3 +24,10 @@ std::any VerilogVisitor::visitModule_declaration(VerilogParser::Module_declarati
 
     return visitChildren(ctx);
 };
+
+std::any VerilogVisitor::visitPort_declaration(VerilogParser::Port_declarationContext *ctx)
+{
+    std::string text = ctx->getText();
+    // cout << text << endl;
+    return visitChildren(ctx);
+}

@@ -5,11 +5,30 @@
 #include "parsers/verilog/VerilogVisitor.h"
 #include "parsers/verilog/generated/VerilogLexer.h"
 #include <argparse/argparse.hpp>
+#include <future>
 #include <iostream>
 #include <memory>
+#include <thread>
 
 using namespace std;
 using namespace antlr4;
+
+shared_ptr<BLLibrary> read_verilog(string file)
+{
+    ifstream stream;
+    stream.open(file);
+
+    ANTLRInputStream input(stream);
+    VerilogLexer lexer(&input);
+    CommonTokenStream tokens(&lexer);
+    VerilogParser parser(&tokens);
+    VerilogParser::Source_textContext *tree = parser.source_text();
+    VerilogVisitor visitor;
+    visitor.visitSource_text(tree);
+    shared_ptr<BLLibrary> library = visitor.get_library();
+    library->add_filename(file);
+    return library;
+}
 
 int main(int argc, char *argv[])
 {
@@ -26,30 +45,38 @@ int main(int argc, char *argv[])
     {
         program.parse_args(argc, argv);
     }
-    catch (const std::runtime_error &err)
+    catch (const runtime_error &err)
     {
-        std::cerr << err.what() << std::endl;
-        std::cerr << program;
-        std::exit(1);
+        cerr << err.what() << endl;
+        cerr << program;
+        exit(1);
     }
 
     if (program.is_subcommand_used("verilog"))
     {
-        for (auto file : verilog_command.get<list<string>>("--files"))
+        // Run read_verilog for each file in the future
+        list<future<shared_ptr<BLLibrary>>> futures;
+        for (string file : verilog_command.get<list<string>>("--files"))
         {
-            cout << "Parsing: " << file << endl;
-            std::ifstream stream;
-            stream.open(file);
+            futures.push_back(async(&read_verilog, file));
+        }
 
-            ANTLRInputStream input(stream);
-            VerilogLexer lexer(&input);
-            CommonTokenStream tokens(&lexer);
-            VerilogParser parser(&tokens);
-            VerilogParser::Source_textContext *tree = parser.source_text();
-            VerilogVisitor visitor;
-            visitor.visitSource_text(tree);
-            shared_ptr<BLLibrary> library = visitor.get_library();
+        // Bring back libraries from the future
+        list<shared_ptr<BLLibrary>> libraries;
+        for (auto &future : futures)
+        {
+            libraries.push_back(future.get());
+        }
 
+        // Report library and design names
+        for (auto library : libraries)
+        {
+            cout << "Verilog File(s): '";
+            for (string filename : library->get_filenames())
+            {
+                cout << filename << " ";
+            }
+            cout << "'" << endl;
             for (shared_ptr<BLDesign> design : library->get_designs())
             {
                 cout << design->get_name() << endl;

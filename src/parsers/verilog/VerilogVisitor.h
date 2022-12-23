@@ -13,4 +13,5 @@ public:
     shared_ptr<BLLibrary> get_library();
     std::any visitSource_text(VerilogParser::Source_textContext *ctx);
     std::any visitModule_declaration(VerilogParser::Module_declarationContext *ctx);
+    std::any visitPort_declaration(VerilogParser::Port_declarationContext *ctx);
 };

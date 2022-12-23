@@ -21,6 +21,8 @@ class BLLibrary
     
         string name;
     
+        list<string> filenames;
+    
         list<shared_ptr<BLDesign>> designs;
     
     public:
@@ -28,6 +30,11 @@ class BLLibrary
             string get_name();
             
                 void set_name(string value);
+            
+        
+            list<string> get_filenames();
+            
+                void add_filename(string value);
             
         
             list<shared_ptr<BLDesign>> get_designs();
