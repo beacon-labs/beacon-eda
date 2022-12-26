@@ -30,3 +30,15 @@
             this->instances.push_back( value );
         }
     
+
+    list<shared_ptr<BLPort>> BLDesign::get_ports()
+    {
+        return this->ports;
+    }
+
+    
+        void BLDesign::add_port(shared_ptr<BLPort> value)
+        {
+            this->ports.push_back( value );
+        }
+    

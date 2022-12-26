@@ -1,17 +1,17 @@
-#pragma once
+#include "../../database/database.h"
+#include "slang/syntax/SyntaxVisitor.h"
+#include <list>
 
-#include "../../database/bl_library.h"
-#include "antlr4-runtime.h"
-#include "generated/VerilogParserBaseVisitor.h"
-#include <string>
-
-class VerilogVisitor : VerilogParserBaseVisitor
+class VerilogVisitor : public slang::syntax::SyntaxVisitor<VerilogVisitor>
 {
-    shared_ptr<BLLibrary> library;
-
 public:
-    shared_ptr<BLLibrary> get_library();
-    std::any visitSource_text(VerilogParser::Source_textContext *ctx);
-    std::any visitModule_declaration(VerilogParser::Module_declarationContext *ctx);
-    std::any visitPort_declaration(VerilogParser::Port_declarationContext *ctx);
+    std::shared_ptr<BLLibrary> library;
+
+    void handle(const slang::syntax::ModuleHeaderSyntax &syntax);
+    void handle(const slang::syntax::ImplicitAnsiPortSyntax &syntax);
+    void handle(const slang::syntax::VariablePortHeaderSyntax &syntax);
+
+private:
+    std::shared_ptr<BLDesign> design;
+    std::shared_ptr<BLPort> port;
 };

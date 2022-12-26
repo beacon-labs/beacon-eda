@@ -13,8 +13,10 @@ using namespace std;
 #include <string>
 #include <list>
 #include "bl_instance.h"
+#include "bl_port.h"
 
 class BLInstance;
+class BLPort;
 
 class BLDesign
 {
@@ -22,6 +24,8 @@ class BLDesign
         string name;
     
         list<shared_ptr<BLInstance>> instances;
+    
+        list<shared_ptr<BLPort>> ports;
     
     public:
         
@@ -33,6 +37,11 @@ class BLDesign
             list<shared_ptr<BLInstance>> get_instances();
             
                 void add_instance(shared_ptr<BLInstance> value);
+            
+        
+            list<shared_ptr<BLPort>> get_ports();
+            
+                void add_port(shared_ptr<BLPort> value);
             
         
 

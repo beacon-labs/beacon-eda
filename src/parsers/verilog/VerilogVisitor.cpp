@@ -1,33 +1,32 @@
 #include "VerilogVisitor.h"
-#include "../../database/bl_design.h"
+
 #include <string>
 
 using namespace std;
+using namespace slang::syntax;
 
-shared_ptr<BLLibrary> VerilogVisitor::get_library()
+// Get name of module and create a design for it
+void VerilogVisitor::handle(const ModuleHeaderSyntax &syntax)
 {
-    return library;
-}
-
-std::any VerilogVisitor::visitSource_text(VerilogParser::Source_textContext *ctx)
-{
-    library = make_shared<BLLibrary>();
-    return visitChildren(ctx);
-}
-
-std::any VerilogVisitor::visitModule_declaration(VerilogParser::Module_declarationContext *ctx)
-{
-    shared_ptr<BLDesign> design = make_shared<BLDesign>();
-    string name = ctx->module_identifier()->getText();
-    design->set_name(name);
+    design = make_shared<BLDesign>();
+    design->set_name(syntax.name.toString());
     library->add_design(design);
 
-    return visitChildren(ctx);
-};
+    visitDefault(syntax);
+}
 
-std::any VerilogVisitor::visitPort_declaration(VerilogParser::Port_declarationContext *ctx)
+void VerilogVisitor::handle(const ImplicitAnsiPortSyntax &syntax)
 {
-    std::string text = ctx->getText();
-    // cout << text << endl;
-    return visitChildren(ctx);
+    port = make_shared<BLPort>();
+    design->add_port(port);
+    port->set_name(string(syntax.declarator->name.valueText()));
+
+    visitDefault(syntax);
+}
+
+void VerilogVisitor::handle(const VariablePortHeaderSyntax &syntax)
+{
+    port->set_direction(string(syntax.direction.valueText()));
+
+    visitDefault(syntax);
 }
