@@ -7,30 +7,11 @@
 
 #pragma once
 
+#include "bl_pin_base.h"
+
 using namespace std;
 
-#include <memory>
-#include <string>
-
-
-class BLPin
+class BLPin : public BLPinBase
 {
-    
-        string name;
-    
-        string direction;
-    
-    public:
-        
-            string get_name();
-            
-                void set_name(string value);
-            
-        
-            string get_direction();
-            
-                void set_direction(string value);
-            
-        
-
+    // Add your custom code here
 };

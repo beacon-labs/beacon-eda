@@ -42,7 +42,6 @@ int main(int argc, char *argv[])
 
         for (std::string file : verilog_command.get<std::list<std::string>>("--files"))
         {
-            cout << "INFO: parsing '" << file << "'" << endl;
             auto tree = slang::syntax::SyntaxTree::fromFile(file);
 
             // JohnsTestVisitor visitor;
@@ -50,15 +49,9 @@ int main(int argc, char *argv[])
             visitor.library = library;
             tree->root().visit(visitor);
         }
-
         for (shared_ptr<BLDesign> design : library->get_designs())
         {
-            cout << design->get_name() << ": ";
-            for (shared_ptr<BLPort> port : design->get_ports())
-            {
-                cout << port->get_direction() << ":" << port->get_name() << " ";
-            }
-            cout << endl;
+            design->pp("");
         }
     }
 }

@@ -4,41 +4,18 @@
  * ------------------------------
  * A design or module used to group functions and cells
  */
+#include <iostream>
 
 #include "bl_design.h"
+#include "bl_port.h"
 
-
-    string BLDesign::get_name()
+void BLDesign::pp(std::string ident)
+{
+    std::cout << ident << "name: " << get_name() << std::endl;
+    std::cout << ident << "ports:" << std::endl;
+    for (shared_ptr<BLPort> port : get_ports())
     {
-        return this->name;
+        cout << endl;
+        port->pp(ident + "  ");
     }
-
-    void BLDesign::set_name(string value)
-        {
-            this->name = value;
-        }
-    
-
-    list<shared_ptr<BLInstance>> BLDesign::get_instances()
-    {
-        return this->instances;
-    }
-
-    
-        void BLDesign::add_instance(shared_ptr<BLInstance> value)
-        {
-            this->instances.push_back( value );
-        }
-    
-
-    list<shared_ptr<BLPort>> BLDesign::get_ports()
-    {
-        return this->ports;
-    }
-
-    
-        void BLDesign::add_port(shared_ptr<BLPort> value)
-        {
-            this->ports.push_back( value );
-        }
-    
+}

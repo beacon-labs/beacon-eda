@@ -5,27 +5,20 @@
  * A port of a design
  */
 
+#include <iostream>
+
 #include "bl_port.h"
 
+void BLPort::pp(std::string ident)
+{
+    std::cout << ident << "name: " << get_name() << std::endl;
+    std::cout << ident << "direction: " << get_direction() << std::endl;
+    int from = get_from();
+    int to = get_to();
 
-    string BLPort::get_name()
+    if (from != 0 || to != 0)
     {
-        return this->name;
+        std::cout << ident << "from: " << std::to_string(from) << std::endl;
+        std::cout << ident << "to: " << std::to_string(to) << std::endl;
     }
-
-    void BLPort::set_name(string value)
-        {
-            this->name = value;
-        }
-    
-
-    string BLPort::get_direction()
-    {
-        return this->direction;
-    }
-
-    void BLPort::set_direction(string value)
-        {
-            this->direction = value;
-        }
-    
+}

@@ -7,40 +7,11 @@
 
 #pragma once
 
+#include "bl_library_base.h"
+
 using namespace std;
 
-#include <memory>
-#include <string>
-#include <list>
-#include "bl_design.h"
-
-class BLDesign;
-
-class BLLibrary
+class BLLibrary : public BLLibraryBase
 {
-    
-        string name;
-    
-        list<string> filenames;
-    
-        list<shared_ptr<BLDesign>> designs;
-    
-    public:
-        
-            string get_name();
-            
-                void set_name(string value);
-            
-        
-            list<string> get_filenames();
-            
-                void add_filename(string value);
-            
-        
-            list<shared_ptr<BLDesign>> get_designs();
-            
-                void add_design(shared_ptr<BLDesign> value);
-            
-        
-
+    // Add your custom code here
 };
