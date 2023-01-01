@@ -9,13 +9,13 @@
 #include "bl_design.h"
 #include "bl_port.h"
 
-void BLDesign::pp(std::string ident)
+void BLDesign::pp(pp_args args)
 {
-    std::cout << ident << "name: " << get_name() << std::endl;
-    std::cout << ident << "ports:" << std::endl;
+    std::cout << args.ident << "name: " << get_name() << std::endl;
+    std::cout << args.ident << "ports:" << std::endl;
     for (shared_ptr<BLPort> port : get_ports())
     {
         cout << endl;
-        port->pp(ident + "  ");
+        port->pp(args.ident + "  ");
     }
 }

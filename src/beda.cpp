@@ -3,7 +3,7 @@
 #include "database/bl_library.h"
 
 // #include "parsers/verilog/JohnsTestVisitor.h"
-#include "parsers/verilog/VerilogVisitor.h"
+#include "parsers/systemverilog/VerilogVisitor.h"
 #include "slang/syntax/SyntaxNode.h"
 #include "slang/syntax/SyntaxTree.h"
 #include "slang/text/SourceManager.h"
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         }
         for (shared_ptr<BLDesign> design : library->get_designs())
         {
-            design->pp("");
+            design->pp(pp_args({.indent = "  "}));
         }
     }
 }

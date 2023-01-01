@@ -10,9 +10,10 @@
 #include <any>
 
 #include "bl_design_base.h"
+#include "pp.h"
 
-class BLDesign : public BLDesignBase
+class BLDesign : public BLDesignBase, PP
 {
 public:
-    void pp(std::string ident);
+    void pp(pp_args args = pp_args());
 };
