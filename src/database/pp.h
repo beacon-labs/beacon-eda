@@ -3,13 +3,16 @@
   A struct with virtual function pp that can be added to any class to
   pretty print it's representation.
 
+
   Example usage:
 
+  ```
   class MyClass : public PP
   {
     public:
         void pp(pp_args args = pp_args());
   }
+  ```
 */
 #pragma once
 

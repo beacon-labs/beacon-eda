@@ -24,7 +24,16 @@ A struct with virtual function pp that can be added to any class to pretty print
 
 Example usage\+:
 
-class My\+Class \+: public \mbox{\hyperlink{structPP}{PP}} \{ public\+: void pp(\mbox{\hyperlink{structpp__args}{pp\+\_\+args}} args = \mbox{\hyperlink{structpp__args}{pp\+\_\+args()}}); \} 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }MyClass : \textcolor{keyword}{public} \mbox{\hyperlink{classPP}{PP}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{keyword}{public}:}
+\DoxyCodeLine{      \textcolor{keywordtype}{void} pp(\mbox{\hyperlink{structpp__args}{pp\_args}} args = \mbox{\hyperlink{structpp__args}{pp\_args}}());}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
