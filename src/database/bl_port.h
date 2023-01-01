@@ -8,11 +8,10 @@
 #pragma once
 
 #include "bl_port_base.h"
+#include "pp.h"
 
-using namespace std;
-
-class BLPort : public BLPortBase
+class BLPort : public BLPortBase, PP
 {
 public:
-    void pp(std::string ident);
+    void pp(pp_args args = pp_args()) override;
 };

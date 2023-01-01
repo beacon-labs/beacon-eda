@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         }
         for (shared_ptr<BLDesign> design : library->get_designs())
         {
-            design->pp(pp_args({.indent = "  "}));
+            design->pp();
         }
     }
 }

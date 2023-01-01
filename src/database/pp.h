@@ -11,6 +11,8 @@
         void pp(pp_args args = pp_args());
   }
 */
+#pragma once
+
 #include <string>
 
 /* Use pp_args to define the indentation of the printing */
@@ -19,8 +21,9 @@ struct pp_args
     std::string ident = "";
 };
 
-/* Abstract struct to inherit in your class or struct */
-struct PP
+/* Abstract class to inherit in your class or struct */
+class PP
 {
-    virtual void pp(pp_args args = pp_args());
+public:
+    virtual void pp(pp_args args = pp_args()) = 0;
 };

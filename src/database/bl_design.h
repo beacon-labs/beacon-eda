@@ -15,5 +15,5 @@
 class BLDesign : public BLDesignBase, PP
 {
 public:
-    void pp(pp_args args = pp_args());
+    void pp(pp_args args = pp_args()) override;
 };
