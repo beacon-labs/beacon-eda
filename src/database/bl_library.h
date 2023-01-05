@@ -8,10 +8,10 @@
 #pragma once
 
 #include "bl_library_base.h"
+#include "pp.h"
 
-using namespace std;
-
-class BLLibrary : public BLLibraryBase
+class BLLibrary : public BLLibraryBase, PP
 {
-    // Add your custom code here
+public:
+    void pp(pp_args args = pp_args()) override;
 };

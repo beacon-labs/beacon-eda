@@ -7,10 +7,17 @@
   Example usage:
 
   ```
+  ---MyClass.h---
   class MyClass : public PP
   {
     public:
-        void pp(pp_args args = pp_args());
+        void pp(pp_args args = pp_args()) override;
+  }
+
+  ---MyClass.cpp---
+  void MyClass::pp(pp_args args)
+  {
+    cout << args.ident << name << endl;
   }
   ```
 */
@@ -18,10 +25,10 @@
 
 #include <string>
 
-/* Use pp_args to define the indentation of the printing */
+//! Use pp_args to define the indentation of the printing
 struct pp_args
 {
-    std::string ident = "";
+    std::string ident = ""; //! indentation string
 };
 
 /* Abstract class to inherit in your class or struct */

@@ -13,37 +13,39 @@
 using namespace std;
 
 #include <memory>
+#include "bl_observer.h"
+#include <list>
 #include <string>
 #include <list>
-// //     #include "bl_design.h"
-// 
 class BLDesign;
 
 class BLLibraryBase
 {
     
-        string name;
+    string name;
+    list<shared_ptr<IBLObserver<string>>> name_observers;
     
-        list<string> filenames;
+    list<string> filenames;
+    list<shared_ptr<IBLObserver<string>>> filenames_observers;
     
-        list<shared_ptr<BLDesign>> designs;
+    list<shared_ptr<BLDesign>> designs;
+    list<shared_ptr<IBLObserver<shared_ptr<BLDesign>>>> designs_observers;
     
-    public:
-        
-            string get_name();
-            
-                void set_name(string value);
-            
-        
-            list<string> get_filenames();
-            
-                void add_filename(string value);
-            
-        
-            list<shared_ptr<BLDesign>> get_designs();
-            
-                void add_design(shared_ptr<BLDesign> value);
-            
-        
+public:
+    
+    string get_name();
+    void observe_name(shared_ptr<IBLObserver<string>> observer);
+    void set_name(string value);
+    
+    list<string> get_filenames();
+    void observe_filenames(shared_ptr<IBLObserver<string>> observer);
+    void add_filename(string value);
+    
+    
+    list<shared_ptr<BLDesign>> get_designs();
+    void observe_designs(shared_ptr<IBLObserver<shared_ptr<BLDesign>>> observer);
+    void add_design(shared_ptr<BLDesign> value);
+    
+    
 
 };

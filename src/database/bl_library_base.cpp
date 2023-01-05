@@ -11,37 +11,64 @@
 #include "bl_library_base.h"
 
 
-    string BLLibraryBase::get_name()
+string BLLibraryBase::get_name()
+{
+    return this->name;
+}
+
+void BLLibraryBase::observe_name(shared_ptr<IBLObserver<string>> observer)
+{
+    name_observers.push_back( observer );
+}
+
+void BLLibraryBase::set_name(string value)
+{
+    this->name = value;
+    for ( shared_ptr<IBLObserver<string>> observer : name_observers )
     {
-        return this->name;
+        observer->update( value );
     }
+}
 
-    void BLLibraryBase::set_name(string value)
-        {
-            this->name = value;
-        }
-    
 
-    list<string> BLLibraryBase::get_filenames()
+list<string> BLLibraryBase::get_filenames()
+{
+    return this->filenames;
+}
+
+void BLLibraryBase::observe_filenames(shared_ptr<IBLObserver<string>> observer)
+{
+    filenames_observers.push_back( observer );
+}
+
+
+void BLLibraryBase::add_filename(string value)
+{
+    this->filenames.push_back( value );
+    for ( shared_ptr<IBLObserver<string>> observer : filenames_observers )
     {
-        return this->filenames;
+        observer->update( value );
     }
+}
 
-    
-        void BLLibraryBase::add_filename(string value)
-        {
-            this->filenames.push_back( value );
-        }
-    
 
-    list<shared_ptr<BLDesign>> BLLibraryBase::get_designs()
+list<shared_ptr<BLDesign>> BLLibraryBase::get_designs()
+{
+    return this->designs;
+}
+
+void BLLibraryBase::observe_designs(shared_ptr<IBLObserver<shared_ptr<BLDesign>>> observer)
+{
+    designs_observers.push_back( observer );
+}
+
+
+void BLLibraryBase::add_design(shared_ptr<BLDesign> value)
+{
+    this->designs.push_back( value );
+    for ( shared_ptr<IBLObserver<shared_ptr<BLDesign>>> observer : designs_observers )
     {
-        return this->designs;
+        observer->update( value );
     }
+}
 
-    
-        void BLLibraryBase::add_design(shared_ptr<BLDesign> value)
-        {
-            this->designs.push_back( value );
-        }
-    

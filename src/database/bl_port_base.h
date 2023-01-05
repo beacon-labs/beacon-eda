@@ -13,41 +13,42 @@
 using namespace std;
 
 #include <memory>
+#include "bl_observer.h"
+#include <list>
 #include <string>
-// 
 
 class BLPortBase
 {
     
-        string name;
+    string name;
+    list<shared_ptr<IBLObserver<string>>> name_observers;
     
-        string direction;
+    string direction;
+    list<shared_ptr<IBLObserver<string>>> direction_observers;
     
-        int from;
+    int from;
+    list<shared_ptr<IBLObserver<int>>> from_observers;
     
-        int to;
+    int to;
+    list<shared_ptr<IBLObserver<int>>> to_observers;
     
-    public:
-        
-            string get_name();
-            
-                void set_name(string value);
-            
-        
-            string get_direction();
-            
-                void set_direction(string value);
-            
-        
-            int get_from();
-            
-                void set_from(int value);
-            
-        
-            int get_to();
-            
-                void set_to(int value);
-            
-        
+public:
+    
+    string get_name();
+    void observe_name(shared_ptr<IBLObserver<string>> observer);
+    void set_name(string value);
+    
+    string get_direction();
+    void observe_direction(shared_ptr<IBLObserver<string>> observer);
+    void set_direction(string value);
+    
+    int get_from();
+    void observe_from(shared_ptr<IBLObserver<int>> observer);
+    void set_from(int value);
+    
+    int get_to();
+    void observe_to(shared_ptr<IBLObserver<int>> observer);
+    void set_to(int value);
+    
 
 };

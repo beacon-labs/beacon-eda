@@ -106,14 +106,22 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ident</b> = &q
 <div class="textblock"><p>Pretty Print. </p>
 <p>A struct with virtual function pp that can be added to any class to pretty print it's representation.</p>
 <p>Example usage:</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>MyClass : <span class="keyword">public</span> <a class="code" href="classPP.html">PP</a></div>
+<div class="fragment"><div class="line">---MyClass.h---</div>
+<div class="line"><span class="keyword">class </span>MyClass : <span class="keyword">public</span> <a class="code" href="classPP.html">PP</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">public</span>:</div>
-<div class="line">      <span class="keywordtype">void</span> pp(<a class="code" href="structpp__args.html">pp_args</a> args = <a class="code" href="structpp__args.html">pp_args</a>());</div>
+<div class="line">      <span class="keywordtype">void</span> pp(<a class="code" href="structpp__args.html">pp_args</a> args = <a class="code" href="structpp__args.html">pp_args</a>()) <span class="keyword">override</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassPP_html"><div class="ttname"><a href="classPP.html">PP</a></div><div class="ttdef"><b>Definition:</b> pp.h:29</div></div>
-<div class="ttc" id="astructpp__args_html"><div class="ttname"><a href="structpp__args.html">pp_args</a></div><div class="ttdoc">Pretty Print.</div><div class="ttdef"><b>Definition:</b> pp.h:23</div></div>
-</div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="line"> </div>
+<div class="line">---MyClass.cpp---</div>
+<div class="line"><span class="keywordtype">void</span> MyClass::pp(<a class="code" href="structpp__args.html">pp_args</a> args)</div>
+<div class="line">{</div>
+<div class="line">  cout &lt;&lt; args.ident &lt;&lt; name &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassPP_html"><div class="ttname"><a href="classPP.html">PP</a></div><div class="ttdef"><b>Definition:</b> pp.h:36</div></div>
+<div class="ttc" id="astructpp__args_html"><div class="ttname"><a href="structpp__args.html">pp_args</a></div><div class="ttdoc">Pretty Print.</div><div class="ttdef"><b>Definition:</b> pp.h:30</div></div>
+</div><!-- fragment --><p> Use <a class="el" href="structpp__args.html" title="Pretty Print.">pp_args</a> to define the indentation of the printing </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/database/<a class="el" href="pp_8h_source.html">pp.h</a></li>
 </ul>
 </div><!-- contents -->

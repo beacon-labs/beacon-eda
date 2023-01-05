@@ -13,39 +13,40 @@
 using namespace std;
 
 #include <memory>
+#include "bl_observer.h"
+#include <list>
 #include <string>
 #include <list>
-// //     #include "bl_pin.h"
-// //     #include "bl_port.h"
-// 
 class BLPin;
 class BLPort;
 
 class BLNetBase
 {
     
-        string name;
+    string name;
+    list<shared_ptr<IBLObserver<string>>> name_observers;
     
-        list<shared_ptr<BLPin>> pins;
+    list<shared_ptr<BLPin>> pins;
+    list<shared_ptr<IBLObserver<shared_ptr<BLPin>>>> pins_observers;
     
-        list<shared_ptr<BLPort>> ports;
+    list<shared_ptr<BLPort>> ports;
+    list<shared_ptr<IBLObserver<shared_ptr<BLPort>>>> ports_observers;
     
-    public:
-        
-            string get_name();
-            
-                void set_name(string value);
-            
-        
-            list<shared_ptr<BLPin>> get_pins();
-            
-                void add_pin(shared_ptr<BLPin> value);
-            
-        
-            list<shared_ptr<BLPort>> get_ports();
-            
-                void add_port(shared_ptr<BLPort> value);
-            
-        
+public:
+    
+    string get_name();
+    void observe_name(shared_ptr<IBLObserver<string>> observer);
+    void set_name(string value);
+    
+    list<shared_ptr<BLPin>> get_pins();
+    void observe_pins(shared_ptr<IBLObserver<shared_ptr<BLPin>>> observer);
+    void add_pin(shared_ptr<BLPin> value);
+    
+    
+    list<shared_ptr<BLPort>> get_ports();
+    void observe_ports(shared_ptr<IBLObserver<shared_ptr<BLPort>>> observer);
+    void add_port(shared_ptr<BLPort> value);
+    
+    
 
 };

@@ -1,7 +1,7 @@
 
 #include "database/bl_design.h"
 #include "database/bl_library.h"
-
+#include "database/bl_observer.h"
 // #include "parsers/verilog/JohnsTestVisitor.h"
 #include "parsers/systemverilog/VerilogVisitor.h"
 #include "slang/syntax/SyntaxNode.h"
@@ -13,6 +13,15 @@
 #include <iostream>
 #include <memory>
 #include <thread>
+
+class DesignObserver : public IBLObserver<shared_ptr<BLDesign>>
+{
+public:
+    void update(shared_ptr<BLDesign> design) override
+    {
+        cout << "New Design: " << design->get_name() << endl;
+    }
+};
 
 int main(int argc, char *argv[])
 {
@@ -39,19 +48,19 @@ int main(int argc, char *argv[])
     if (program.is_subcommand_used("verilog"))
     {
         shared_ptr<BLLibrary> library = make_shared<BLLibrary>();
-
+        library->set_name("rtl_parser_test");
+        shared_ptr<DesignObserver> obs = make_shared<DesignObserver>();
+        library->observe_designs(obs);
         for (std::string file : verilog_command.get<std::list<std::string>>("--files"))
         {
             auto tree = slang::syntax::SyntaxTree::fromFile(file);
 
             // JohnsTestVisitor visitor;
+            library->add_filename(file);
             VerilogVisitor visitor;
             visitor.library = library;
             tree->root().visit(visitor);
         }
-        for (shared_ptr<BLDesign> design : library->get_designs())
-        {
-            design->pp();
-        }
+        library->pp();
     }
 }

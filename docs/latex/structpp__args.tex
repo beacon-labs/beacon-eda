@@ -26,14 +26,21 @@ Example usage\+:
 
 
 \begin{DoxyCode}{0}
+\DoxyCodeLine{-\/-\/-\/MyClass.h-\/-\/-\/}
 \DoxyCodeLine{\textcolor{keyword}{class }MyClass : \textcolor{keyword}{public} \mbox{\hyperlink{classPP}{PP}}}
 \DoxyCodeLine{\{}
 \DoxyCodeLine{  \textcolor{keyword}{public}:}
-\DoxyCodeLine{      \textcolor{keywordtype}{void} pp(\mbox{\hyperlink{structpp__args}{pp\_args}} args = \mbox{\hyperlink{structpp__args}{pp\_args}}());}
+\DoxyCodeLine{      \textcolor{keywordtype}{void} pp(\mbox{\hyperlink{structpp__args}{pp\_args}} args = \mbox{\hyperlink{structpp__args}{pp\_args}}()) \textcolor{keyword}{override};}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/-\/MyClass.cpp-\/-\/-\/}
+\DoxyCodeLine{\textcolor{keywordtype}{void} MyClass::pp(\mbox{\hyperlink{structpp__args}{pp\_args}} args)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  cout << args.ident << name << endl;}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
- 
+ Use \mbox{\hyperlink{structpp__args}{pp\+\_\+args}} to define the indentation of the printing 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

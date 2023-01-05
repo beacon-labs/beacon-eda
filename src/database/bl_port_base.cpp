@@ -11,46 +11,82 @@
 #include "bl_port_base.h"
 
 
-    string BLPortBase::get_name()
+string BLPortBase::get_name()
+{
+    return this->name;
+}
+
+void BLPortBase::observe_name(shared_ptr<IBLObserver<string>> observer)
+{
+    name_observers.push_back( observer );
+}
+
+void BLPortBase::set_name(string value)
+{
+    this->name = value;
+    for ( shared_ptr<IBLObserver<string>> observer : name_observers )
     {
-        return this->name;
+        observer->update( value );
     }
+}
 
-    void BLPortBase::set_name(string value)
-        {
-            this->name = value;
-        }
-    
 
-    string BLPortBase::get_direction()
+string BLPortBase::get_direction()
+{
+    return this->direction;
+}
+
+void BLPortBase::observe_direction(shared_ptr<IBLObserver<string>> observer)
+{
+    direction_observers.push_back( observer );
+}
+
+void BLPortBase::set_direction(string value)
+{
+    this->direction = value;
+    for ( shared_ptr<IBLObserver<string>> observer : direction_observers )
     {
-        return this->direction;
+        observer->update( value );
     }
+}
 
-    void BLPortBase::set_direction(string value)
-        {
-            this->direction = value;
-        }
-    
 
-    int BLPortBase::get_from()
+int BLPortBase::get_from()
+{
+    return this->from;
+}
+
+void BLPortBase::observe_from(shared_ptr<IBLObserver<int>> observer)
+{
+    from_observers.push_back( observer );
+}
+
+void BLPortBase::set_from(int value)
+{
+    this->from = value;
+    for ( shared_ptr<IBLObserver<int>> observer : from_observers )
     {
-        return this->from;
+        observer->update( value );
     }
+}
 
-    void BLPortBase::set_from(int value)
-        {
-            this->from = value;
-        }
-    
 
-    int BLPortBase::get_to()
+int BLPortBase::get_to()
+{
+    return this->to;
+}
+
+void BLPortBase::observe_to(shared_ptr<IBLObserver<int>> observer)
+{
+    to_observers.push_back( observer );
+}
+
+void BLPortBase::set_to(int value)
+{
+    this->to = value;
+    for ( shared_ptr<IBLObserver<int>> observer : to_observers )
     {
-        return this->to;
+        observer->update( value );
     }
+}
 
-    void BLPortBase::set_to(int value)
-        {
-            this->to = value;
-        }
-    
