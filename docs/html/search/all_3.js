@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verilogvisitor_16',['VerilogVisitor',['../classVerilogVisitor.html',1,'']]]
+  ['johnstestvisitor_16',['JohnsTestVisitor',['../classJohnsTestVisitor.html',1,'']]]
 ];

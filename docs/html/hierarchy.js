@@ -18,8 +18,13 @@ var hierarchy =
     [ "BLPortBase", "classBLPortBase.html", [
       [ "BLPort", "classBLPort.html", null ]
     ] ],
+    [ "IBLObserver< TObserverValue >", "classIBLObserver.html", null ],
+    [ "IBLObserver< shared_ptr< BLDesign > >", "classIBLObserver.html", [
+      [ "DesignObserver", "classDesignObserver.html", null ]
+    ] ],
     [ "PP", "classPP.html", [
       [ "BLDesign", "classBLDesign.html", null ],
+      [ "BLLibrary", "classBLLibrary.html", null ],
       [ "BLPort", "classBLPort.html", null ]
     ] ],
     [ "pp_args", "structpp__args.html", null ],

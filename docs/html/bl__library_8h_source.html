@@ -97,15 +97,17 @@ $(document).ready(function(){initNavTree('bl__library_8h_source.html',''); initR
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;bl_library_base.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classBLLibrary.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBLLibrary.html">BLLibrary</a> : <span class="keyword">public</span> <a class="code" href="classBLLibraryBase.html">BLLibraryBase</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// Add your custom code here</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;pp.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classBLLibrary.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBLLibrary.html">BLLibrary</a> : <span class="keyword">public</span> <a class="code" href="classBLLibraryBase.html">BLLibraryBase</a>, <a class="code" href="classPP.html">PP</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> pp(<a class="code" href="structpp__args.html">pp_args</a> args = <a class="code" href="structpp__args.html">pp_args</a>()) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
 <div class="ttc" id="aclassBLLibraryBase_html"><div class="ttname"><a href="classBLLibraryBase.html">BLLibraryBase</a></div><div class="ttdef"><b>Definition:</b> bl_library_base.h:23</div></div>
-<div class="ttc" id="aclassBLLibrary_html"><div class="ttname"><a href="classBLLibrary.html">BLLibrary</a></div><div class="ttdef"><b>Definition:</b> bl_library.h:15</div></div>
+<div class="ttc" id="aclassBLLibrary_html"><div class="ttname"><a href="classBLLibrary.html">BLLibrary</a></div><div class="ttdef"><b>Definition:</b> bl_library.h:14</div></div>
+<div class="ttc" id="aclassPP_html"><div class="ttname"><a href="classPP.html">PP</a></div><div class="ttdef"><b>Definition:</b> pp.h:36</div></div>
+<div class="ttc" id="astructpp__args_html"><div class="ttname"><a href="structpp__args.html">pp_args</a></div><div class="ttdoc">Pretty Print.</div><div class="ttdef"><b>Definition:</b> pp.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

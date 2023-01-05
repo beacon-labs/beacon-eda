@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
-  0: "bjpv",
-  1: "bjpv",
+  0: "bdijpv",
+  1: "bdijpv",
   2: "b"
 };
 

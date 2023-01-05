@@ -8,6 +8,7 @@ var dir_803ee67260c130b45d29089798491ab2 =
     [ "bl_library_base.h", "bl__library__base_8h_source.html", null ],
     [ "bl_net.h", "bl__net_8h_source.html", null ],
     [ "bl_net_base.h", "bl__net__base_8h_source.html", null ],
+    [ "bl_observer.h", "bl__observer_8h_source.html", null ],
     [ "bl_pin.h", "bl__pin_8h_source.html", null ],
     [ "bl_pin_base.h", "bl__pin__base_8h_source.html", null ],
     [ "bl_port.h", "bl__port_8h_source.html", null ],
